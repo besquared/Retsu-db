@@ -23,10 +23,9 @@ namespace Retsu {
       public:
         RecordID id;
         map<string, string> values;
-        map<string, double> *measures;
+        map<string, double> measures;
         
         Record(RecordID id);
-        ~Record();
         
         void insert(const string& key, const string& value);
         void insert(const string& key, const double& value);

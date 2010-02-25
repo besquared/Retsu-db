@@ -21,12 +21,17 @@ namespace Retsu {
 		class Dimensions {
 		protected:
 			string path;
+      map<string, Data::Dimension*> cache;
 			
 		public:
 			Dimensions(const string& path);
-			
+			~Dimensions();
+      
 			virtual bool insert(const Data::Record& record);
 //			virtual void Lookup(const string& dimension, const Data::RIDList& records, vector<string>& results);
+      
+    protected:
+      Data::Dimension* retrieve(const string& dimension);
 		};
 	}
 }

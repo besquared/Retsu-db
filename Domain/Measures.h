@@ -20,12 +20,17 @@ namespace Retsu {
 		class Measures {
 		protected:
 			string path;
-      
+      map<string, Data::Measure*> cache;
+
 		public:		
 			Measures(const string& path);
-			
+			~Measures();
+      
 			virtual bool insert(const Data::Record& record);
 //			virtual void Lookup(const string& measure, const Data::RIDList& records, vector<double>& results);
+      
+      protected:
+        Data::Measure* retrieve(const string& measure);
 		};
 	}
 }
