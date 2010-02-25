@@ -26,6 +26,7 @@ namespace Retsu {
         map<string, double> measures;
         
         Record(RecordID id);
+        ~Record();
         
         void insert(const string& key, const string& value);
         void insert(const string& key, const double& value);

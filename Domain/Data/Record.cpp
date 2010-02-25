@@ -13,6 +13,8 @@ Retsu::Domain::Data::Record::Record(RecordID id) {
   this->id = id;
 }
 
+Retsu::Domain::Data::Record::~Record() {}
+
 void Retsu::Domain::Data::Record::insert(const string& key, const string& value) {
   this->values[key] = value;
 }

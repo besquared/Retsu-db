@@ -69,6 +69,7 @@
 		030FADBF1131CB9A0047E4F7 /* Dimensions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dimensions.cpp; sourceTree = "<group>"; };
 		030FADC21131CBA60047E4F7 /* Measures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Measures.h; sourceTree = "<group>"; };
 		030FADC31131CBA60047E4F7 /* Measures.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Measures.cpp; sourceTree = "<group>"; };
+		0324FAB211363E76001E567A /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8DD76F6C0486A84900D96B5E /* retsudb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = retsudb; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859E8B029090EE04C91782 /* retsudb.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = retsudb.1; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 				C6859E8C029090F304C91782 /* Documentation */,
 				030FACBC112E677E0047E4F7 /* Libraries */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
+				0324FAB211363E76001E567A /* Makefile */,
 			);
 			name = retsudb;
 			sourceTree = "<group>";
@@ -188,6 +190,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		0324FAA311363D44001E567A /* retsudb2 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 0324FAAB11363D69001E567A /* Build configuration list for PBXLegacyTarget "retsudb2" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = /Users/Josh/Socialytical/retsudb;
+			dependencies = (
+			);
+			name = retsudb2;
+			passBuildSettingsInEnvironment = 1;
+			productName = retsudb2;
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		030FACF0112E69DA0047E4F7 /* retsu */ = {
@@ -240,6 +259,7 @@
 			targets = (
 				030FACF0112E69DA0047E4F7 /* retsu */,
 				8DD76F620486A84900D96B5E /* retsudb */,
+				0324FAA311363D44001E567A /* retsudb2 */,
 			);
 		};
 /* End PBXProject section */
@@ -288,6 +308,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					.,
 					/usr/local/include,
@@ -322,6 +343,27 @@
 			};
 			name = Release;
 		};
+		0324FAA411363D44001E567A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = retsudb2;
+			};
+			name = Debug;
+		};
+		0324FAA511363D44001E567A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = retsudb2;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		1DEB923208733DC60010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -335,6 +377,7 @@
 					"_GLIBCXX_DEBUG=1",
 					"_GLIBCXX_DEBUG_PEDANTIC=1",
 				);
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					.,
 					/usr/local/include,
@@ -402,6 +445,15 @@
 			buildConfigurations = (
 				030FACF2112E69E10047E4F7 /* Debug */,
 				030FACF3112E69E10047E4F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0324FAAB11363D69001E567A /* Build configuration list for PBXLegacyTarget "retsudb2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0324FAA411363D44001E567A /* Debug */,
+				0324FAA511363D44001E567A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
