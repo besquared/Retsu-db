@@ -1,0 +1,54 @@
+8
+
+dir
+3980
+http://v8.googlecode.com/svn/trunk/include
+http://v8.googlecode.com/svn
+
+
+
+2010-02-19T08:53:10.844612Z
+3905
+ager@chromium.org
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ce2b1a6d-e550-0410-aec6-3dcde31c8c00
+
+v8.h
+file
+
+
+
+
+2010-02-28T22:31:32.000000Z
+26100fa33603fdf5b2e7c83c13fcbf1c
+2010-02-19T08:53:10.844612Z
+3905
+ager@chromium.org
+has-props
+
+v8-debug.h
+file
+
+
+
+
+2010-02-28T22:31:32.000000Z
+a9690bb5363c79b8c47ed9450af24aee
+2010-02-03T11:26:59.170360Z
+3781
+sgjesse@chromium.org
+has-props
+

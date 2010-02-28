@@ -1,0 +1,34 @@
+8
+
+dir
+3980
+http://v8.googlecode.com/svn/trunk/src/third_party
+http://v8.googlecode.com/svn
+
+
+
+2009-10-28T14:53:37.049521Z
+3167
+ager@chromium.org
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ce2b1a6d-e550-0410-aec6-3dcde31c8c00
+
+valgrind
+dir
+
+dtoa
+dir
+
