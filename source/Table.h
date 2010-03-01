@@ -15,6 +15,7 @@
 #include "Dimensions.h"
 
 namespace Retsu {
+  using namespace v8;
   using namespace std;
 
   class Table {
@@ -29,7 +30,10 @@ namespace Retsu {
     Table(const string& path, const string& dpath);
     virtual ~Table();
     
+    RecordID next_id();
     void insert(const Record& record);
+    void insert(const RecordID& id, const string& measure, const double& value);
+    void insert(const RecordID& id, const string& dimension, const string& value);
   };
 }
 

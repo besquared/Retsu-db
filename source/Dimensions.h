@@ -29,7 +29,6 @@ namespace Retsu {
     virtual bool insert(const Record& record);
 //			virtual void Lookup(const string& dimension, const Data::RIDList& records, vector<string>& results);
     
-  protected:
     Dimension* retrieve(const string& dimension);
   };
 }

@@ -1,4 +1,5 @@
 #include <Source/Table.h>
+#include <Source/TableOperations.h>
 
 using namespace v8;
 using namespace std;
@@ -15,41 +16,12 @@ void dump_v8_object(Local<Object> object) {
   }
 }
 
-Handle<Value> table_insert(const Arguments& args) {
-  Local<String> key = String::New("name");
-  Local<Value> tname_val = args.This()->Get(key);
-  string table_name = *String::AsciiValue(tname_val);
-  
-  if(args.Length() < 1) {
-    return Boolean::New(false);
-  } else {
-    if(!args[0]->IsObject()) {
-      return Boolean::New(false);
-    } else {
-      Local<Object> values = args[0]->ToObject();
-      Local<Array> dimensions = values->GetPropertyNames();
-      
-      for(size_t i = 0; i < dimensions->Length(); i++) {
-        Local<Number> index = Number::New(i);
-        Local<Value> key = dimensions->Get(index);
-        Local<Value> value = values->Get(key);
-        
-        if(value->IsNumber()) {
-          // insert measure
-        } else {
-          // insert string
-        }
-      }
-      
-      return Boolean::New(true);
-    }
-  }
-}
-
 Handle<Value> table_get(Local<String> name, const AccessorInfo &info) {
   Handle<ObjectTemplate> table_templ = ObjectTemplate::New();
+  
   table_templ->Set("name", name);
-  table_templ->Set("insert", FunctionTemplate::New(table_insert, name));
+  table_templ->Set("insert", FunctionTemplate::New(Retsu::TableOperations::insert));
+  
   return table_templ->NewInstance();
 }
 
