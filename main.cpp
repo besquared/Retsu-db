@@ -7,34 +7,41 @@ Handle<Value> table_insert(const Arguments& args) {
   if(args.Length() < 1) {
     return Local<Value>();
   } else {
-    HandleScope handle_scope;
-    
-    Local<Value> options = args[0];
-    std::cout << "Called with " << args.Length() << " arguments." << std::endl;
-    return String::New("Inserted!");
+    if(!args[0]->IsObject()) {
+      return Local<Value>();
+    } else {
+      Local<Object> values = args[0]->ToObject();
+      Local<Array> dimensions = values->GetPropertyNames();
+      
+      cout << "Called with " << dimensions->Length() << " keys." << endl;
+      
+      return String::New("Inserted!");      
+    }
   }
+}
+
+Handle<Value> table_get(Local<String> name, const AccessorInfo &info) {
+  Handle<ObjectTemplate> table_templ = ObjectTemplate::New();
+  table_templ->Set("name", name);
+  table_templ->Set("insert", FunctionTemplate::New(table_insert));
+  return table_templ->NewInstance();
 }
 
 int main(int argc, char * const argv[]) {
   // Create a handle scope to hold the temporary references.
   HandleScope handle_scope;
-  
-  Handle<FunctionTemplate> table_templ = FunctionTemplate::New();
-  Local<Template> table_templ_proto = table_templ->PrototypeTemplate();
-  table_templ_proto->Set("insert", FunctionTemplate::New(table_insert));
+    
+  Handle<ObjectTemplate> db_template = ObjectTemplate::New();
+  db_template->SetNamedPropertyHandler(table_get);
   
   Handle<ObjectTemplate> global = ObjectTemplate::New();
-  global->Set(String::New("table"), table_templ);
+  global->Set(String::New("db"), db_template);
   
-  // Each processor gets its own context so different processors
-  // don't affect each other (ignore the first three lines).
   Persistent<Context> context = Context::New(NULL, global);
   
-  // Enter the new context so all the following operations take place
-  // within it.
   Context::Scope context_scope(context);
 
-  Handle<String> source = String::New("var tbl = new table(); tbl.insert({'mykey': 'myval'});");
+  Handle<String> source = String::New("db.playback.insert({'mykey': 'myval', 'anotherkey': 'anothervalue'});");
   
   // We're just about to compile the script; set up an error handler to
   // catch any exceptions the script might throw.

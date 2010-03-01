@@ -288,7 +288,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {270, 760}}</string>
+							<string>{{0, 49}, {270, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -337,7 +337,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>0324005F113B3E38001E567A</string>
+										<string>032400BE113B551E001E567A</string>
 										<key>history</key>
 										<array>
 											<string>030FAD96112E6FFB0047E4F7</string>
@@ -364,10 +364,10 @@
 											<string>0324000B113B335D001E567A</string>
 											<string>0324000C113B335D001E567A</string>
 											<string>0324000D113B335D001E567A</string>
-											<string>0324000E113B335D001E567A</string>
 											<string>0324003A113B3BBB001E567A</string>
-											<string>0324005A113B3DE0001E567A</string>
-											<string>0324005B113B3DE0001E567A</string>
+											<string>0324009F113B52DE001E567A</string>
+											<string>032400B6113B551E001E567A</string>
+											<string>032400B7113B551E001E567A</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -458,6 +458,30 @@
 											<string>03240058113B3DBF001E567A</string>
 											<string>0324005C113B3DE0001E567A</string>
 											<string>0324005D113B3DE0001E567A</string>
+											<string>03240065113B4EF0001E567A</string>
+											<string>03240066113B4EF0001E567A</string>
+											<string>0324006C113B4FDE001E567A</string>
+											<string>0324006D113B4FDE001E567A</string>
+											<string>0324008A113B51F3001E567A</string>
+											<string>0324008B113B51F3001E567A</string>
+											<string>0324008C113B51F3001E567A</string>
+											<string>0324008D113B51F3001E567A</string>
+											<string>0324008E113B51F3001E567A</string>
+											<string>0324008F113B51F3001E567A</string>
+											<string>03240090113B51F3001E567A</string>
+											<string>03240091113B51F3001E567A</string>
+											<string>032400A1113B52DE001E567A</string>
+											<string>032400A2113B52DE001E567A</string>
+											<string>032400A8113B5457001E567A</string>
+											<string>032400A9113B5457001E567A</string>
+											<string>032400AA113B5457001E567A</string>
+											<string>032400AB113B5457001E567A</string>
+											<string>032400B8113B551E001E567A</string>
+											<string>032400B9113B551E001E567A</string>
+											<string>032400BA113B551E001E567A</string>
+											<string>032400BB113B551E001E567A</string>
+											<string>032400BC113B551E001E567A</string>
+											<string>032400BD113B551E001E567A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -651,11 +675,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>0324FA7D11363825001E567A</string>
 		<string>0324FA7E11363825001E567A</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>030FACCD112E67CF0047E4F7</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/Josh/Socialytical/retsudb/retsudb.xcodeproj</string>
 	</array>
@@ -676,14 +700,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Measures.cpp</string>
+								<string>v8.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -700,6 +722,8 @@
 							<string>362pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -965,7 +989,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
