@@ -825,7 +825,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 4";
 		rLen = 0;
-		rLoc = 1012;
+		rLoc = 486;
 		rType = 0;
 		vrLen = 69;
 		vrLoc = 0;
@@ -1025,7 +1025,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 4";
 		rLen = 0;
-		rLoc = 1012;
+		rLoc = 486;
 		rType = 0;
 		vrLen = 69;
 		vrLoc = 0;
@@ -1045,7 +1045,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 8";
 		rLen = 0;
-		rLoc = 1012;
+		rLoc = 486;
 		rType = 0;
 		vrLen = 136;
 		vrLoc = 0;
@@ -1275,7 +1275,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 9";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 176;
 		vrLoc = 0;
@@ -1505,7 +1505,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 13";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 397;
 		vrLoc = 0;
@@ -1545,7 +1545,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 13";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 397;
 		vrLoc = 0;
@@ -1565,7 +1565,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 13";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 397;
 		vrLoc = 0;
@@ -1605,7 +1605,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 15";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 0;
@@ -1635,7 +1635,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 14";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 0;
@@ -1675,7 +1675,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 17";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 0;
@@ -1705,7 +1705,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 12";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 0;
@@ -1765,7 +1765,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 12";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 0;
@@ -1815,7 +1815,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 13";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 0;
@@ -1845,7 +1845,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 12";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 0;
@@ -1875,7 +1875,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 14";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 391;
 		vrLoc = 0;
@@ -1985,7 +1985,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 14";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 391;
 		vrLoc = 0;
@@ -2125,7 +2125,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 10";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 0;
@@ -2155,7 +2155,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 10";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 0;
@@ -2215,7 +2215,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 25";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 845;
 		vrLoc = 571;
@@ -2235,7 +2235,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 24";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 878;
 		vrLoc = 255;
@@ -2275,7 +2275,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 27";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 888;
 		vrLoc = 297;
@@ -2285,7 +2285,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 23";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 920;
 		vrLoc = 200;
@@ -2335,7 +2335,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 24";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 871;
 		vrLoc = 200;
@@ -2345,7 +2345,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 24";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 871;
 		vrLoc = 200;
@@ -2405,7 +2405,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 17";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 844;
 		vrLoc = 69;
@@ -2415,7 +2415,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 17";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 848;
 		vrLoc = 69;
@@ -2425,7 +2425,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 23";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 833;
 		vrLoc = 200;
@@ -2435,7 +2435,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 48";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 682;
 		vrLoc = 918;
@@ -2445,7 +2445,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 48";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 625;
 		vrLoc = 1033;
@@ -2455,7 +2455,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 48";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 673;
 		vrLoc = 1033;
@@ -2465,7 +2465,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 36";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 736;
 		vrLoc = 983;
@@ -2475,7 +2475,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 23";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 844;
 		vrLoc = 172;
@@ -2485,7 +2485,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 24";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 882;
 		vrLoc = 172;
@@ -2495,7 +2495,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 25";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 863;
 		vrLoc = 172;
@@ -2515,7 +2515,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 25";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 863;
 		vrLoc = 172;
@@ -2525,7 +2525,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 25";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 863;
 		vrLoc = 172;
@@ -2545,7 +2545,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 26";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 172;
@@ -2555,7 +2555,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 26";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 898;
 		vrLoc = 358;
@@ -2565,7 +2565,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 29";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 358;
@@ -2575,7 +2575,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 23";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 358;
@@ -2742,7 +2742,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 39";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 902;
 		vrLoc = 840;
@@ -2752,7 +2752,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 35";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 840;
@@ -2762,7 +2762,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 35";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 895;
 		vrLoc = 840;
@@ -2782,7 +2782,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 35";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 895;
 		vrLoc = 840;
@@ -2792,7 +2792,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 35";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 895;
 		vrLoc = 840;
@@ -2812,7 +2812,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 38";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 939;
 		vrLoc = 840;
@@ -3042,7 +3042,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 46";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 912;
 		vrLoc = 1394;
@@ -3147,7 +3147,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 34";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 373;
 		vrLoc = 806;
@@ -3167,7 +3167,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 34";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 373;
 		vrLoc = 806;
@@ -3187,7 +3187,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 34";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 425;
 		vrLoc = 806;
@@ -3205,7 +3205,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 34";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 425;
 		vrLoc = 806;
@@ -3275,7 +3275,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 34";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 452;
@@ -3295,7 +3295,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 34";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 590;
@@ -3613,7 +3613,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 44";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 773;
 		vrLoc = 987;
@@ -3980,7 +3980,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 49";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 837;
 		vrLoc = 1150;
@@ -4038,7 +4038,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 50";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 757;
 		vrLoc = 1151;
@@ -4048,7 +4048,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 50";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 743;
 		vrLoc = 1329;
@@ -4958,9 +4958,9 @@
 	};
 	03240181113B90AD001E567A /* TableOperations.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {991, 1925}}";
-			sepNavSelRange = "{245, 0}";
-			sepNavVisRange = "{81, 268}";
+			sepNavIntBoundsRect = "{{0, 0}, {1070.57, 1775}}";
+			sepNavSelRange = "{178, 0}";
+			sepNavVisRange = "{1228, 672}";
 		};
 	};
 	03240186113B9147001E567A /* PBXTextBookmark */ = {
@@ -4988,7 +4988,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 43";
 		rLen = 0;
-		rLoc = 1871;
+		rLoc = 1873;
 		rType = 0;
 		vrLen = 731;
 		vrLoc = 40;
@@ -5018,7 +5018,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 15";
 		rLen = 0;
-		rLoc = 1883;
+		rLoc = 1885;
 		rType = 0;
 		vrLen = 290;
 		vrLoc = 0;
@@ -5038,7 +5038,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 16";
 		rLen = 0;
-		rLoc = 1877;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 332;
 		vrLoc = 0;
@@ -5058,7 +5058,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 43";
 		rLen = 0;
-		rLoc = 1871;
+		rLoc = 1873;
 		rType = 0;
 		vrLen = 731;
 		vrLoc = 40;
@@ -5275,7 +5275,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 25";
 		rLen = 0;
-		rLoc = 978;
+		rLoc = 980;
 		rType = 0;
 		vrLen = 799;
 		vrLoc = 481;
@@ -5325,7 +5325,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 20";
 		rLen = 0;
-		rLoc = 998;
+		rLoc = 1000;
 		rType = 0;
 		vrLen = 737;
 		vrLoc = 81;
@@ -5345,7 +5345,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 25";
 		rLen = 0;
-		rLoc = 978;
+		rLoc = 980;
 		rType = 0;
 		vrLen = 799;
 		vrLoc = 481;
@@ -5543,7 +5543,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 41";
 		rLen = 0;
-		rLoc = 1566;
+		rLoc = 1568;
 		rType = 0;
 		vrLen = 688;
 		vrLoc = 670;
@@ -5573,7 +5573,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 41";
 		rLen = 0;
-		rLoc = 1566;
+		rLoc = 1568;
 		rType = 0;
 		vrLen = 724;
 		vrLoc = 634;
@@ -5593,7 +5593,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 45";
 		rLen = 0;
-		rLoc = 1776;
+		rLoc = 1778;
 		rType = 0;
 		vrLen = 805;
 		vrLoc = 700;
@@ -5603,7 +5603,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 42";
 		rLen = 0;
-		rLoc = 1567;
+		rLoc = 1569;
 		rType = 0;
 		vrLen = 853;
 		vrLoc = 614;
@@ -5613,7 +5613,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 40";
 		rLen = 0;
-		rLoc = 1530;
+		rLoc = 1532;
 		rType = 0;
 		vrLen = 605;
 		vrLoc = 150;
@@ -5643,7 +5643,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 40";
 		rLen = 0;
-		rLoc = 1530;
+		rLoc = 1532;
 		rType = 0;
 		vrLen = 605;
 		vrLoc = 150;
@@ -5751,7 +5751,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 24";
 		rLen = 0;
-		rLoc = 558;
+		rLoc = 560;
 		rType = 0;
 		vrLen = 685;
 		vrLoc = 207;
@@ -5811,7 +5811,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 24";
 		rLen = 0;
-		rLoc = 558;
+		rLoc = 560;
 		rType = 0;
 		vrLen = 685;
 		vrLoc = 207;
@@ -6529,7 +6529,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 30";
 		rLen = 0;
-		rLoc = 727;
+		rLoc = 729;
 		rType = 0;
 		vrLen = 709;
 		vrLoc = 228;
@@ -6579,7 +6579,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 30";
 		rLen = 0;
-		rLoc = 727;
+		rLoc = 729;
 		rType = 0;
 		vrLen = 709;
 		vrLoc = 228;
@@ -6599,7 +6599,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 43";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 644;
 		vrLoc = 1045;
@@ -6633,7 +6633,7 @@
 		comments = "error: 'result' was not declared in this scope";
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		rLen = 0;
-		rLoc = 23;
+		rLoc = 6;
 		rType = 1;
 	};
 	03240261113BA062001E567A /* PBXTextBookmark */ = {
@@ -6651,7 +6651,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 17";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 336;
 		vrLoc = 63;
@@ -6671,7 +6671,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 16";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 159;
 		vrLoc = 0;
@@ -6681,7 +6681,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 14";
 		rLen = 0;
-		rLoc = 245;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 268;
 		vrLoc = 81;
@@ -6719,7 +6719,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 16";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 159;
 		vrLoc = 0;
@@ -6759,7 +6759,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 14";
 		rLen = 0;
-		rLoc = 245;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 268;
 		vrLoc = 81;
@@ -6859,7 +6859,7 @@
 		comments = "error: 'Commander' was not declared in this scope";
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		rLen = 1;
-		rLoc = 23;
+		rLoc = 6;
 		rType = 1;
 	};
 	032402A4113BA346001E567A /* PBXTextBookmark */ = {
@@ -6887,7 +6887,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 7";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 358;
 		vrLoc = 0;
@@ -6907,7 +6907,7 @@
 		comments = "error: expected type-specifier before 'Commander'";
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		rLen = 1;
-		rLoc = 23;
+		rLoc = 6;
 		rType = 1;
 	};
 	032402AD113BA3B8001E567A /* PBXTextBookmark */ = {
@@ -6915,7 +6915,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 7";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 251;
 		vrLoc = 0;
@@ -6935,7 +6935,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 44";
 		rLen = 0;
-		rLoc = 1116;
+		rLoc = 1118;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 325;
@@ -7005,7 +7005,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 8";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 390;
 		vrLoc = 0;
@@ -7015,7 +7015,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 52";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 608;
 		vrLoc = 1215;
@@ -7025,7 +7025,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 31";
 		rLen = 0;
-		rLoc = 735;
+		rLoc = 737;
 		rType = 0;
 		vrLen = 735;
 		vrLoc = 246;
@@ -7035,7 +7035,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 45";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 656;
 		vrLoc = 932;
@@ -7055,7 +7055,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 38";
 		rLen = 0;
-		rLoc = 956;
+		rLoc = 958;
 		rType = 0;
 		vrLen = 693;
 		vrLoc = 589;
@@ -7075,7 +7075,7 @@
 		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
 		name = "TableOperations.h: 44";
 		rLen = 0;
-		rLoc = 1116;
+		rLoc = 1118;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 325;
@@ -7135,7 +7135,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 30";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 473;
@@ -7185,7 +7185,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 51";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 508;
 		vrLoc = 1500;
@@ -7225,7 +7225,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 60";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 583;
 		vrLoc = 1423;
@@ -7375,7 +7375,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 15";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 383;
 		vrLoc = 0;
@@ -7405,7 +7405,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 8";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 383;
 		vrLoc = 0;
@@ -7505,7 +7505,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 7";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 429;
 		vrLoc = 0;
@@ -7515,7 +7515,7 @@
 		comments = "error: expected type-specifier before 'Commander'";
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		rLen = 1;
-		rLoc = 23;
+		rLoc = 6;
 		rType = 1;
 	};
 	032402F0113BA480001E567A /* PBXTextBookmark */ = {
@@ -7523,7 +7523,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 7";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 320;
 		vrLoc = 0;
@@ -7563,7 +7563,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 15";
 		rLen = 0;
-		rLoc = 361;
+		rLoc = 114;
 		rType = 0;
 		vrLen = 647;
 		vrLoc = 31;
@@ -7593,7 +7593,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 7";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 429;
 		vrLoc = 0;
@@ -7653,7 +7653,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 18";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 483;
 		vrLoc = 0;
@@ -7723,7 +7723,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 10";
 		rLen = 0;
-		rLoc = 236;
+		rLoc = 114;
 		rType = 0;
 		vrLen = 582;
 		vrLoc = 0;
@@ -7743,7 +7743,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 22";
 		rLen = 0;
-		rLoc = 611;
+		rLoc = 114;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 72;
@@ -7773,7 +7773,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 15";
 		rLen = 0;
-		rLoc = 361;
+		rLoc = 114;
 		rType = 0;
 		vrLen = 647;
 		vrLoc = 31;
@@ -7823,7 +7823,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 11";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 260;
 		vrLoc = 0;
@@ -7843,7 +7843,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 12";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 282;
 		vrLoc = 0;
@@ -7853,7 +7853,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 14";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 354;
 		vrLoc = 0;
@@ -7863,7 +7863,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 11";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 361;
 		vrLoc = 0;
@@ -7883,7 +7883,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 6";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 417;
 		vrLoc = 0;
@@ -7943,7 +7943,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 6";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 417;
 		vrLoc = 0;
@@ -7953,7 +7953,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 5";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 421;
 		vrLoc = 0;
@@ -7963,7 +7963,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 5";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 363;
 		vrLoc = 0;
@@ -7973,7 +7973,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 5";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 370;
 		vrLoc = 0;
@@ -7983,7 +7983,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 6";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 310;
 		vrLoc = 0;
@@ -7993,7 +7993,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 9";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 455;
 		vrLoc = 0;
@@ -8003,7 +8003,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 11";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 453;
 		vrLoc = 0;
@@ -8013,7 +8013,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 12";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 535;
 		vrLoc = 0;
@@ -8023,7 +8023,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 13";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 535;
 		vrLoc = 0;
@@ -8033,7 +8033,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 10";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 536;
 		vrLoc = 0;
@@ -8043,7 +8043,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 5";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 536;
 		vrLoc = 0;
@@ -8053,7 +8053,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 12";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 274;
 		vrLoc = 0;
@@ -8063,7 +8063,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 12";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 274;
 		vrLoc = 0;
@@ -8103,7 +8103,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 12";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 274;
 		vrLoc = 0;
@@ -8163,7 +8163,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 12";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 274;
 		vrLoc = 0;
@@ -8183,7 +8183,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 15";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 275;
 		vrLoc = 0;
@@ -8193,7 +8193,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 9";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 279;
 		vrLoc = 0;
@@ -8203,7 +8203,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 15";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 279;
 		vrLoc = 0;
@@ -8213,7 +8213,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 15";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 279;
 		vrLoc = 0;
@@ -8223,7 +8223,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 15";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 290;
 		vrLoc = 0;
@@ -8233,7 +8233,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 12";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 347;
 		vrLoc = 0;
@@ -8243,7 +8243,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 14";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 349;
 		vrLoc = 0;
@@ -8253,7 +8253,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 17";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 358;
 		vrLoc = 0;
@@ -8263,7 +8263,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 17";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 358;
 		vrLoc = 0;
@@ -8273,7 +8273,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 18";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 426;
 		vrLoc = 0;
@@ -8283,7 +8283,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 18";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 422;
 		vrLoc = 0;
@@ -8293,7 +8293,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 17";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 442;
 		vrLoc = 0;
@@ -8303,7 +8303,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 14";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 444;
 		vrLoc = 0;
@@ -8313,7 +8313,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 17";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 448;
 		vrLoc = 0;
@@ -8323,7 +8323,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 19";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 413;
 		vrLoc = 0;
@@ -8333,7 +8333,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 5";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 181;
 		vrLoc = 0;
@@ -8373,7 +8373,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 8";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 312;
 		vrLoc = 0;
@@ -8383,7 +8383,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 8";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 333;
 		vrLoc = 0;
@@ -8593,7 +8593,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 11";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 322;
 		vrLoc = 0;
@@ -8613,7 +8613,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 13";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 330;
 		vrLoc = 0;
@@ -8623,7 +8623,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 14";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 338;
 		vrLoc = 0;
@@ -8633,7 +8633,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 14";
 		rLen = 0;
-		rLoc = 515;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 338;
 		vrLoc = 0;
@@ -8773,7 +8773,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 19";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 520;
 		vrLoc = 0;
@@ -8816,6 +8816,126 @@
 		rLoc = 358;
 		rType = 0;
 		vrLen = 546;
+		vrLoc = 0;
+	};
+	0324037E113BB320001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324FAB211363E76001E567A /* Makefile */;
+		name = "Makefile: 8";
+		rLen = 0;
+		rLoc = 358;
+		rType = 0;
+		vrLen = 546;
+		vrLoc = 0;
+	};
+	0324037F113BB320001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
+		name = "Main.cpp: 15";
+		rLen = 0;
+		rLoc = 114;
+		rType = 0;
+		vrLen = 647;
+		vrLoc = 31;
+	};
+	03240380113BB320001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324FAB211363E76001E567A /* Makefile */;
+		name = "Makefile: 8";
+		rLen = 0;
+		rLoc = 358;
+		rType = 0;
+		vrLen = 546;
+		vrLoc = 0;
+	};
+	03240381113BB320001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
+		name = "Main.cpp: 16";
+		rLen = 0;
+		rLoc = 414;
+		rType = 0;
+		vrLen = 458;
+		vrLoc = 30;
+	};
+	03240382113BB35A001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
+		name = "Main.cpp: 16";
+		rLen = 0;
+		rLoc = 414;
+		rType = 0;
+		vrLen = 458;
+		vrLoc = 30;
+	};
+	03240383113BB35A001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
+		name = "TableOperations.h: 45";
+		rLen = 0;
+		rLoc = 1118;
+		rType = 0;
+		vrLen = 682;
+		vrLoc = 319;
+	};
+	03240384113BB35A001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
+		name = "Main.cpp: 16";
+		rLen = 0;
+		rLoc = 414;
+		rType = 0;
+		vrLen = 458;
+		vrLoc = 30;
+	};
+	03240385113BB35A001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
+		name = "TableOperations.h: 10";
+		rLen = 0;
+		rLoc = 178;
+		rType = 0;
+		vrLen = 502;
+		vrLoc = 0;
+	};
+	03240386113BB3A9001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
+		name = "TableOperations.h: 10";
+		rLen = 0;
+		rLoc = 178;
+		rType = 0;
+		vrLen = 672;
+		vrLoc = 1228;
+	};
+	03240387113BB3A9001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324FAB211363E76001E567A /* Makefile */;
+		name = "Makefile: 8";
+		rLen = 0;
+		rLoc = 358;
+		rType = 0;
+		vrLen = 546;
+		vrLoc = 0;
+	};
+	03240388113BB3A9001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03240181113B90AD001E567A /* TableOperations.h */;
+		name = "TableOperations.h: 10";
+		rLen = 0;
+		rLoc = 178;
+		rType = 0;
+		vrLen = 672;
+		vrLoc = 1228;
+	};
+	03240389113BB3A9001E567A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324FAB211363E76001E567A /* Makefile */;
+		name = "Makefile: 20";
+		rLen = 0;
+		rLoc = 586;
+		rType = 0;
+		vrLen = 586;
 		vrLoc = 0;
 	};
 	0324F9E9113630FD001E567A /* PBXTextBookmark */ = {
@@ -8957,7 +9077,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 23";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 613;
 		vrLoc = 113;
@@ -9017,7 +9137,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 15";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 393;
 		vrLoc = 0;
@@ -9057,7 +9177,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 17";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 0;
@@ -9097,7 +9217,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 13";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 0;
@@ -9227,7 +9347,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 19";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 489;
 		vrLoc = 45;
@@ -9407,7 +9527,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 9";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 542;
 		vrLoc = 45;
@@ -9439,7 +9559,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 9";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 542;
 		vrLoc = 45;
@@ -9469,7 +9589,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 20";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 580;
 		vrLoc = 46;
@@ -9495,7 +9615,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 24";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 566;
 		vrLoc = 69;
@@ -9521,7 +9641,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 25";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 70;
@@ -9547,7 +9667,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 20";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 586;
 		vrLoc = 46;
@@ -9633,7 +9753,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 25";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 526;
 		vrLoc = 201;
@@ -9709,7 +9829,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 12";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 535;
 		vrLoc = 0;
@@ -9735,7 +9855,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 7";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 535;
 		vrLoc = 0;
@@ -9765,7 +9885,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 23";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 613;
 		vrLoc = 113;
@@ -9791,7 +9911,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 18";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 584;
 		vrLoc = 45;
@@ -9801,7 +9921,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 18";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 584;
 		vrLoc = 45;
@@ -9811,7 +9931,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 18";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 587;
 		vrLoc = 45;
@@ -9821,7 +9941,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 18";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 587;
 		vrLoc = 45;
@@ -9831,7 +9951,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 18";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 587;
 		vrLoc = 45;
@@ -10181,8 +10301,8 @@
 	0324FAB211363E76001E567A /* Makefile */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1243.4, 568}}";
-			sepNavSelRange = "{358, 0}";
-			sepNavVisRange = "{0, 546}";
+			sepNavSelRange = "{586, 0}";
+			sepNavVisRange = "{0, 586}";
 		};
 	};
 	0324FAB4113640A1001E567A /* PBXTargetBookmark */ = {
@@ -10204,7 +10324,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 3";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 260;
 		vrLoc = 0;
@@ -10228,7 +10348,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 3";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 260;
 		vrLoc = 0;
@@ -10238,7 +10358,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 11";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 260;
 		vrLoc = 0;
@@ -10278,7 +10398,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 12";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 591;
 		vrLoc = 26;
@@ -10288,7 +10408,7 @@
 		fRef = 0324FAB211363E76001E567A /* Makefile */;
 		name = "Makefile: 11";
 		rLen = 0;
-		rLoc = 546;
+		rLoc = 586;
 		rType = 0;
 		vrLen = 260;
 		vrLoc = 0;
@@ -10328,7 +10448,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 12";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 591;
 		vrLoc = 26;
@@ -10348,7 +10468,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 14";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 586;
 		vrLoc = 26;
@@ -10358,7 +10478,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 14";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 594;
 		vrLoc = 26;
@@ -10388,7 +10508,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 12";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 566;
 		vrLoc = 25;
@@ -10398,7 +10518,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 14";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 591;
 		vrLoc = 26;
@@ -10418,7 +10538,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 12";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 566;
 		vrLoc = 25;
@@ -10438,7 +10558,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 15";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 532;
 		vrLoc = 0;
@@ -10448,7 +10568,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 7";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 614;
 		vrLoc = 0;
@@ -10478,7 +10598,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 7";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 614;
 		vrLoc = 0;
@@ -10558,7 +10678,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 14";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 677;
 		vrLoc = 50;
@@ -10578,7 +10698,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 17";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 572;
 		vrLoc = 0;
@@ -10598,7 +10718,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 14";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 677;
 		vrLoc = 50;
@@ -10648,7 +10768,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 25";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 549;
 		vrLoc = 226;
@@ -10658,7 +10778,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 10";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 577;
 		vrLoc = 26;
@@ -10668,7 +10788,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 10";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 26;
@@ -10678,7 +10798,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 23";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 549;
 		vrLoc = 221;
@@ -10688,7 +10808,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 7";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 593;
 		vrLoc = 0;
@@ -10712,7 +10832,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 9";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 593;
 		vrLoc = 0;
@@ -10722,7 +10842,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "main.cpp: 10";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 593;
 		vrLoc = 0;
@@ -11065,7 +11185,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 10";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 593;
 		vrLoc = 0;
@@ -11075,7 +11195,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 10";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 593;
 		vrLoc = 0;
@@ -11341,7 +11461,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 24";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 878;
 		vrLoc = 255;
@@ -11361,7 +11481,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 12";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 626;
 		vrLoc = 0;
@@ -11381,7 +11501,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 12";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 626;
 		vrLoc = 0;
@@ -11401,7 +11521,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 12";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 819;
 		vrLoc = 0;
@@ -11421,7 +11541,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */;
 		name = "Main.cpp: 15";
 		rLen = 0;
-		rLoc = 615;
+		rLoc = 117;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 0;
@@ -12357,6 +12477,18 @@
 			0324037B113BB25D001E567A /* PBXTextBookmark */ = 0324037B113BB25D001E567A /* PBXTextBookmark */;
 			0324037C113BB270001E567A /* PBXTextBookmark */ = 0324037C113BB270001E567A /* PBXTextBookmark */;
 			0324037D113BB2A4001E567A /* PBXTextBookmark */ = 0324037D113BB2A4001E567A /* PBXTextBookmark */;
+			0324037E113BB320001E567A /* PBXTextBookmark */ = 0324037E113BB320001E567A /* PBXTextBookmark */;
+			0324037F113BB320001E567A /* PBXTextBookmark */ = 0324037F113BB320001E567A /* PBXTextBookmark */;
+			03240380113BB320001E567A /* PBXTextBookmark */ = 03240380113BB320001E567A /* PBXTextBookmark */;
+			03240381113BB320001E567A /* PBXTextBookmark */ = 03240381113BB320001E567A /* PBXTextBookmark */;
+			03240382113BB35A001E567A /* PBXTextBookmark */ = 03240382113BB35A001E567A /* PBXTextBookmark */;
+			03240383113BB35A001E567A /* PBXTextBookmark */ = 03240383113BB35A001E567A /* PBXTextBookmark */;
+			03240384113BB35A001E567A /* PBXTextBookmark */ = 03240384113BB35A001E567A /* PBXTextBookmark */;
+			03240385113BB35A001E567A /* PBXTextBookmark */ = 03240385113BB35A001E567A /* PBXTextBookmark */;
+			03240386113BB3A9001E567A /* PBXTextBookmark */ = 03240386113BB3A9001E567A /* PBXTextBookmark */;
+			03240387113BB3A9001E567A /* PBXTextBookmark */ = 03240387113BB3A9001E567A /* PBXTextBookmark */;
+			03240388113BB3A9001E567A /* PBXTextBookmark */ = 03240388113BB3A9001E567A /* PBXTextBookmark */;
+			03240389113BB3A9001E567A /* PBXTextBookmark */ = 03240389113BB3A9001E567A /* PBXTextBookmark */;
 			0324F9E9113630FD001E567A /* PBXTextBookmark */ = 0324F9E9113630FD001E567A /* PBXTextBookmark */;
 			0324F9EA113630FD001E567A /* PBXTextBookmark */ = 0324F9EA113630FD001E567A /* PBXTextBookmark */;
 			0324FA1811363825001E567A /* PBXTextBookmark */ = 0324FA1811363825001E567A /* PBXTextBookmark */;
@@ -12593,9 +12725,9 @@
 	};
 	08FB7796FE84155DC02AAC07 /* Main.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {884, 950}}";
-			sepNavSelRange = "{361, 0}";
-			sepNavVisRange = "{31, 647}";
+			sepNavIntBoundsRect = "{{0, 0}, {884, 600}}";
+			sepNavSelRange = "{414, 0}";
+			sepNavVisRange = "{30, 458}";
 		};
 	};
 	8DD76F620486A84900D96B5E /* retsudb */ = {

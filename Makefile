@@ -14,6 +14,7 @@ lib/libretsu.a: $(OBJECTS)
 	$(CXX) $(INCLUDES) $(CXXFLAGS) -c $<
 
 clean:
-	\rm *.o
-	\rm lib/libretsu.a
-	\rm main
+	\rm -f *.o
+	\rm -f lib/libretsu.a
+	\rm -f build/main
+	\rm -rf build/main.dSYM
