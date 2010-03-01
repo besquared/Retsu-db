@@ -5,17 +5,22 @@ using namespace std;
 
 Handle<Value> table_insert(const Arguments& args) {
   if(args.Length() < 1) {
-    return Local<Value>();
+    return Boolean::New(false);
   } else {
     if(!args[0]->IsObject()) {
-      return Local<Value>();
+      return Boolean::New(false);
     } else {
       Local<Object> values = args[0]->ToObject();
       Local<Array> dimensions = values->GetPropertyNames();
       
-      cout << "Called with " << dimensions->Length() << " keys." << endl;
+      for(size_t i = 0; i < dimensions->Length(); i++) {
+        Local<Number> index = Number::New(i);
+        Local<Value> key = dimensions->Get(index);
+        Local<Value> val = values->Get(key);
+//        cout << "Got " << *String::AsciiValue(key) << " => " << *String::AsciiValue(val) << endl;
+      }
       
-      return String::New("Inserted!");      
+      return Boolean::New(true);
     }
   }
 }
@@ -41,7 +46,13 @@ int main(int argc, char * const argv[]) {
   
   Context::Scope context_scope(context);
 
-  Handle<String> source = String::New("db.playback.insert({'mykey': 'myval', 'anotherkey': 'anothervalue'});");
+  Handle<String> source = String::New("\
+    var playback = db.playback;\
+    for(var i = 0; i < 100000; i++) {\
+      playback.insert(\
+        {'mykey': 'myval', 'anotherkey': 'anothervalue'}\
+      );\
+    }");
   
   // We're just about to compile the script; set up an error handler to
   // catch any exceptions the script might throw.
@@ -56,7 +67,11 @@ int main(int argc, char * const argv[]) {
   }
   
   // Run the script to get the result.
+
+  boost::timer t;
   Handle<Value> result = compiled_script->Run();
+  cout << "Completed in " << t.elapsed() << " seconds." << endl;
+
   if (result.IsEmpty()) {
     // The TryCatch above is still in effect and will have caught the error.
     String::Utf8Value error(try_catch.Exception());
