@@ -1,11 +1,11 @@
-CXX = g++
-CXXFLAGS = -Wall -g
+CXX := g++
+CXXFLAGS := -Wall -g
+INCLUDES := -I/usr/local/include -I.
+LIBS := -L/usr/local/lib -L.
+OBJECTS := Commander.o Dimension.o Dimensions.o Measure.o Measures.o Record.o RIDList.o Table.o 
 
-libretsu: build/domain/data/dimension.o build/domain/data/measure.o build/domain/data/record.o build/domain/data/RIDList.o
-	$(CXX)
+libretsu: $(OBJECTS)
+	ar cr libretsu.a $(OBJECTS)
 
-main: main.o
-	$(CXX) $(CXXFLAGS) -o main main.o
-
-main.o: main.cpp
-	$(CXX) $(CXXFLAGS) -c main.cpp
+%.o: source/%.cpp
+	$(CXX) $(INCLUDES) $(CXXFLAGS) -c $(inputs) -o $(output)

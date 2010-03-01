@@ -11,6 +11,7 @@
 #define _TABLE_OPERATIONS_H
 
 #include "Common.h"
+#include "Table.h"
 
 namespace Retsu {
   namespace TableOperations {

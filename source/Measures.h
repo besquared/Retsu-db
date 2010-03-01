@@ -25,7 +25,7 @@ namespace Retsu {
     Measures(const fs::path& table_path);
     ~Measures();
     
-    virtual bool insert(const Record& record);
+    bool insert(const Record& record);
 //			virtual void Lookup(const string& measure, const RIDList& records, vector<double>& results);
     
     protected:

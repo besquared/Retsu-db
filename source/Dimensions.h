@@ -26,7 +26,7 @@ namespace Retsu {
     Dimensions(const fs::path& table_path);
     ~Dimensions();
     
-    virtual bool insert(const Record& record);
+    bool insert(const Record& record);
 //			virtual void Lookup(const string& dimension, const Data::RIDList& records, vector<string>& results);
     
     Dimension* retrieve(const string& dimension);
