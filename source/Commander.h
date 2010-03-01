@@ -27,7 +27,6 @@ namespace Retsu {
     return table_templ->NewInstance();
   }
   
-  
   class Commander {
   public:
     Persistent<Context> context;

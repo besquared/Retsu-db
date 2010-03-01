@@ -1,4 +1,4 @@
-#include <Source/Commander.h>
+#include <source/Commander.h>
 
 using namespace v8;
 using namespace std;
@@ -6,6 +6,7 @@ using namespace std;
 int main(int argc, char * const argv[]) {  
   Retsu::Commander* commander = new Retsu::Commander();
   
+  /*
 //  commander->execute("\
 //    db.playback.create();\
 //    var playback = db.playback;\
@@ -14,6 +15,7 @@ int main(int argc, char * const argv[]) {
 //        {'mykey': 'myval', 'anotherkey': 'anothervalue'}\
 //      );\
 //    }");
+  */
   
   commander->execute("2+2");
   

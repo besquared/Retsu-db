@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>03240389113BB3A9001E567A</string>
+										<string>032403AA113BB605001E567A</string>
 										<key>history</key>
 										<array>
 											<string>030FAD96112E6FFB0047E4F7</string>
@@ -352,22 +352,22 @@
 											<string>0324013C113B8CA4001E567A</string>
 											<string>032401E9113B98D2001E567A</string>
 											<string>0324022B113B9BA7001E567A</string>
-											<string>03240239113B9BDC001E567A</string>
 											<string>0324024B113B9C63001E567A</string>
 											<string>0324024D113B9C63001E567A</string>
 											<string>032402B3113BA3BF001E567A</string>
 											<string>032402FB113BA5C9001E567A</string>
 											<string>032402FC113BA5C9001E567A</string>
-											<string>032402FE113BA5C9001E567A</string>
 											<string>03240316113BA731001E567A</string>
 											<string>03240333113BAA53001E567A</string>
 											<string>03240334113BAA53001E567A</string>
 											<string>03240335113BAA53001E567A</string>
 											<string>0324033B113BAA82001E567A</string>
 											<string>03240355113BADB0001E567A</string>
-											<string>03240382113BB35A001E567A</string>
-											<string>03240386113BB3A9001E567A</string>
-											<string>03240387113BB3A9001E567A</string>
+											<string>0324038F113BB462001E567A</string>
+											<string>03240396113BB4F3001E567A</string>
+											<string>03240397113BB4F3001E567A</string>
+											<string>032403A0113BB523001E567A</string>
+											<string>032403A1113BB523001E567A</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -689,6 +689,15 @@
 											<string>03240380113BB320001E567A</string>
 											<string>03240384113BB35A001E567A</string>
 											<string>03240388113BB3A9001E567A</string>
+											<string>0324038C113BB41E001E567A</string>
+											<string>03240391113BB462001E567A</string>
+											<string>03240399113BB4F3001E567A</string>
+											<string>0324039A113BB4F3001E567A</string>
+											<string>0324039B113BB4F3001E567A</string>
+											<string>0324039C113BB4F3001E567A</string>
+											<string>0324039D113BB4F3001E567A</string>
+											<string>0324039E113BB4F3001E567A</string>
+											<string>032403A2113BB523001E567A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -1137,7 +1146,7 @@
 										<key>Frame</key>
 										<string>{{0, 0}, {928, 180}}</string>
 										<key>RubberWindowFrame</key>
-										<string>42 72 928 674 0 0 1280 1002 </string>
+										<string>52 -9 928 674 0 0 1280 1002 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXNavigatorGroup</string>
@@ -1163,7 +1172,7 @@
 								<key>Frame</key>
 								<string>{{0, 185}, {928, 448}}</string>
 								<key>RubberWindowFrame</key>
-								<string>42 72 928 674 0 0 1280 1002 </string>
+								<string>52 -9 928 674 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXProjectFindModule</string>
@@ -1192,7 +1201,7 @@
 				<string>1CD0528E0623707200166675</string>
 			</array>
 			<key>WindowString</key>
-			<string>42 72 928 674 0 0 1280 1002 </string>
+			<string>52 -9 928 674 0 0 1280 1002 </string>
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>

@@ -7,8 +7,8 @@
  *
  */
 
-#ifndef _TABLE_OPERATIONS_H_
-#define _TABLE_OPERATIONS_H_
+#ifndef _RETSU_TABLE_OPERATIONS_H_
+#define _RETSU_TABLE_OPERATIONS_H_
 
 #include "Common.h"
 #include "Table.h"
