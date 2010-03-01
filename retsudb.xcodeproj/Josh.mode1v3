@@ -269,6 +269,7 @@
 								<string>08FB7794FE84155DC02AAC07</string>
 								<string>08FB7795FE84155DC02AAC07</string>
 								<string>0324FB0D113B28D6001E567A</string>
+								<string>030FACBC112E677E0047E4F7</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>0324FB4C113B2CA6001E567A</string>
 								<string>032402AF113BA3BF001E567A</string>
@@ -276,7 +277,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>28</integer>
+									<integer>32</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -300,7 +301,7 @@
 							<real>270</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>69 140 1237 819 0 0 1280 1002 </string>
+						<string>2 162 1237 819 0 0 1280 1002 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -330,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>03240368113BAEB7001E567A</string>
+										<string>0324037D113BB2A4001E567A</string>
 										<key>history</key>
 										<array>
 											<string>030FAD96112E6FFB0047E4F7</string>
@@ -698,7 +699,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {945, 600}}</string>
 								<key>RubberWindowFrame</key>
-								<string>69 140 1237 819 0 0 1280 1002 </string>
+								<string>2 162 1237 819 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -718,7 +719,7 @@
 								<key>Frame</key>
 								<string>{{0, 605}, {945, 173}}</string>
 								<key>RubberWindowFrame</key>
-								<string>69 140 1237 819 0 0 1280 1002 </string>
+								<string>2 162 1237 819 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -887,7 +888,7 @@
 		<string>/Users/Josh/Socialytical/retsudb/retsudb.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>69 140 1237 819 0 0 1280 1002 </string>
+	<string>2 162 1237 819 0 0 1280 1002 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

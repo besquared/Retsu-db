@@ -1,2 +1,2 @@
-*.dylib
 build/*
+lib/libretsu.a
