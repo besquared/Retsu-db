@@ -32,7 +32,10 @@
 
 #include <boost/lexical_cast.hpp>
 #include <boost/algorithm/string.hpp>
+#include <boost/filesystem.hpp>
 
 #include <include/v8.h>
+
+namespace fs = boost::filesystem;
 
 #endif

@@ -18,11 +18,11 @@ namespace Retsu {
 
   class Measures {
   protected:
-    string path;
+    fs::path table_path;
     map<string, Measure*> cache;
 
   public:		
-    Measures(const string& path);
+    Measures(const fs::path& table_path);
     ~Measures();
     
     virtual bool insert(const Record& record);

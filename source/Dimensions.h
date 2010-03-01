@@ -16,14 +16,14 @@
 
 namespace Retsu {
   using namespace std;
-
+  
   class Dimensions {
   protected:
-    string path;
+    fs::path table_path;
     map<string, Dimension*> cache;
     
   public:
-    Dimensions(const string& path);
+    Dimensions(const fs::path& table_path);
     ~Dimensions();
     
     virtual bool insert(const Record& record);

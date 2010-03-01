@@ -17,11 +17,11 @@
 namespace Retsu {
   using namespace v8;
   using namespace std;
-
+  
   class Table {
   protected:
-    string path;
-    string dpath;
+    fs::path root_path;
+    fs::path table_path;
     
   public:
     Measures* measures;
@@ -29,6 +29,8 @@ namespace Retsu {
     
     Table(const string& path, const string& dpath);
     virtual ~Table();
+    
+    bool create();
     
     RecordID next_id();
     void insert(const Record& record);

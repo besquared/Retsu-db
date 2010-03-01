@@ -17,6 +17,20 @@ namespace Retsu {
     using namespace v8;
     using namespace std;
     
+    Handle<Value> create(const Arguments& args) {
+      Local<String> key = String::New("name");
+      Local<Value> tname_val = args.This()->Get(key);
+      string table_name = *String::AsciiValue(tname_val);
+      
+      Retsu::Table table(".", table_name);
+      
+      if(table.create()) {
+        return Boolean::New(true);
+      } else {
+        return Boolean::New(false);
+      }
+    }
+    
     Handle<Value> insert(const Arguments& args) {
       Local<String> key = String::New("name");
       Local<Value> tname_val = args.This()->Get(key);

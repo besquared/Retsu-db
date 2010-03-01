@@ -9,8 +9,8 @@
 
 #include "Measures.h"
 
-Retsu::Measures::Measures(const string& path) {
-	this->path = path;
+Retsu::Measures::Measures(const fs::path& table_path) {
+	this->table_path = table_path;
 }
 
 Retsu::Measures::~Measures() {
@@ -42,7 +42,7 @@ Retsu::Measure* Retsu::Measures::retrieve(const string& measure) {
   map<string, Measure*>::iterator found = cache.find(measure);
   
   if(found == cache.end()) {
-    Measure* database = new Measure(this->path, measure);
+    Measure* database = new Measure(this->table_path.string(), measure);
     if(database->OpenWriter()) {
       cache[measure] = database;
       return database;

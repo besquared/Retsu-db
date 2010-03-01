@@ -20,6 +20,7 @@ Handle<Value> table_get(Local<String> name, const AccessorInfo &info) {
   Handle<ObjectTemplate> table_templ = ObjectTemplate::New();
   
   table_templ->Set("name", name);
+  table_templ->Set("create", FunctionTemplate::New(Retsu::TableOperations::create));
   table_templ->Set("insert", FunctionTemplate::New(Retsu::TableOperations::insert));
   
   return table_templ->NewInstance();
@@ -39,6 +40,7 @@ int main(int argc, char * const argv[]) {
   Context::Scope context_scope(context);
 
   Handle<String> source = String::New("\
+    db.playback.create();\
     var playback = db.playback;\
     for(var i = 0; i < 1; i++) {\
       playback.insert(\

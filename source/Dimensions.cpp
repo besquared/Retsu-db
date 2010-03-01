@@ -9,8 +9,8 @@
 
 #include "Dimensions.h"
 
-Retsu::Dimensions::Dimensions(const string& path) {
-	this->path = path;
+Retsu::Dimensions::Dimensions(const fs::path& table_path) {
+	this->table_path = table_path;
 }
 
 Retsu::Dimensions::~Dimensions() {
@@ -41,11 +41,13 @@ Retsu::Dimension* Retsu::Dimensions::retrieve(const string& dimension) {
   map<string, Dimension*>::iterator found = cache.find(dimension);
   
   if(found == cache.end()) {
-    Dimension* database = new Dimension(this->path, dimension);
+    cout << "Opening database at path " << this->table_path.string() << endl;
+    Dimension* database = new Dimension(this->table_path.string(), dimension);
     if(database->OpenWriter()) {
       cache[dimension] = database;
       return database;
     } else {
+      cout << "Couldn't open database for dimension " << dimension << endl;
       return NULL;
     }
   } else {
