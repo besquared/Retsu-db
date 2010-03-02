@@ -20,14 +20,15 @@ namespace Retsu {
   
   class Table {
   protected:
-    fs::path root_path;
-    fs::path table_path;
+    fs::path database_path;
+    fs::path table_name;
     
   public:
     Measures* measures;
     Dimensions* dimensions;
-
-    Table(const string& path, const string& dpath);
+    Dimension* metadata;
+    
+    Table(const string& database_path, const string& table_name);
     virtual ~Table();
     
     bool create();
@@ -36,6 +37,8 @@ namespace Retsu {
     void insert(const Record& record);
     void insert(const RecordID& id, const string& measure, const double& value);
     void insert(const RecordID& id, const string& dimension, const string& value);
+    
+    void lookup(const RecordID& id, const string& dimension);
   };
 }
 

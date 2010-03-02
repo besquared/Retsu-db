@@ -9,22 +9,25 @@
 
 #include "Table.h"
 
-Retsu::Table::Table(const string& root_path, const string& table_path) {
-	this->root_path = fs::path(root_path);
-	this->table_path = fs::path(table_path);
+Retsu::Table::Table(const string& database_path, const string& table_name) {
+	this->database_path = fs::path(database_path);
+	this->table_name = fs::path(table_name);
   
   // need a file to keep up with our id
-  this->measures = new Measures(this->root_path / this->table_path);
-	this->dimensions = new Dimensions(this->root_path / this->table_path);
+  this->measures = new Measures(this->database_path / this->table_name);
+	this->dimensions = new Dimensions(this->database_path / this->table_name);
+  
+  this->metadata = new Dimension((this->database_path / this->table_name).string(), "meta");
 }
 
 Retsu::Table::~Table() {
 	delete(this->measures);
 	delete(this->dimensions);
+  delete(this->metadata);
 }
 
 bool Retsu::Table::create() {
-  if(fs::create_directory(this->root_path / this->table_path)) {
+  if(fs::create_directory(this->database_path / this->table_name)) {
     return true;
   } else {
     return false;

@@ -57,6 +57,11 @@ v8::Handle<v8::Value> Retsu::TableOperations::insert(const v8::Arguments& args) 
   }
 }
 
+// db.playback.find(1, ['mykey', 'anotherkey']) => 
+//   {'mykey' => myvalue, 'anotherkey' => 'anothervalue'}
+//v8::Handle<v8::Value> Retsu::TableOperations::find(const v8::Arguments& args) { 
+//}
+
 boost::shared_ptr<Retsu::Table> Retsu::TableOperations::get_cached_table(const string& db_path, const string& table_name) {
   string key = db_path + "/" + table_name;
   TableCache::iterator found = table_cache.find(key);

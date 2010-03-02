@@ -16,7 +16,7 @@ int main(int argc, char * const argv[]) {
         {'00000000': '00000000'}\
       );\
     }"
-  );  
+  );
   
   std::cout << "Executed in " << t.elapsed() << " seconds" << std::endl;
   
