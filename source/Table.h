@@ -26,7 +26,7 @@ namespace Retsu {
   public:
     Measures* measures;
     Dimensions* dimensions;
-    
+
     Table(const string& path, const string& dpath);
     virtual ~Table();
     

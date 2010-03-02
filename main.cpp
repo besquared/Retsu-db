@@ -6,18 +6,19 @@ using namespace std;
 int main(int argc, char * const argv[]) {  
   Retsu::Commander* commander = new Retsu::Commander();
   
-  /*
-//  commander->execute("\
-//    db.playback.create();\
-//    var playback = db.playback;\
-//    for(var i = 0; i < 10000; i++) {\
-//      playback.insert(\
-//        {'mykey': 'myval', 'anotherkey': 'anothervalue'}\
-//      );\
-//    }");
-  */
+  boost::timer t;
   
-  commander->execute("2+2");
+  commander->execute("\
+    db.playback.create();\
+    var playback = db.playback;\
+    for(var i = 0; i < 70000; i++) {\
+      playback.insert(\
+        {'00000000': '00000000'}\
+      );\
+    }"
+  );  
+  
+  std::cout << "Executed in " << t.elapsed() << " seconds" << std::endl;
   
   delete(commander);
   

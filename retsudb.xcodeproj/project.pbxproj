@@ -31,6 +31,7 @@
 		03240279113BA080001E567A /* Record.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0324FB1E113B29A4001E567A /* Record.cpp */; };
 		0324027A113BA080001E567A /* RIDList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0324FB20113B29A4001E567A /* RIDList.cpp */; };
 		0324027B113BA080001E567A /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0324FB14113B29A4001E567A /* Table.cpp */; };
+		032403C5113CD32F001E567A /* TableOperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 032403C4113CD32F001E567A /* TableOperations.cpp */; };
 		0324FB0C113B28C7001E567A /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB0B113B28C7001E567A /* libv8.a */; };
 		0324FB43113B2C91001E567A /* libtokyocabinet.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB42113B2C91001E567A /* libtokyocabinet.dylib */; };
 		0324FB44113B2C99001E567A /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB0B113B28C7001E567A /* libv8.a */; };
@@ -103,6 +104,7 @@
 		0324021E113B9B14001E567A /* libboost_system-xgcc40-mt-1_38.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_system-xgcc40-mt-1_38.dylib"; path = "usr/lib/libboost_system-xgcc40-mt-1_38.dylib"; sourceTree = DEVELOPER_DIR; };
 		03240258113B9E95001E567A /* Commander.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Commander.cpp; path = source/Commander.cpp; sourceTree = "<group>"; };
 		03240259113B9E95001E567A /* Commander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Commander.h; path = source/Commander.h; sourceTree = "<group>"; };
+		032403C4113CD32F001E567A /* TableOperations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TableOperations.cpp; path = source/TableOperations.cpp; sourceTree = "<group>"; };
 		0324FAB211363E76001E567A /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		0324FB0B113B28C7001E567A /* libv8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libv8.a; path = lib/libv8.a; sourceTree = "<group>"; };
 		0324FB0E113B28E6001E567A /* v8-debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "v8-debug.h"; path = "include/v8-debug.h"; sourceTree = "<group>"; };
@@ -2692,6 +2694,7 @@
 				0324FB21113B29A4001E567A /* RIDList.h */,
 				0324FB14113B29A4001E567A /* Table.cpp */,
 				0324FB15113B29A4001E567A /* Table.h */,
+				032403C4113CD32F001E567A /* TableOperations.cpp */,
 				03240181113B90AD001E567A /* TableOperations.h */,
 			);
 			name = Source;
@@ -2848,6 +2851,7 @@
 				03240279113BA080001E567A /* Record.cpp in Sources */,
 				0324027A113BA080001E567A /* RIDList.cpp in Sources */,
 				0324027B113BA080001E567A /* Table.cpp in Sources */,
+				032403C5113CD32F001E567A /* TableOperations.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,57 +13,18 @@
 #include "Common.h"
 #include "Table.h"
 
-namespace Retsu {
+namespace Retsu {  
+  typedef std::map< std::string, boost::shared_ptr<Table> > TableCache;
+
   namespace TableOperations {
     using namespace v8;
     using namespace std;
-    
-    Handle<Value> create(const Arguments& args) {
-      Local<String> key = String::New("name");
-      Local<Value> tname_val = args.This()->Get(key);
-      string table_name = *String::AsciiValue(tname_val);
-      
-      Retsu::Table table(".", table_name);
-      
-      if(table.create()) {
-        return Boolean::New(true);
-      } else {
-        return Boolean::New(false);
-      }
-    }
-    
-    Handle<Value> insert(const Arguments& args) {
-      Local<String> key = String::New("name");
-      Local<Value> tname_val = args.This()->Get(key);
-      string table_name = *String::AsciiValue(tname_val);
+    using namespace boost;
 
-      Retsu::Table table(".", table_name);
-
-      if(args.Length() < 1) {
-        return Boolean::New(false);
-      } else {
-        if(!args[0]->IsObject()) {
-          return Boolean::New(false);
-        } else {
-          Local<Object> values = args[0]->ToObject();
-          Local<Array> dimensions = values->GetPropertyNames();
-          
-          for(size_t i = 0; i < dimensions->Length(); i++) {
-            Local<Number> index = Number::New(i);
-            Local<Value> key = dimensions->Get(index);
-            Local<Value> value = values->Get(key);
-            
-            if(value->IsNumber()) {
-              table.insert(table.next_id(), *String::AsciiValue(key), value->NumberValue());
-            } else {
-              table.insert(table.next_id(), *String::AsciiValue(key), *String::AsciiValue(value));
-            }
-          }
-          
-          return Boolean::New(true);
-        }
-      }      
-    }
+    Handle<Value> create(const Arguments& args);
+    Handle<Value> insert(const Arguments& args);
+    
+    shared_ptr<Table> get_cached_table(const string& db_path, const string& table_name);
   }
 }
 

@@ -19,17 +19,17 @@ Retsu::Commander::Commander() {
   global->Set(String::New("db"), db);
   
   context = Context::New(NULL, global);
-  Context::Scope context_scope(context);
 }
 
 Retsu::Commander::~Commander() {
-  this->context.Dispose();
+  context.Dispose();
 }
 
 v8::Handle<v8::Value> Retsu::Commander::execute(const string& source) {
   TryCatch try_catch;
   HandleScope handle_scope;
-  
+  Context::Scope context_scope(context);
+
   Handle<String> script = String::New(source.c_str());
   
   Handle<Script> compiled_script = Script::Compile(script);
@@ -45,4 +45,14 @@ v8::Handle<v8::Value> Retsu::Commander::execute(const string& source) {
   } else {
     return result;
   }
+}
+
+v8::Handle<v8::Value> Retsu::cmd_table(v8::Local<v8::String> name, const v8::AccessorInfo &info) {
+  Handle<ObjectTemplate> table_templ = ObjectTemplate::New();
+  
+  table_templ->Set("name", name);
+  table_templ->Set("create", FunctionTemplate::New(Retsu::TableOperations::create));
+  table_templ->Set("insert", FunctionTemplate::New(Retsu::TableOperations::insert));
+  
+  return table_templ->NewInstance();
 }

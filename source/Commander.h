@@ -17,16 +17,6 @@ namespace Retsu {
   using namespace v8;
   using namespace std;
   
-  Handle<Value> cmd_table(Local<String> name, const AccessorInfo &info) {
-    Handle<ObjectTemplate> table_templ = ObjectTemplate::New();
-    
-    table_templ->Set("name", name);
-    table_templ->Set("create", FunctionTemplate::New(Retsu::TableOperations::create));
-    table_templ->Set("insert", FunctionTemplate::New(Retsu::TableOperations::insert));
-    
-    return table_templ->NewInstance();
-  }
-  
   class Commander {
   public:
     Persistent<Context> context;
@@ -36,6 +26,8 @@ namespace Retsu {
     
     Handle<Value> execute(const string& source);
   };
+  
+  Handle<Value> cmd_table(Local<String> name, const AccessorInfo &info);
 }
 
 #endif
