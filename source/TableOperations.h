@@ -28,6 +28,9 @@ namespace Retsu {
     Handle<Value> lookup_many(const Arguments& args);
     Handle<Value> lookup_query(const Arguments& args);
 
+    Handle<Value> each(const Arguments& args);
+    Handle<Value> aggregate(const Arguments& args);
+    
     shared_ptr<Table> get_cached_table(const string& db_path, const string& table_name);
   }
 }

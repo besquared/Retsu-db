@@ -99,6 +99,24 @@ v8::Handle<v8::Value> Retsu::TableOperations::lookup_query(const v8::Arguments& 
   return Handle<Value>();
 }
 
+v8::Handle<v8::Value> Retsu::TableOperations::each(const v8::Arguments& args) {
+  if(!args[0]->IsFunction()) {
+    return Handle<Value>();
+  }
+  
+  int argc = 1;
+  Handle<Value> argv[1];
+  Handle<ObjectTemplate> record_templ = ObjectTemplate::New();  
+//  table_templ->Set("create", FunctionTemplate::New(Retsu::TableOperations::create));
+  
+  // loop here and create new instances and pass them in
+  Local<Object> record = record_templ->NewInstance();
+  record->Set(String::New("id"), Number::New(100));
+  argv[0] = record;
+  
+//  Local<Value> Call(Handle<Object> recv, int argc, Handle<Value> argv[]);
+}
+
 boost::shared_ptr<Retsu::Table> Retsu::TableOperations::get_cached_table(const string& db_path, const string& table_name) {
   string key = db_path + "/" + table_name;
   TableCache::iterator found = table_cache.find(key);
