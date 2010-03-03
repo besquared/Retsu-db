@@ -13,6 +13,7 @@
 #include "Common.h"
 #include "Measures.h"
 #include "Dimensions.h"
+#include "Metadata.h"
 
 namespace Retsu {
   using namespace v8;
@@ -26,6 +27,7 @@ namespace Retsu {
   public:
     Measures* measures;
     Dimensions* dimensions;
+    Metadata* metadata;
     
     Table(const string& database_path, const string& table_name);
     virtual ~Table();

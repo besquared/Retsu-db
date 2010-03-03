@@ -231,8 +231,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -276,7 +274,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
+									<integer>20</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -312,12 +310,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Metadata.cpp</string>
+								<string>Table.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +325,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Metadata.cpp</string>
+										<string>Table.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>032405E7113E52F2001E567A</string>
+										<string>032405F4113E5398001E567A</string>
 										<key>history</key>
 										<array>
 											<string>030FAD96112E6FFB0047E4F7</string>
@@ -356,10 +356,8 @@
 											<string>032404F0113CE9ED001E567A</string>
 											<string>032404FD113E2550001E567A</string>
 											<string>03240510113E4101001E567A</string>
-											<string>03240530113E42EA001E567A</string>
 											<string>03240531113E42EA001E567A</string>
 											<string>03240532113E42EA001E567A</string>
-											<string>03240533113E42EA001E567A</string>
 											<string>03240556113E4400001E567A</string>
 											<string>03240563113E44C4001E567A</string>
 											<string>0324059F113E4C19001E567A</string>
@@ -368,7 +366,9 @@
 											<string>032405B9113E4DFA001E567A</string>
 											<string>032405E1113E52F2001E567A</string>
 											<string>032405E2113E52F2001E567A</string>
-											<string>032405E3113E52F2001E567A</string>
+											<string>032405EF113E5398001E567A</string>
+											<string>032405F0113E5398001E567A</string>
+											<string>032405F1113E5398001E567A</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -867,6 +867,8 @@
 											<string>032405E4113E52F2001E567A</string>
 											<string>032405E5113E52F2001E567A</string>
 											<string>032405E6113E52F2001E567A</string>
+											<string>032405F2113E5398001E567A</string>
+											<string>032405F3113E5398001E567A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -1092,7 +1094,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Metadata.cpp</string>
+								<string>Table.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -1101,7 +1103,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1052, 362}}</string>
 								<key>RubberWindowFrame</key>
-								<string>186 127 1052 698 0 0 1280 1002 </string>
+								<string>206 127 1052 698 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -1125,7 +1127,7 @@
 								<key>Frame</key>
 								<string>{{0, 367}, {1052, 290}}</string>
 								<key>RubberWindowFrame</key>
-								<string>186 127 1052 698 0 0 1280 1002 </string>
+								<string>206 127 1052 698 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -1155,7 +1157,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.buildV3</string>
 			<key>WindowString</key>
-			<string>186 127 1052 698 0 0 1280 1002 </string>
+			<string>206 127 1052 698 0 0 1280 1002 </string>
 			<key>WindowToolGUID</key>
 			<string>030FACCD112E67CF0047E4F7</string>
 			<key>WindowToolIsVisible</key>

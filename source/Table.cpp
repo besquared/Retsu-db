@@ -23,6 +23,7 @@ Retsu::Table::~Table() {
 	delete(this->dimensions);
 }
 
+// make this static, wtf mate
 bool Retsu::Table::create() {
   if(fs::create_directory(this->database_path / this->table_name)) {
     return true;
