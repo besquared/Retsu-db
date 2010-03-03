@@ -14,7 +14,7 @@ int main(int argc, char * const argv[]) {
     var playback = db.playback;\
     for(var i = 0; i < 70000; i++) {\
       playback.insert(\
-        {'00000000': 'another thing'}\
+        {'mykey': 'another thing'}\
       );\
     }"
   );
@@ -23,7 +23,7 @@ int main(int argc, char * const argv[]) {
   
   t.restart();
   
-  Handle<Value> result = commander->execute("db.playback.lookup(100, '00000000');");
+  Handle<Value> result = commander->execute("db.playback.lookup(100, 'mykey');");
 
   std::cout << "Executed in " << t.elapsed() << " seconds" << std::endl;
 
