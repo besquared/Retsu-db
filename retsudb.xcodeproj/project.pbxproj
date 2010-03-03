@@ -32,6 +32,8 @@
 		0324027A113BA080001E567A /* RIDList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0324FB20113B29A4001E567A /* RIDList.cpp */; };
 		0324027B113BA080001E567A /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0324FB14113B29A4001E567A /* Table.cpp */; };
 		032403C5113CD32F001E567A /* TableOperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 032403C4113CD32F001E567A /* TableOperations.cpp */; };
+		032405CF113E51AF001E567A /* Metadata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 032405CD113E51AF001E567A /* Metadata.cpp */; };
+		032405D0113E51AF001E567A /* Metadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 032405CE113E51AF001E567A /* Metadata.h */; };
 		0324FB0C113B28C7001E567A /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB0B113B28C7001E567A /* libv8.a */; };
 		0324FB43113B2C91001E567A /* libtokyocabinet.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB42113B2C91001E567A /* libtokyocabinet.dylib */; };
 		0324FB44113B2C99001E567A /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB0B113B28C7001E567A /* libv8.a */; };
@@ -105,6 +107,8 @@
 		03240258113B9E95001E567A /* Commander.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Commander.cpp; path = source/Commander.cpp; sourceTree = "<group>"; };
 		03240259113B9E95001E567A /* Commander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Commander.h; path = source/Commander.h; sourceTree = "<group>"; };
 		032403C4113CD32F001E567A /* TableOperations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TableOperations.cpp; path = source/TableOperations.cpp; sourceTree = "<group>"; };
+		032405CD113E51AF001E567A /* Metadata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Metadata.cpp; path = source/Metadata.cpp; sourceTree = "<group>"; };
+		032405CE113E51AF001E567A /* Metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Metadata.h; path = source/Metadata.h; sourceTree = "<group>"; };
 		0324FAB211363E76001E567A /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		0324FB0B113B28C7001E567A /* libv8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libv8.a; path = lib/libv8.a; sourceTree = "<group>"; };
 		0324FB0E113B28E6001E567A /* v8-debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "v8-debug.h"; path = "include/v8-debug.h"; sourceTree = "<group>"; };
@@ -2688,6 +2692,8 @@
 				0324FB1B113B29A4001E567A /* Measure.h */,
 				0324FB1C113B29A4001E567A /* Measures.cpp */,
 				0324FB1D113B29A4001E567A /* Measures.h */,
+				032405CD113E51AF001E567A /* Metadata.cpp */,
+				032405CE113E51AF001E567A /* Metadata.h */,
 				0324FB1E113B29A4001E567A /* Record.cpp */,
 				0324FB1F113B29A4001E567A /* Record.h */,
 				0324FB20113B29A4001E567A /* RIDList.cpp */,
@@ -2734,6 +2740,7 @@
 				0324026F113BA07B001E567A /* RIDList.h in Headers */,
 				03240270113BA07B001E567A /* Table.h in Headers */,
 				03240271113BA07B001E567A /* TableOperations.h in Headers */,
+				032405D0113E51AF001E567A /* Metadata.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2852,6 +2859,7 @@
 				0324027A113BA080001E567A /* RIDList.cpp in Sources */,
 				0324027B113BA080001E567A /* Table.cpp in Sources */,
 				032403C5113CD32F001E567A /* TableOperations.cpp in Sources */,
+				032405CF113E51AF001E567A /* Metadata.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
