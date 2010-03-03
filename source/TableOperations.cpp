@@ -59,8 +59,45 @@ v8::Handle<v8::Value> Retsu::TableOperations::insert(const v8::Arguments& args) 
 
 // db.playback.find(1, ['mykey', 'anotherkey']) => 
 //   {'mykey' => myvalue, 'anotherkey' => 'anothervalue'}
-//v8::Handle<v8::Value> Retsu::TableOperations::find(const v8::Arguments& args) { 
-//}
+v8::Handle<v8::Value> Retsu::TableOperations::lookup(const v8::Arguments& args) {  
+  if(args.Length() == 0) {
+    return Handle<Value>();
+  } else if(args.Length() == 1) {
+    return lookup_query(args);
+  } else if(args.Length() == 2) {
+    if(!args[0]->IsNumber()) {
+      return Handle<Value>();
+    } else {
+      if(args[1]->IsString()) {
+        return lookup_one(args);
+      } else if(args[1]->IsArray()) {
+        return lookup_many(args);
+      } else {
+        return Handle<Value>();
+      }
+    }
+  } else {
+    return Handle<Value>();
+  }
+}
+
+v8::Handle<v8::Value> Retsu::TableOperations::lookup_one(const v8::Arguments& args) {
+  Local<String> key = String::New("name");
+  Local<Value> tname_val = args.This()->Get(key);
+  string table_name = *String::AsciiValue(tname_val);      
+  
+  shared_ptr<Table> table = get_cached_table(".", table_name);
+  
+  return table->lookup(args[0]->NumberValue(), *String::AsciiValue(args[1]));
+}
+
+v8::Handle<v8::Value> Retsu::TableOperations::lookup_many(const v8::Arguments& args) {
+  return Handle<Value>();
+}
+
+v8::Handle<v8::Value> Retsu::TableOperations::lookup_query(const v8::Arguments& args) {
+  return Handle<Value>();
+}
 
 boost::shared_ptr<Retsu::Table> Retsu::TableOperations::get_cached_table(const string& db_path, const string& table_name) {
   string key = db_path + "/" + table_name;

@@ -43,6 +43,8 @@ v8::Handle<v8::Value> Retsu::Commander::execute(const string& source) {
     String::Utf8Value error(try_catch.Exception());
     return Boolean::New(false);
   } else {
+    cout << "Returning a result!" << endl;
+    cout << *String::AsciiValue(result) << endl;
     return result;
   }
 }
@@ -53,6 +55,7 @@ v8::Handle<v8::Value> Retsu::cmd_table(v8::Local<v8::String> name, const v8::Acc
   table_templ->Set("name", name);
   table_templ->Set("create", FunctionTemplate::New(Retsu::TableOperations::create));
   table_templ->Set("insert", FunctionTemplate::New(Retsu::TableOperations::insert));
-  
+  table_templ->Set("lookup", FunctionTemplate::New(Retsu::TableOperations::lookup));
+
   return table_templ->NewInstance();
 }

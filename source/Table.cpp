@@ -16,14 +16,11 @@ Retsu::Table::Table(const string& database_path, const string& table_name) {
   // need a file to keep up with our id
   this->measures = new Measures(this->database_path / this->table_name);
 	this->dimensions = new Dimensions(this->database_path / this->table_name);
-  
-  this->metadata = new Dimension((this->database_path / this->table_name).string(), "meta");
 }
 
 Retsu::Table::~Table() {
 	delete(this->measures);
 	delete(this->dimensions);
-  delete(this->metadata);
 }
 
 bool Retsu::Table::create() {
@@ -54,5 +51,31 @@ void Retsu::Table::insert(const RecordID& id, const string& dimension, const str
 }
 
 void Retsu::Table::insert(const RecordID& id, const string& measure, const double& value) {
+  Measure* database = measures->retrieve(measure);
   
+  if(database != NULL) {
+    database->Insert(id, value);
+  } else {
+    return;
+  }  
+}
+
+v8::Handle<v8::Value> Retsu::Table::lookup(const RecordID& id, const string& column) {
+  Dimension* dimension_db = dimensions->retrieve(column);
+  
+  if(dimension_db == NULL) {
+    Measure* measure_db = measures->retrieve(column);
+    
+    if(measure_db == NULL) {
+      return Handle<Value>();
+    } else {
+      double value = 0;
+      measure_db->Lookup(id, value);
+      return Number::New(value);
+    }
+  } else {
+    string value;
+    dimension_db->Lookup(id, value);
+    return String::New(value.c_str());
+  }
 }

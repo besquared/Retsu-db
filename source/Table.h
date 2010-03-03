@@ -26,7 +26,6 @@ namespace Retsu {
   public:
     Measures* measures;
     Dimensions* dimensions;
-    Dimension* metadata;
     
     Table(const string& database_path, const string& table_name);
     virtual ~Table();
@@ -38,7 +37,7 @@ namespace Retsu {
     void insert(const RecordID& id, const string& measure, const double& value);
     void insert(const RecordID& id, const string& dimension, const string& value);
     
-    void lookup(const RecordID& id, const string& dimension);
+    v8::Handle<v8::Value> lookup(const RecordID& id, const string& column);
   };
 }
 

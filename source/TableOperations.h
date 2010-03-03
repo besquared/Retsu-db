@@ -23,7 +23,11 @@ namespace Retsu {
 
     Handle<Value> create(const Arguments& args);
     Handle<Value> insert(const Arguments& args);
-    
+    Handle<Value> lookup(const Arguments& args);
+    Handle<Value> lookup_one(const Arguments& args);
+    Handle<Value> lookup_many(const Arguments& args);
+    Handle<Value> lookup_query(const Arguments& args);
+
     shared_ptr<Table> get_cached_table(const string& db_path, const string& table_name);
   }
 }
