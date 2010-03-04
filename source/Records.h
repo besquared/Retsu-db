@@ -33,11 +33,15 @@ namespace Retsu {
     void open_writer();
     bool open(int mode);
     static void create(const fs::path& table_path);
-
+    
+    /*
+     * Reading
+     */
+    void each(bool (*eachfunc)(RecordID));
+    void each(bool (*eachfunc)(RecordID, Handle<ObjectTemplate>, Handle<Function>));
     /*
      * Writing
      */
-//    bool each();
     void insert(const RecordID& key);
     void remove(const RecordID& key);
   };
