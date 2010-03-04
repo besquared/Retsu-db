@@ -329,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>03240780113F9F63001E567A</string>
+										<string>03240785113F9FAD001E567A</string>
 										<key>history</key>
 										<array>
 											<string>030FAD96112E6FFB0047E4F7</string>
@@ -371,8 +371,8 @@
 											<string>03240774113F9F63001E567A</string>
 											<string>03240775113F9F63001E567A</string>
 											<string>03240776113F9F63001E567A</string>
-											<string>03240777113F9F63001E567A</string>
-											<string>03240778113F9F63001E567A</string>
+											<string>03240781113F9FAD001E567A</string>
+											<string>03240782113F9FAD001E567A</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -1000,6 +1000,8 @@
 											<string>0324077D113F9F63001E567A</string>
 											<string>0324077E113F9F63001E567A</string>
 											<string>0324077F113F9F63001E567A</string>
+											<string>03240783113F9FAD001E567A</string>
+											<string>03240784113F9FAD001E567A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -1198,8 +1200,8 @@
 		<string>0324FA7E11363825001E567A</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>030FACCD112E67CF0047E4F7</string>
-		<string>/Users/Josh/Socialytical/retsudb/retsudb.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/Josh/Socialytical/retsudb/retsudb.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>2 162 1237 819 0 0 1280 1002 </string>
@@ -1540,7 +1542,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {650, 209}}</string>
 								<key>RubberWindowFrame</key>
-								<string>608 66 650 250 0 0 1280 1002 </string>
+								<string>617 74 650 250 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -1569,7 +1571,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>608 66 650 250 0 0 1280 1002 </string>
+			<string>617 74 650 250 0 0 1280 1002 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>

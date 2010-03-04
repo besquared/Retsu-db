@@ -13,7 +13,7 @@ Retsu::Table::Table(const string& database_path, const string& table_name) {
 	this->database_path = fs::path(database_path);
 	this->table_name = fs::path(table_name);
   
-  this->records = new Records(this->database_path);
+  this->records = new Records(this->database_path / this->table_name);
   this->measures = new Measures(this->database_path / this->table_name);
 	this->dimensions = new Dimensions(this->database_path / this->table_name);
   
