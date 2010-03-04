@@ -43,12 +43,10 @@ Retsu::Measure* Retsu::Measures::retrieve(const string& measure) {
   
   if(found == cache.end()) {
     Measure* database = new Measure(this->table_path.string(), measure);
-    if(database->OpenWriter()) {
-      cache[measure] = database;
-      return database;
-    } else {
-      return NULL;
-    }
+    
+    database->OpenWriter();
+    cache[measure] = database;
+    return database;
   } else {
     return found->second;
   }

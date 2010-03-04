@@ -9,9 +9,8 @@
 
 #include "Metadata.h"
 
-Retsu::Metadata::Metadata(const string& path, const string& name) {
-	this->path = path;
-	this->name = name;
+Retsu::Metadata::Metadata(const fs::path& table_path) {
+	this->table_path = table_path;
 	this->database = tcbdbnew();
 }
 
@@ -20,11 +19,11 @@ Retsu::Metadata::~Metadata() {
   tcbdbdel(this->database);
 }
 
-bool Retsu::Metadata::Create(const string& path, const string& name) {
+bool Retsu::Metadata::Create(const fs::path& table_path) {
 	TCBDB* database = tcbdbnew();
 	
 	tcbdbtune(database, -1, -1, -1, -1, -1, BDBTLARGE | BDBTDEFLATE);
-	if(tcbdbopen(database, Retsu::Metadata::Path(path, name).c_str(), BDBOWRITER | BDBOCREAT)) {
+	if(tcbdbopen(database, Retsu::Metadata::Path(table_path).c_str(), BDBOWRITER | BDBOCREAT)) {
 		tcbdbclose(database);
 		tcbdbdel(database);
 		return true;
@@ -34,8 +33,8 @@ bool Retsu::Metadata::Create(const string& path, const string& name) {
 	}
 }
 
-std::string Retsu::Metadata::Path(const string& path, const string& name) {
-  return path + "/" + name + ".tcb";
+std::string Retsu::Metadata::Path(const fs::path& table_path) {
+  return (table_path / fs::path("metadata.tcb")).string();
 }
 
 bool Retsu::Metadata::OpenReader() {
@@ -56,7 +55,7 @@ bool Retsu::Metadata::Truncate() {
 }
 
 bool Retsu::Metadata::Open(int mode) {
-	return tcbdbopen(this->database, Retsu::Metadata::Path(this->path, this->name).c_str(), mode);
+	return tcbdbopen(this->database, Retsu::Metadata::Path(this->table_path).c_str(), mode);
 }
 
 bool Retsu::Metadata::Close() {
@@ -136,6 +135,10 @@ bool Retsu::Metadata::Put(const string& key, const string& value) {
 
 bool Retsu::Metadata::PutDup(const string& key, const string& value) {
 	return tcbdbputdup(this->database, key.c_str(), key.size(), value.c_str(), value.size());
+}
+
+bool Retsu::Metadata::PutDup(const string& key, const RecordID& value) {
+  return tcbdbputdup(this->database, key.c_str(), key.size(), &value, sizeof(RecordID));
 }
 
 bool Retsu::Metadata::PutCat(const string& key, const RecordID& value) {

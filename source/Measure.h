@@ -11,6 +11,7 @@
 #define _RETSU_MEASURE_H_
 
 #include "Common.h"
+#include "Errors.h"
 #include "RIDList.h"
 
 namespace Retsu {
@@ -29,11 +30,11 @@ namespace Retsu {
      * I/O Management
      */
     string Path();
-    bool Create();
-    bool Close();
-    bool Truncate();
-    bool OpenReader();
-    bool OpenWriter();
+    void Create();
+    void Close();
+    void Truncate();
+    void OpenReader();
+    void OpenWriter();
     bool Open(int mode);
     
     /*

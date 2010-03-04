@@ -28,47 +28,48 @@ std::string Retsu::Dimension::Path() {
   return this->path + "/" + this->name + ".tch";
 }
 
-bool Retsu::Dimension::Create() {
+void Retsu::Dimension::Create() {
 	tchdbtune(database, -1, -1, -1, HDBTLARGE | HDBTDEFLATE);
-	if(this->Open(HDBOWRITER | HDBOCREAT)) {
+	
+  if(this->Open(HDBOWRITER | HDBOCREAT)) {
 		this->Close();
-		return true;
 	} else {
-		return false;
+		throw StorageError("Could not create dimension at " + Path());
 	}
 }
 
-bool Retsu::Dimension::Truncate() {
+void Retsu::Dimension::Truncate() {
 	if(this->Open(HDBOWRITER | HDBOTRUNC)) {
 		this->Close();
-		return true;
 	} else {
-		return false;
+		throw StorageError("Could not truncate dimension at " + Path());
 	}	
 }
 
-bool Retsu::Dimension::Close() {	
-  if(tchdbclose(this->database)){
-		return true;
-  } else {
-    return false;
+void Retsu::Dimension::Close() {	
+  if(!tchdbclose(this->database)){
+//		throw StorageError("Could not close dimension at " + Path());
   }
 }
 
-bool Retsu::Dimension::Optimize() {
+void Retsu::Dimension::Optimize() {
 	if(tchdbrnum(this->database) % (1<<16) == 0) {
-		return tchdboptimize(database, -1, -1, -1, HDBTLARGE | HDBTDEFLATE);
-	} else {
-		return false;
+		if(!tchdboptimize(database, -1, -1, -1, HDBTLARGE | HDBTDEFLATE)) {
+      throw StorageError("Could not optimize dimension at " + Path());
+    }
 	}
 }
 
-bool Retsu::Dimension::OpenReader() {
-  return this->Open(HDBOREADER);
+void Retsu::Dimension::OpenReader() {
+  if(!this->Open(HDBOREADER)) {
+    throw StorageError("Could not open dimension for reading at " + Path());
+  }
 }
 
-bool Retsu::Dimension::OpenWriter() {
-  return this->Open(HDBOWRITER | HDBOCREAT);
+void Retsu::Dimension::OpenWriter() {
+  if(!this->Open(HDBOWRITER | HDBOCREAT)) {
+    throw StorageError("Could not open dimension for writing at " + Path());
+  }
 }
 
 bool Retsu::Dimension::Open(int mode) {

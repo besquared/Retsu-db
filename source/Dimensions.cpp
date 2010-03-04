@@ -42,12 +42,9 @@ Retsu::Dimension* Retsu::Dimensions::retrieve(const string& dimension) {
   
   if(found == cache.end()) {
     Dimension* database = new Dimension(this->table_path.string(), dimension);
-    if(database->OpenWriter()) {
-      cache[dimension] = database;
-      return database;
-    } else {
-      return NULL;
-    }
+    database->OpenWriter();
+    cache[dimension] = database;
+    return database;
   } else {
     return found->second;
   }

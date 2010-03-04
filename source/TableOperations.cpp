@@ -11,14 +11,26 @@
 
 static Retsu::TableCache table_cache;
 
+v8::Handle<v8::Value> Retsu::TableOperations::create(const Handle<Value> name) {
+  cout << *String::AsciiValue(name) << endl;
+  string table_name = *String::AsciiValue(name);
+  
+  cout << "Creating table " << table_name << endl;
+
+  if(Table::create(".", table_name)) {
+    return Boolean::New(true);
+  } else {
+    return Boolean::New(false);
+  }  
+}
+
 v8::Handle<v8::Value> Retsu::TableOperations::create(const v8::Arguments& args) {
-  Local<String> key = String::New("name");
-  Local<Value> tname_val = args.This()->Get(key);
+  Local<Value> tname_val = args[0]->ToString();
   string table_name = *String::AsciiValue(tname_val);
-
-  shared_ptr<Table> table = get_cached_table(".", table_name);
-
-  if(table->create()) {
+  
+  cout << "Creating table " << table_name << endl;
+  
+  if(Table::create(".", table_name)) {
     return Boolean::New(true);
   } else {
     return Boolean::New(false);

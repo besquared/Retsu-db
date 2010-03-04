@@ -28,40 +28,40 @@ std::string Retsu::Measure::Path() {
   return this->path + "/" + this->name + ".tcf";
 }
 
-bool Retsu::Measure::Create() {	
+void Retsu::Measure::Create() {	
 	tcfdbtune(this->database, sizeof(double), INT_MAX);
 	
 	if(this->Open(FDBOWRITER | FDBOCREAT)) {
-		this->Close();
-		return true;
+    this->Close();
 	} else {
-		return false;
+    throw StorageError("Could not create measure database at " + Path());
 	}	
 }
 
-bool Retsu::Measure::Close() {
-  if(tcfdbclose(this->database)){
-		return true;
-  } else {
-    return false;
+void Retsu::Measure::Close() {
+  if(!tcfdbclose(this->database)) {
+//		throw StorageError("Could not close measure at " + Path());
   }
 }
 
-bool Retsu::Measure::Truncate() {
-	if(this->Open(FDBOWRITER | FDBOTRUNC)) {
+void Retsu::Measure::Truncate() {
+	if(!this->Open(FDBOWRITER | FDBOTRUNC)) {
 		this->Close();
-		return true;
 	} else {
-		return false;
+		throw StorageError("Could not truncate measure at " + Path());
 	}	
 }
 
-bool Retsu::Measure::OpenReader() {
-  return this->Open(FDBOREADER);
+void Retsu::Measure::OpenReader() {
+  if(!this->Open(FDBOREADER)) {
+    throw StorageError("Could not open measure for reading at " + Path());
+  }
 }
 
-bool Retsu::Measure::OpenWriter() {
-  return this->Open(FDBOWRITER | FDBOCREAT);
+void Retsu::Measure::OpenWriter() {
+  if(!this->Open(FDBOWRITER | FDBOCREAT)) {
+    throw StorageError("Could not open measure for writing at " + Path());
+  }
 }
 
 bool Retsu::Measure::Open(int mode) {

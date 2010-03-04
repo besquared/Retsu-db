@@ -21,6 +21,7 @@ namespace Retsu {
     using namespace std;
     using namespace boost;
 
+    Handle<Value> create(const Handle<Value> name);
     Handle<Value> create(const Arguments& args);
     Handle<Value> insert(const Arguments& args);
     Handle<Value> lookup(const Arguments& args);

@@ -34,6 +34,8 @@
 		032403C5113CD32F001E567A /* TableOperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 032403C4113CD32F001E567A /* TableOperations.cpp */; };
 		032405CF113E51AF001E567A /* Metadata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 032405CD113E51AF001E567A /* Metadata.cpp */; };
 		032405D0113E51AF001E567A /* Metadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 032405CE113E51AF001E567A /* Metadata.h */; };
+		032406AA113F9262001E567A /* Errors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 032406A8113F9262001E567A /* Errors.cpp */; };
+		032406AB113F9262001E567A /* Errors.h in Headers */ = {isa = PBXBuildFile; fileRef = 032406A9113F9262001E567A /* Errors.h */; };
 		0324FB0C113B28C7001E567A /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB0B113B28C7001E567A /* libv8.a */; };
 		0324FB43113B2C91001E567A /* libtokyocabinet.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB42113B2C91001E567A /* libtokyocabinet.dylib */; };
 		0324FB44113B2C99001E567A /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB0B113B28C7001E567A /* libv8.a */; };
@@ -109,6 +111,8 @@
 		032403C4113CD32F001E567A /* TableOperations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TableOperations.cpp; path = source/TableOperations.cpp; sourceTree = "<group>"; };
 		032405CD113E51AF001E567A /* Metadata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Metadata.cpp; path = source/Metadata.cpp; sourceTree = "<group>"; };
 		032405CE113E51AF001E567A /* Metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Metadata.h; path = source/Metadata.h; sourceTree = "<group>"; };
+		032406A8113F9262001E567A /* Errors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Errors.cpp; path = source/Errors.cpp; sourceTree = "<group>"; };
+		032406A9113F9262001E567A /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Errors.h; path = source/Errors.h; sourceTree = "<group>"; };
 		0324FAB211363E76001E567A /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		0324FB0B113B28C7001E567A /* libv8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libv8.a; path = lib/libv8.a; sourceTree = "<group>"; };
 		0324FB0E113B28E6001E567A /* v8-debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "v8-debug.h"; path = "include/v8-debug.h"; sourceTree = "<group>"; };
@@ -2687,6 +2691,8 @@
 				0324FB17113B29A4001E567A /* Dimension.h */,
 				0324FB18113B29A4001E567A /* Dimensions.cpp */,
 				0324FB19113B29A4001E567A /* Dimensions.h */,
+				032406A8113F9262001E567A /* Errors.cpp */,
+				032406A9113F9262001E567A /* Errors.h */,
 				08FB7796FE84155DC02AAC07 /* Main.cpp */,
 				0324FB1A113B29A4001E567A /* Measure.cpp */,
 				0324FB1B113B29A4001E567A /* Measure.h */,
@@ -2741,6 +2747,7 @@
 				03240270113BA07B001E567A /* Table.h in Headers */,
 				03240271113BA07B001E567A /* TableOperations.h in Headers */,
 				032405D0113E51AF001E567A /* Metadata.h in Headers */,
+				032406AB113F9262001E567A /* Errors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2860,6 +2867,7 @@
 				0324027B113BA080001E567A /* Table.cpp in Sources */,
 				032403C5113CD32F001E567A /* TableOperations.cpp in Sources */,
 				032405CF113E51AF001E567A /* Metadata.cpp in Sources */,
+				032406AA113F9262001E567A /* Errors.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,12 +19,11 @@ namespace Retsu {
 
   class Metadata {
   protected:
-    string path;
-    string name;
+    fs::path table_path;
     TCBDB *database;
     
   public:
-    Metadata(const string& path, const string& name);
+    Metadata(const fs::path& table_path);
     virtual ~Metadata();
     
     virtual bool OpenReader();
@@ -40,6 +39,7 @@ namespace Retsu {
     
     virtual bool Put(const string& key, const string& value);
     virtual bool PutDup(const string& key, const string& value);
+    virtual bool PutDup(const string& key, const RecordID& record);
     virtual bool PutCat(const string& key, const RecordID& record);
     
     virtual bool Add(const string& key, const int value, int& result);
@@ -48,8 +48,8 @@ namespace Retsu {
     string Error();
     int ErrorCode();
     
-    static bool Create(const string& path, const string& name);
-    static string Path(const string& path, const string& name);
+    static bool Create(const fs::path& table_path);
+    static string Path(const fs::path& table_path);
   };
 }
 

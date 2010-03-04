@@ -11,6 +11,7 @@
 #define _RETSU_DIMENSION_H_
 
 #include "Common.h"
+#include "Errors.h"
 #include "Record.h"
 #include "RIDList.h"
 
@@ -30,12 +31,12 @@ namespace Retsu {
      * I/O Management
      */
     string Path();
-    bool Create();
-    bool Truncate();
-    bool Close();
-    bool Optimize();
-    bool OpenReader();
-    bool OpenWriter();
+    void Create();
+    void Truncate();
+    void Close();
+    void Optimize();
+    void OpenReader();
+    void OpenWriter();
     bool Open(int mode);
     
     /*

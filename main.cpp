@@ -8,11 +8,11 @@ int main(int argc, char * const argv[]) {
   
   boost::timer t;
   
-  commander->execute("db.playback.create();");
+  commander->execute("create_table('playback');");
   
   commander->execute("\
-    var playback = db.playback;\
-    for(var i = 0; i < 70000; i++) {\
+    var playback = tables.playback;\
+    for(var i = 0; i < 10000; i++) {\
       playback.insert(\
         {'mykey': 'another thing'}\
       );\
@@ -26,8 +26,6 @@ int main(int argc, char * const argv[]) {
   Handle<Value> result = commander->execute("db.playback.lookup(100, 'mykey');");
 
   std::cout << "Executed in " << t.elapsed() << " seconds" << std::endl;
-
-  cout << *String::AsciiValue(result) << endl;
   
   delete(commander);
   
