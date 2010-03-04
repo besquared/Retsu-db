@@ -13,33 +13,27 @@ Retsu::Table::Table(const string& database_path, const string& table_name) {
 	this->database_path = fs::path(database_path);
 	this->table_name = fs::path(table_name);
   
-  // need a file to keep up with our id
+  this->records = new Records(this->database_path);
   this->measures = new Measures(this->database_path / this->table_name);
 	this->dimensions = new Dimensions(this->database_path / this->table_name);
   
-  this->metadata = new Metadata(this->database_path / fs::path("metadata"));
+  this->records->open_writer();
 }
 
 Retsu::Table::~Table() {
+  delete(this->records);
 	delete(this->measures);
 	delete(this->dimensions);
-  delete(this->metadata);
 }
 
 // make this static, wtf mate
-bool Retsu::Table::create(const string& database_path, const string& table_name) {
+void Retsu::Table::create(const string& database_path, const string& table_name) {
   fs::path full_path = fs::path(database_path) / fs::path(table_name);
   
   if(fs::exists(full_path) || fs::create_directory(full_path)) {
-    cout << "Creating metadata" << endl;
-    if(Metadata::Create(full_path)) {
-      return true;
-    } else {
-      return false;
-    }
+    Records::create(full_path);
   } else {
-    cout << "Couldn't create directory" << endl;
-    return false;
+    throw StorageError("Could not create table directory at " + full_path.string());
   }
 }
 
@@ -56,8 +50,8 @@ void Retsu::Table::insert(const RecordID& id, const string& dimension, const str
   Dimension* database = dimensions->retrieve(dimension);
 
   if(database != NULL) {
+    records->insert(id);
     database->Insert(id, value);
-    metadata->PutDup("records", id);
   } else {
     return;
   }

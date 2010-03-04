@@ -11,9 +11,9 @@
 #define _RETSU_TABLE_H
 
 #include "Common.h"
+#include "Records.h"
 #include "Measures.h"
 #include "Dimensions.h"
-#include "Metadata.h"
 
 namespace Retsu {
   using namespace v8;
@@ -25,14 +25,14 @@ namespace Retsu {
     fs::path table_name;
     
   public:
+    Records* records;
     Measures* measures;
     Dimensions* dimensions;
-    Metadata* metadata;
     
     Table(const string& database_path, const string& table_name);
     virtual ~Table();
     
-    static bool create(const string& database_path, const string& table_name);
+    static void create(const string& database_path, const string& table_name);
     
     RecordID next_id();
     void insert(const Record& record);

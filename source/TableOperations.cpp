@@ -17,11 +17,12 @@ v8::Handle<v8::Value> Retsu::TableOperations::create(const Handle<Value> name) {
   
   cout << "Creating table " << table_name << endl;
 
-  if(Table::create(".", table_name)) {
+  try {
+    Table::create(".", table_name);
     return Boolean::New(true);
-  } else {
+  } catch(StorageError e) {
     return Boolean::New(false);
-  }  
+  }
 }
 
 v8::Handle<v8::Value> Retsu::TableOperations::create(const v8::Arguments& args) {
@@ -30,9 +31,10 @@ v8::Handle<v8::Value> Retsu::TableOperations::create(const v8::Arguments& args) 
   
   cout << "Creating table " << table_name << endl;
   
-  if(Table::create(".", table_name)) {
+  try {
+    Table::create(".", table_name);
     return Boolean::New(true);
-  } else {
+  } catch(StorageError e) {
     return Boolean::New(false);
   }
 }
@@ -116,7 +118,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::each(const v8::Arguments& args) {
     return Handle<Value>();
   }
   
-  int argc = 1;
+//  int argc = 1;
   Handle<Value> argv[1];
   Handle<ObjectTemplate> record_templ = ObjectTemplate::New();  
 //  table_templ->Set("create", FunctionTemplate::New(Retsu::TableOperations::create));
@@ -127,6 +129,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::each(const v8::Arguments& args) {
   argv[0] = record;
   
 //  Local<Value> Call(Handle<Object> recv, int argc, Handle<Value> argv[]);
+  return Handle<Value>();
 }
 
 boost::shared_ptr<Retsu::Table> Retsu::TableOperations::get_cached_table(const string& db_path, const string& table_name) {
