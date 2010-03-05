@@ -167,6 +167,9 @@ v8::Handle<v8::Value> Retsu::TableOperations::each(const Arguments& args) {
 v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name, const AccessorInfo& info) {
   Local<Object> record = info.This();
   Local<Value> id = record->GetRealNamedProperty(String::New("id"));
+  
+  if(name->Equals(String::New("id"))) return id;
+  
   Local<Value> table_name = record->GetRealNamedProperty(String::New("table"));
   shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
   
