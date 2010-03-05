@@ -44,20 +44,6 @@ v8::Handle<v8::Value> Retsu::TableOperations::get_table_proxy(Local<String> name
   return table_proxy;
 }
 
-v8::Handle<v8::Value> Retsu::TableOperations::create(const Handle<Value> name) {
-  cout << *String::AsciiValue(name) << endl;
-  string table_name = *String::AsciiValue(name);
-  
-  cout << "Creating table " << table_name << endl;
-
-  try {
-    Table::create(".", table_name);
-    return Boolean::New(true);
-  } catch(StorageError e) {
-    return ThrowException(String::New(e.what()));
-  }
-}
-
 v8::Handle<v8::Value> Retsu::TableOperations::create(const Arguments& args) {
   Local<Value> tname_val = args[0]->ToString();
   string table_name = *String::AsciiValue(tname_val);
