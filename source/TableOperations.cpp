@@ -181,9 +181,6 @@ v8::Handle<v8::Value> Retsu::TableOperations::each(const Arguments& args) {
   return Handle<Value>();
 }
 
-void Retsu::TableOperations::each_callback(RecordID id, Handle<ObjectTemplate> record_templ, Handle<Function> callback) {    
-}
-
 v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name, const AccessorInfo& info) {
   Local<Object> record = info.This();
   Local<Value> id = record->GetRealNamedProperty(String::New("id"));
