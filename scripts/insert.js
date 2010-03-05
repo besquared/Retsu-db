@@ -1,5 +1,6 @@
 print(tables.playback);
 
-for(var i = 0; i < 10; i++) {
-  tables.playback.insert({'mykey': 'another thing'});
+var playback = tables.playback;
+for(var i = 0; i < 100000; i++) {
+  playback.insert({'mykey': 'another thing'});
 }

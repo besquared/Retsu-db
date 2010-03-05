@@ -38,7 +38,7 @@ void Retsu::Table::create(const string& database_path, const string& table_name)
 }
 
 double Retsu::Table::next_id() {
-  return 100;
+  return rand() % 999999 + 1;
 }
 
 void Retsu::Table::insert(const Record& record) {

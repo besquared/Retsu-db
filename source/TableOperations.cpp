@@ -48,8 +48,6 @@ v8::Handle<v8::Value> Retsu::TableOperations::create(const Arguments& args) {
   Local<Value> tname_val = args[0]->ToString();
   string table_name = *String::AsciiValue(tname_val);
   
-  cout << "Creating table " << table_name << endl;
-  
   try {
     Table::create(".", table_name);
     return Boolean::New(true);
@@ -59,8 +57,6 @@ v8::Handle<v8::Value> Retsu::TableOperations::create(const Arguments& args) {
 }
 
 v8::Handle<v8::Value> Retsu::TableOperations::insert(const Arguments& args) {  
-  cout << "Inserting record" << endl;
-  
   if(args.Length() < 1) {
     return ThrowException(String::New("Invalid arguments to tables.insert"));
   } else {    
@@ -143,21 +139,22 @@ v8::Handle<v8::Value> Retsu::TableOperations::each(const Arguments& args) {
   Local<Value> table_name = args.This()->Get(key);
   shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
   
+  Local<Function> callback = Local<Function>::Cast(args[0]);
+
   try {
     Handle<Value> argv[1];
 
     record_templ = ObjectTemplate::New();
-    record_templ->SetNamedPropertyHandler(get_record_data);
     record_templ->Set(String::New("table"), table_name);
+    record_templ->SetNamedPropertyHandler(get_record_data);
+    Local<Object> record = record_templ->NewInstance();
     
     uint64_t current;
     table->cursor_init();
     while((current = table->cursor_next()) > 0) {
-      Local<Object> record = record_templ->NewInstance();
       record->Set(String::New("id"), Number::New(current));
-
       argv[0] = record;
-      Local<Function> callback = Local<Function>::Cast(args[0]);
+
       callback->Call(callback, 1, argv);
     }
   } catch(StorageError e) {

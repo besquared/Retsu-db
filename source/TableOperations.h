@@ -33,7 +33,7 @@ namespace Retsu {
 
     Handle<Value> each(const Arguments& args);
     Handle<Value> aggregate(const Arguments& args);
-        
+    
     Handle<Value> get_record_data(Local<String> name, const AccessorInfo& info);
     shared_ptr<Table> get_cached_table(const string& db_path, const string& table_name);
   }
