@@ -35,10 +35,11 @@ namespace Retsu {
     static void create(const fs::path& table_path);
     
     /*
-     * Reading
+     * Iteration
      */
-    void each(bool (*eachfunc)(RecordID));
-    void each(bool (*eachfunc)(RecordID, Handle<ObjectTemplate>, Handle<Function>));
+    uint64_t first_record();
+    uint64_t next_record();
+    
     /*
      * Writing
      */

@@ -10,6 +10,32 @@
 #include "TableOperations.h"
 
 static Retsu::TableCache table_cache;
+static v8::Handle<v8::ObjectTemplate> table_templ;
+static v8::Handle<v8::ObjectTemplate> record_templ;
+
+/*
+ * Installation and global commands
+ */
+void Retsu::TableOperations::install(Handle<ObjectTemplate> scope) {
+  Handle<ObjectTemplate> tables = ObjectTemplate::New();
+  tables->SetNamedPropertyHandler(table_proxy);
+  
+  scope->Set(String::New("tables"), tables);
+  scope->Set(String::New("create_table"), FunctionTemplate::New(create));
+  
+  table_templ = ObjectTemplate::New();
+  table_templ->Set("insert", FunctionTemplate::New(insert));
+  table_templ->Set("lookup", FunctionTemplate::New(lookup));
+  
+  record_templ = ObjectTemplate::New();
+  // set index property handler here
+}
+
+v8::Handle<v8::Value> Retsu::TableOperations::table_proxy(v8::Local<v8::String> name, const v8::AccessorInfo &info) {
+  Local<Object> table_proxy = table_templ->NewInstance();
+  table_proxy->Set(String::New("name"), name);
+  return table_proxy;
+}
 
 v8::Handle<v8::Value> Retsu::TableOperations::create(const Handle<Value> name) {
   cout << *String::AsciiValue(name) << endl;
@@ -21,7 +47,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::create(const Handle<Value> name) {
     Table::create(".", table_name);
     return Boolean::New(true);
   } catch(StorageError e) {
-    return Boolean::New(false);
+    return ThrowException(String::New(e.what()));
   }
 }
 
@@ -114,20 +140,30 @@ v8::Handle<v8::Value> Retsu::TableOperations::lookup_query(const v8::Arguments& 
 }
 
 v8::Handle<v8::Value> Retsu::TableOperations::each(const v8::Arguments& args) {
-  if(!args[0]->IsFunction()) return Handle<Value>();
-  Handle<ObjectTemplate> record_templ = ObjectTemplate::New();  
-  // table->records->each(&each_func, record_templ, );
+  if(!args[0]->IsFunction()) 
+    return ThrowException(String::New("Invalid arguments to each which takes a single function argment"));
+  
+  Local<String> key = String::New("name");
+  Local<Value> tname_val = args.This()->Get(key);
+  string table_name = *String::AsciiValue(tname_val);      
+  
+  shared_ptr<Table> table = get_cached_table(".", table_name);
+  
+  try {
+    table->each(&each_callback, Handle<Function>::Cast(args[0]));
+  } catch(StorageError e) {
+    return ThrowException(String::New(e.what()));
+  }
+  
   return Handle<Value>();
 }
 
-bool Retsu::TableOperations::each_func(RecordID record, Handle<ObjectTemplate> record_templ, Handle<Function> callback) {
-  int argc = 1;
+bool Retsu::TableOperations::each_callback(RecordID id, Handle<Function> callback) {
   Handle<Value> argv[1];
   Local<Object> record = record_templ->NewInstance();
-  record->Set(String::New("id"), Number::New(record));
-  
+  record->Set(String::New("id"), Number::New(id));
   argv[0] = record;
-  Local<Value> result = callback->Call(callback, argc, argv);
+  Local<Value> result = callback->Call(callback, 1, argv);
   
   if(result->IsTrue()) {
     return true;

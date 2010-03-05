@@ -39,7 +39,14 @@ namespace Retsu {
     void insert(const RecordID& id, const string& measure, const double& value);
     void insert(const RecordID& id, const string& dimension, const string& value);
     
+    /*
+     * Reading
+     */
+    
     v8::Handle<v8::Value> lookup(const RecordID& id, const string& column);
+    
+    void each(bool (*callback)(RecordID));
+    void each(bool (*callback)(RecordID, Handle<Function>), Handle<Function> v8_callback);    
   };
 }
 

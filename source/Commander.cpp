@@ -12,13 +12,10 @@
 Retsu::Commander::Commander() {
   HandleScope handle_scope;
 
-  Handle<ObjectTemplate> tables = ObjectTemplate::New();
-  tables->SetNamedPropertyHandler(cmd_table);
-
   Handle<ObjectTemplate> global = ObjectTemplate::New();
-  global->Set(String::New("tables"), tables);
-  global->Set(String::New("create_table"), FunctionTemplate::New(Retsu::TableOperations::create));
-
+  
+  Retsu::TableOperations::install(global);
+  
   context = Context::New(NULL, global);
 }
 
@@ -48,14 +45,4 @@ v8::Handle<v8::Value> Retsu::Commander::execute(const string& source) {
     cout << *String::AsciiValue(result) << endl;
     return result;
   }
-}
-
-v8::Handle<v8::Value> Retsu::cmd_table(v8::Local<v8::String> name, const v8::AccessorInfo &info) {
-  Handle<ObjectTemplate> table_templ = ObjectTemplate::New();
-  
-  table_templ->Set("name", name);
-  table_templ->Set("insert", FunctionTemplate::New(Retsu::TableOperations::insert));
-  table_templ->Set("lookup", FunctionTemplate::New(Retsu::TableOperations::lookup));
-
-  return table_templ->NewInstance();
 }

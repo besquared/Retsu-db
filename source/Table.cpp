@@ -86,3 +86,23 @@ v8::Handle<v8::Value> Retsu::Table::lookup(const RecordID& id, const string& col
     return String::New(value.c_str());
   }
 }
+
+void Retsu::Table::each(bool (*callback)(RecordID)) {
+  uint64_t next = records->first_record();
+  
+  bool result = true;
+  while(result && next > 0) {
+    result = callback((RecordID)next);
+    next = records->next_record();
+  }
+}
+
+void Retsu::Table::each(bool (*callback)(RecordID, Handle<Function>), Handle<Function> v8_callback) {
+  uint64_t next = records->first_record();
+  
+  bool result = true;
+  while(result && next > 0) {
+    result = callback((RecordID)next, v8_callback);
+    next = records->next_record();
+  }  
+}

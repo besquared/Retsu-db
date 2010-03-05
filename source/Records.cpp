@@ -70,35 +70,18 @@ void Retsu::Records::create(const fs::path& table_path) {
   }
 }
 
-void Retsu::Records::each(bool (*eachfunc)(RecordID)) {
-  bool result = true;
-  
+uint64_t Retsu::Records::first_record() {
   if(!tcfdbiterinit(database)) {
     throw StorageError("Could not instantiate records iterator for each in " + path());
-  }
-  
-  uint64_t next = tcfdbiternext(database);
-  
-  while(result && next > 0) {
-    result = eachfunc((RecordID)next);
-    next = tcfdbiternext(database);
+  } else {
+    return next_record();
   }
 }
 
-void each(bool (*eachfunc)(RecordID, Handle<ObjectTemplate>, Handle<Function>), Handle<ObjectTemplate> ) {
-  bool result = true;
-  
-  if(!tcfdbiterinit(database)) {
-    throw StorageError("Could not instantiate records iterator for each in " + path());
-  }
-  
+uint64_t Retsu::Records::next_record() {
   uint64_t next = tcfdbiternext(database);
-  
-  while(result && next > 0) {
-    result = eachfunc((RecordID)next, );
-    next = tcfdbiternext(database);
-  }  
 }
+
 
 void Retsu::Records::insert(const RecordID& key) {
   double new_value = tcfdbadddouble(database, key, FDBIDNEXT);
