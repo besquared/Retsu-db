@@ -11,6 +11,7 @@
 #define _RETSU_COMMANDER_H_
 
 #include "Common.h"
+#include "CommonOperations.h"
 #include "TableOperations.h"
 
 namespace Retsu {

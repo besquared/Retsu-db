@@ -15,6 +15,8 @@
 #include "Measures.h"
 #include "Dimensions.h"
 
+#define V8EachCallback void (*callback)(RecordID, Handle<ObjectTemplate>, Handle<Function>)
+
 namespace Retsu {
   using namespace v8;
   using namespace std;
@@ -46,7 +48,7 @@ namespace Retsu {
     v8::Handle<v8::Value> lookup(const RecordID& id, const string& column);
     
     void each(bool (*callback)(RecordID));
-    void each(bool (*callback)(RecordID, Handle<Function>), Handle<Function> v8_callback);    
+    void each(V8EachCallback, Handle<ObjectTemplate> record_templ, Handle<Function> v8_callback);    
   };
 }
 

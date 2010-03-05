@@ -22,7 +22,7 @@ namespace Retsu {
     using namespace boost;
 
     void install(Handle<ObjectTemplate> scope);
-    Handle<Value> table_proxy(v8::Local<v8::String> name, const v8::AccessorInfo &info);
+    Handle<Value> get_table_proxy(v8::Local<v8::String> name, const v8::AccessorInfo &info);
     
     Handle<Value> create(const Handle<Value> name);
     Handle<Value> create(const Arguments& args);
@@ -35,7 +35,7 @@ namespace Retsu {
     Handle<Value> each(const Arguments& args);
     Handle<Value> aggregate(const Arguments& args);
     
-    bool each_callback(RecordID record, Handle<Function> callback);
+    void each_callback(RecordID record, Handle<ObjectTemplate> record_templ, Handle<Function> callback);
     shared_ptr<Table> get_cached_table(const string& db_path, const string& table_name);
   }
 }

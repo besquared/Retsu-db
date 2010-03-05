@@ -14,6 +14,7 @@ Retsu::Commander::Commander() {
 
   Handle<ObjectTemplate> global = ObjectTemplate::New();
   
+  Retsu::CommonOperations::install(global);
   Retsu::TableOperations::install(global);
   
   context = Context::New(NULL, global);
@@ -31,18 +32,18 @@ v8::Handle<v8::Value> Retsu::Commander::execute(const string& source) {
   Handle<String> script = String::New(source.c_str());
   
   Handle<Script> compiled_script = Script::Compile(script);
-  if (compiled_script.IsEmpty()) {
-    String::Utf8Value error(try_catch.Exception());
-    return Boolean::New(false);
-  }
+//  if (compiled_script.IsEmpty()) {
+//    String::Utf8Value error(try_catch.Exception());
+//    return Boolean::New(false);
+//  }
 
   Handle<Value> result = compiled_script->Run();
-  if (result.IsEmpty()) {
-    String::Utf8Value error(try_catch.Exception());
-    return Boolean::New(false);
-  } else {
-    cout << "Returning a result!" << endl;
-    cout << *String::AsciiValue(result) << endl;
-    return result;
-  }
+//  if (result.IsEmpty()) {
+//    String::Utf8Value error(try_catch.Exception());
+//    return Boolean::New(false);
+//  } else {
+//    cout << *String::AsciiValue(result) << endl;
+//    return result;
+//  }
+  return result;
 }

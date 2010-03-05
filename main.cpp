@@ -12,7 +12,7 @@ string read_source(const string& path) {
   if(source_file.is_open()) {
     while(!source_file.eof()) {
       getline(source_file, line);
-      source += line;
+      source += line + "\n";
     }
     source_file.close();
   }
@@ -20,17 +20,20 @@ string read_source(const string& path) {
   return source;
 }
 
-int main(int argc, char * const argv[]) {  
+int main(int argc, char * const argv[]) { 
   Retsu::Commander* commander = new Retsu::Commander();
   
-  string source = read_source("create.js");
+  string source_file = "each.js";
+  string source = read_source(source_file);
   
-  cout << source << endl;
+  cout << "Executing " << source_file << "\n\n" << source << endl;
+  
+  cout << "-------------------------------------------------\n\n";
   
   boost::timer t;
-    
+  commander->execute(source);
   std::cout << "Executed in " << t.elapsed() << " seconds" << std::endl;
-    
+  
   delete(commander);
   
   return 0;

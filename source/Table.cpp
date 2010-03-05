@@ -97,12 +97,11 @@ void Retsu::Table::each(bool (*callback)(RecordID)) {
   }
 }
 
-void Retsu::Table::each(bool (*callback)(RecordID, Handle<Function>), Handle<Function> v8_callback) {
+void Retsu::Table::each(V8EachCallback, Handle<ObjectTemplate> record_templ, Handle<Function> v8_callback) {
   uint64_t next = records->first_record();
   
-  bool result = true;
-  while(result && next > 0) {
-    result = callback((RecordID)next, v8_callback);
+  while(next > 0) {
+    callback((RecordID)next, record_templ, v8_callback);
     next = records->next_record();
   }  
 }
