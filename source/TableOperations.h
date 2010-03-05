@@ -36,6 +36,8 @@ namespace Retsu {
     Handle<Value> aggregate(const Arguments& args);
     
     void each_callback(RecordID record, Handle<ObjectTemplate> record_templ, Handle<Function> callback);
+    
+    Handle<Value> get_record_data(Local<String> name, const AccessorInfo& info);
     shared_ptr<Table> get_cached_table(const string& db_path, const string& table_name);
   }
 }

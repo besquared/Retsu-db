@@ -63,35 +63,35 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0324FFB5113B2D09001E567A /* v8.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8970F2F00E719FB2006AE7B5 /* libv8.a */;
+			remoteGlobalIDString = 8970F2F00E719FB2006AE7B5;
 			remoteInfo = v8;
 		};
 		0324FFED113B2D09001E567A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0324FFB5113B2D09001E567A /* v8.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 897F767A0E71B4CC007ACF34 /* v8_shell */;
+			remoteGlobalIDString = 897F767A0E71B4CC007ACF34;
 			remoteInfo = v8_shell;
 		};
 		0324FFEF113B2D09001E567A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0324FFB5113B2D09001E567A /* v8.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8939880B0F2A35FA007D5254 /* v8_shell */;
+			remoteGlobalIDString = 8939880B0F2A35FA007D5254;
 			remoteInfo = d8_shell;
 		};
 		0324FFF1113B2D09001E567A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0324FFB5113B2D09001E567A /* v8.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 89F23C870E78D5B2006B2466 /* libv8-arm.a */;
+			remoteGlobalIDString = 89F23C870E78D5B2006B2466;
 			remoteInfo = "v8-arm";
 		};
 		0324FFF3113B2D09001E567A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0324FFB5113B2D09001E567A /* v8.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 89F23C950E78D5B6006B2466 /* v8_shell-arm */;
+			remoteGlobalIDString = 89F23C950E78D5B6006B2466;
 			remoteInfo = "v8_shell-arm";
 		};
 /* End PBXContainerItemProxy section */

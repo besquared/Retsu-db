@@ -149,7 +149,6 @@ v8::Handle<v8::Value> Retsu::TableOperations::lookup_query(const Arguments& args
 }
 
 v8::Handle<v8::Value> Retsu::TableOperations::each(const Arguments& args) {
-  cout << "HERE!" << endl;
   if(!args[0]->IsFunction()) {
     return ThrowException(String::New("Invalid arguments to each which takes a single function argment"));
   }
@@ -164,6 +163,9 @@ v8::Handle<v8::Value> Retsu::TableOperations::each(const Arguments& args) {
   
   try {
     record_templ = ObjectTemplate::New();
+    record_templ->SetNamedPropertyHandler(get_record_data);
+    record_templ->Set(String::New("table"), String::New(table_name.c_str()));
+
     table->each(&each_callback, record_templ, Handle<Function>::Cast(args[0]));
   } catch(StorageError e) {
     return ThrowException(String::New(e.what()));
@@ -180,6 +182,15 @@ void Retsu::TableOperations::each_callback(RecordID id, Handle<ObjectTemplate> r
   
   argv[0] = record;
   callback->Call(callback, 1, argv);
+}
+
+v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name, const AccessorInfo& info) {
+  Local<Object> record = info.This();
+  Local<Value> id = record->GetRealNamedProperty(String::New("id"));
+  Local<Value> table_name = record->GetRealNamedProperty(String::New("table"));
+  shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
+  
+  return table->lookup(id->NumberValue(), *String::AsciiValue(name));
 }
 
 boost::shared_ptr<Retsu::Table> Retsu::TableOperations::get_cached_table(const string& db_path, const string& table_name) {
