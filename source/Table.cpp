@@ -87,21 +87,11 @@ v8::Handle<v8::Value> Retsu::Table::lookup(const RecordID& id, const string& col
   }
 }
 
-void Retsu::Table::each(bool (*callback)(RecordID)) {
-  uint64_t next = records->first_record();
-  
-  bool result = true;
-  while(result && next > 0) {
-    result = callback((RecordID)next);
-    next = records->next_record();
-  }
+
+void Retsu::Table::cursor_init() {
+  records->cursor_init();
 }
 
-void Retsu::Table::each(V8EachCallback, Handle<ObjectTemplate> record_templ, Handle<Function> v8_callback) {
-  uint64_t next = records->first_record();
-  
-  while(next > 0) {
-    callback((RecordID)next, record_templ, v8_callback);
-    next = records->next_record();
-  }  
+uint64_t Retsu::Table::cursor_next() {
+  return records->cursor_next();
 }

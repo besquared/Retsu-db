@@ -70,16 +70,14 @@ void Retsu::Records::create(const fs::path& table_path) {
   }
 }
 
-uint64_t Retsu::Records::first_record() {
+void Retsu::Records::cursor_init() {
   if(!tcfdbiterinit(database)) {
     throw StorageError("Could not instantiate records iterator for each in " + path());
-  } else {
-    return next_record();
   }
 }
 
-uint64_t Retsu::Records::next_record() {
-  uint64_t next = tcfdbiternext(database);
+uint64_t Retsu::Records::cursor_next() {
+  return tcfdbiternext(database);
 }
 
 

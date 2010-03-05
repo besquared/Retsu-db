@@ -37,8 +37,8 @@ namespace Retsu {
     /*
      * Iteration
      */
-    uint64_t first_record();
-    uint64_t next_record();
+    void cursor_init();
+    uint64_t cursor_next();
     
     /*
      * Writing

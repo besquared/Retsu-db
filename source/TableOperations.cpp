@@ -154,19 +154,26 @@ v8::Handle<v8::Value> Retsu::TableOperations::each(const Arguments& args) {
   }
   
   Local<String> key = String::New("name");
-  Local<Value> tname_val = args.This()->Get(key);
-  string table_name = *String::AsciiValue(tname_val);      
-  
-  cout << "Eaching through table " << table_name << endl;
-
-  shared_ptr<Table> table = get_cached_table(".", table_name);
+  Local<Value> table_name = args.This()->Get(key);
+  shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
   
   try {
+    Handle<Value> argv[1];
+
     record_templ = ObjectTemplate::New();
     record_templ->SetNamedPropertyHandler(get_record_data);
-    record_templ->Set(String::New("table"), String::New(table_name.c_str()));
+    record_templ->Set(String::New("table"), table_name);
+    
+    uint64_t current;
+    table->cursor_init();
+    while((current = table->cursor_next()) > 0) {
+      Local<Object> record = record_templ->NewInstance();
+      record->Set(String::New("id"), Number::New(current));
 
-    table->each(&each_callback, record_templ, Handle<Function>::Cast(args[0]));
+      argv[0] = record;
+      Local<Function> callback = Local<Function>::Cast(args[0]);
+      callback->Call(callback, 1, argv);
+    }
   } catch(StorageError e) {
     return ThrowException(String::New(e.what()));
   }
@@ -175,13 +182,6 @@ v8::Handle<v8::Value> Retsu::TableOperations::each(const Arguments& args) {
 }
 
 void Retsu::TableOperations::each_callback(RecordID id, Handle<ObjectTemplate> record_templ, Handle<Function> callback) {    
-  Handle<Value> argv[1];
-  
-  Local<Object> record = record_templ->NewInstance();
-  record->Set(String::New("id"), Number::New(id));
-  
-  argv[0] = record;
-  callback->Call(callback, 1, argv);
 }
 
 v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name, const AccessorInfo& info) {
