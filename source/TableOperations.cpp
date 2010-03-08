@@ -52,7 +52,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::create(const Arguments& args) {
     Table::create(".", table_name);
     return Boolean::New(true);
   } catch(StorageError e) {
-    return Boolean::New(false);
+    return ThrowException(String::New(e.what()));
   }
 }
 
@@ -174,6 +174,93 @@ v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name
   shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
   
   return table->lookup(id->NumberValue(), *String::AsciiValue(name));
+}
+
+
+// 
+v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
+  if(!args[0]->IsObject()) {
+    return ThrowException(String::New("Argument must be an object"));
+  }
+  
+  Local<Object> params = Local<Object>::Cast(args[0]);
+  
+  if(params->Has(String::New("group"))) {
+    return aggregate_groups(args);
+  } else {
+    return aggregate_flat(args);
+  }
+  
+  return Handle<Value>();
+}
+
+v8::Handle<v8::Value> Retsu::TableOperations::aggregate_flat(const Arguments& args) {
+  Local<String> key = String::New("name");
+  Local<Value> table_name = args.This()->Get(key);
+  shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
+    
+  Local<Object> filters;
+  Local<Object> aggregates;
+  
+  return Handle<Value>();
+}
+
+v8::Handle<v8::Value> Retsu::TableOperations::aggregate_groups(const Arguments& args) {
+  Local<String> key = String::New("name");
+  Local<Value> table_name = args.This()->Get(key);
+  shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
+  
+  return Handle<Value>();
+}
+
+v8::Handle<v8::Value> Retsu::TableOperations::group(const Arguments& args) {
+  // so we're gonna like hella group here and stuff, scan and then construct
+  vector<string> group_by;
+  for(size_t i = 0; i < args.Length() - 1; i++) {
+    group_by.push_back(*String::AsciiValue(args[i]));
+  }
+  
+  Local<String> key = String::New("name");
+  Local<Value> table_name = args.This()->Get(key);
+  shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
+  
+  // lets just do the grouping straight up right here
+  //  first lets run filter() to get a list of record id's that matter
+  //  then lets go through and group of all of them then return this group
+  
+  return Handle<Value>();
+}
+
+v8::Handle<v8::Value> Retsu::TableOperations::construct(vector<string>& dimensions, RIDTree& lookedup, size_t offset, map<string, string>& values, RIDList& records) {
+//	if(inquired_dims.size() == offset) {
+//		RIDList intersected = records & instantiated;
+//		
+//		if(intersected.size() > 0) {
+//      map<string, string> group_values;
+//      group_values.insert(values.begin(), values.end());
+//      group_values.insert(instantiate.begin(), instantiate.end());
+//      worksets.push_back(WorkSet(group_values, intersected));
+//		}
+//    
+//		return;
+//	}
+//	
+//  string& dimension = inquired_dims[offset];
+//  
+//  RIDMap::iterator rpair;
+//	RIDMap rmap = inquired[dimension];
+//	for(rpair = rmap.begin(); rpair != rmap.end(); rpair++) {
+//		RIDList intersection = 
+//		(records.empty() ? rpair->second : records & rpair->second);
+//		
+//		if(intersection.size() > 0) {
+//      values[dimension] = rpair->first;
+//			Construct(instantiate, instantiated, inquired_dims, 
+//								inquired, offset + 1, values, intersection, worksets);
+//      values.erase(dimension);
+//		}
+//	}
+  return Handle<Value>();
 }
 
 boost::shared_ptr<Retsu::Table> Retsu::TableOperations::get_cached_table(const string& db_path, const string& table_name) {

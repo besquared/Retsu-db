@@ -12,6 +12,7 @@
 
 #include "Common.h"
 #include "Table.h"
+#include "RIDTree.h"
 
 namespace Retsu {  
   typedef std::map< std::string, boost::shared_ptr<Table> > TableCache;
@@ -33,7 +34,12 @@ namespace Retsu {
 
     Handle<Value> each(const Arguments& args);
     Handle<Value> aggregate(const Arguments& args);
-    
+    Handle<Value> aggregate_flat(const Arguments& args);
+    Handle<Value> aggregate_groups(const Arguments& args);
+
+    Handle<Value> group(const Arguments& args);
+    Handle<Value> construct(vector<string>& dimensions, RIDTree& lookedup, size_t offset, map<string, string>& values, RIDList& records);
+
     Handle<Value> get_record_data(Local<String> name, const AccessorInfo& info);
     shared_ptr<Table> get_cached_table(const string& db_path, const string& table_name);
   }

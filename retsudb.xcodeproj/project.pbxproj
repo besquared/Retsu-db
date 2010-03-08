@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030C010C114219F000D27A1F /* RIDMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C0108114219F000D27A1F /* RIDMap.cpp */; };
+		030C010D114219F000D27A1F /* RIDMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C0109114219F000D27A1F /* RIDMap.h */; };
+		030C010E114219F000D27A1F /* RIDTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C010A114219F000D27A1F /* RIDTree.cpp */; };
+		030C010F114219F000D27A1F /* RIDTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C010B114219F000D27A1F /* RIDTree.h */; };
+		030C016011448FD400D27A1F /* Aggregator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C015E11448FD400D27A1F /* Aggregator.cpp */; };
+		030C016111448FD400D27A1F /* Aggregator.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C015F11448FD400D27A1F /* Aggregator.h */; };
+		030C016B114490E100D27A1F /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C0163114490E100D27A1F /* Base.h */; };
+		030C016C114490E100D27A1F /* Eq.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C0164114490E100D27A1F /* Eq.h */; };
+		030C016D114490E100D27A1F /* Gt.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C0165114490E100D27A1F /* Gt.h */; };
+		030C016E114490E100D27A1F /* Gte.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C0166114490E100D27A1F /* Gte.h */; };
+		030C016F114490E100D27A1F /* In.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C0167114490E100D27A1F /* In.h */; };
+		030C0170114490E100D27A1F /* Lt.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C0168114490E100D27A1F /* Lt.h */; };
+		030C0171114490E100D27A1F /* Lte.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C0169114490E100D27A1F /* Lte.h */; };
+		030C0172114490E100D27A1F /* Neq.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C016A114490E100D27A1F /* Neq.h */; };
+		030C01751144910E00D27A1F /* Conditions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C01731144910E00D27A1F /* Conditions.cpp */; };
+		030C01761144910E00D27A1F /* Conditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C01741144910E00D27A1F /* Conditions.h */; };
+		030C018C1144916200D27A1F /* Base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C01861144916200D27A1F /* Base.cpp */; };
+		030C018D1144916200D27A1F /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C01871144916200D27A1F /* Base.h */; };
+		030C018E1144916200D27A1F /* Count.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C01881144916200D27A1F /* Count.cpp */; };
+		030C018F1144916200D27A1F /* Count.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C01891144916200D27A1F /* Count.h */; };
+		030C01901144916200D27A1F /* Sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C018A1144916200D27A1F /* Sum.cpp */; };
+		030C01911144916200D27A1F /* Sum.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C018B1144916200D27A1F /* Sum.h */; };
+		030C01971144917A00D27A1F /* Aggregates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C01951144917A00D27A1F /* Aggregates.cpp */; };
+		030C01981144917A00D27A1F /* Aggregates.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C01961144917A00D27A1F /* Aggregates.h */; };
 		030FACF6112E6A070047E4F7 /* libretsu.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 030FACF1112E69DA0047E4F7 /* libretsu.dylib */; };
 		0324020D113B9A95001E567A /* libboost_filesystem-xgcc40-mt-1_38.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324020C113B9A8B001E567A /* libboost_filesystem-xgcc40-mt-1_38.dylib */; };
 		0324021F113B9B1C001E567A /* libboost_system-xgcc40-mt-1_38.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324021E113B9B14001E567A /* libboost_system-xgcc40-mt-1_38.dylib */; };
@@ -123,6 +147,31 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		030C0108114219F000D27A1F /* RIDMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RIDMap.cpp; path = source/RIDMap.cpp; sourceTree = "<group>"; };
+		030C0109114219F000D27A1F /* RIDMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RIDMap.h; path = source/RIDMap.h; sourceTree = "<group>"; };
+		030C010A114219F000D27A1F /* RIDTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RIDTree.cpp; path = source/RIDTree.cpp; sourceTree = "<group>"; };
+		030C010B114219F000D27A1F /* RIDTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RIDTree.h; path = source/RIDTree.h; sourceTree = "<group>"; };
+		030C01431142D53500D27A1F /* group.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = group.js; path = scripts/group.js; sourceTree = "<group>"; };
+		030C015E11448FD400D27A1F /* Aggregator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Aggregator.cpp; path = source/Aggregator.cpp; sourceTree = "<group>"; };
+		030C015F11448FD400D27A1F /* Aggregator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aggregator.h; path = source/Aggregator.h; sourceTree = "<group>"; };
+		030C0163114490E100D27A1F /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		030C0164114490E100D27A1F /* Eq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eq.h; sourceTree = "<group>"; };
+		030C0165114490E100D27A1F /* Gt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gt.h; sourceTree = "<group>"; };
+		030C0166114490E100D27A1F /* Gte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gte.h; sourceTree = "<group>"; };
+		030C0167114490E100D27A1F /* In.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = In.h; sourceTree = "<group>"; };
+		030C0168114490E100D27A1F /* Lt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lt.h; sourceTree = "<group>"; };
+		030C0169114490E100D27A1F /* Lte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lte.h; sourceTree = "<group>"; };
+		030C016A114490E100D27A1F /* Neq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Neq.h; sourceTree = "<group>"; };
+		030C01731144910E00D27A1F /* Conditions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Conditions.cpp; path = source/Conditions.cpp; sourceTree = "<group>"; };
+		030C01741144910E00D27A1F /* Conditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conditions.h; path = source/Conditions.h; sourceTree = "<group>"; };
+		030C01861144916200D27A1F /* Base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base.cpp; sourceTree = "<group>"; };
+		030C01871144916200D27A1F /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		030C01881144916200D27A1F /* Count.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Count.cpp; sourceTree = "<group>"; };
+		030C01891144916200D27A1F /* Count.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Count.h; sourceTree = "<group>"; };
+		030C018A1144916200D27A1F /* Sum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sum.cpp; sourceTree = "<group>"; };
+		030C018B1144916200D27A1F /* Sum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sum.h; sourceTree = "<group>"; };
+		030C01951144917A00D27A1F /* Aggregates.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Aggregates.cpp; path = source/Aggregates.cpp; sourceTree = "<group>"; };
+		030C01961144917A00D27A1F /* Aggregates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aggregates.h; path = source/Aggregates.h; sourceTree = "<group>"; };
 		030FACF1112E69DA0047E4F7 /* libretsu.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libretsu.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		03240181113B90AD001E567A /* TableOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableOperations.h; path = source/TableOperations.h; sourceTree = "<group>"; };
 		0324020C113B9A8B001E567A /* libboost_filesystem-xgcc40-mt-1_38.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_filesystem-xgcc40-mt-1_38.dylib"; path = "usr/lib/libboost_filesystem-xgcc40-mt-1_38.dylib"; sourceTree = DEVELOPER_DIR; };
@@ -1293,6 +1342,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030C0162114490E100D27A1F /* condition */ = {
+			isa = PBXGroup;
+			children = (
+				030C0163114490E100D27A1F /* Base.h */,
+				030C0164114490E100D27A1F /* Eq.h */,
+				030C0165114490E100D27A1F /* Gt.h */,
+				030C0166114490E100D27A1F /* Gte.h */,
+				030C0167114490E100D27A1F /* In.h */,
+				030C0168114490E100D27A1F /* Lt.h */,
+				030C0169114490E100D27A1F /* Lte.h */,
+				030C016A114490E100D27A1F /* Neq.h */,
+			);
+			name = condition;
+			path = source/condition;
+			sourceTree = "<group>";
+		};
+		030C01851144916200D27A1F /* aggregate */ = {
+			isa = PBXGroup;
+			children = (
+				030C01861144916200D27A1F /* Base.cpp */,
+				030C01871144916200D27A1F /* Base.h */,
+				030C01881144916200D27A1F /* Count.cpp */,
+				030C01891144916200D27A1F /* Count.h */,
+				030C018A1144916200D27A1F /* Sum.cpp */,
+				030C018B1144916200D27A1F /* Sum.h */,
+			);
+			name = aggregate;
+			path = source/aggregate;
+			sourceTree = "<group>";
+		};
 		030FACBC112E677E0047E4F7 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -1309,6 +1388,7 @@
 			children = (
 				032408511140C762001E567A /* create.js */,
 				032408521140C762001E567A /* each.js */,
+				030C01431142D53500D27A1F /* group.js */,
 				032408531140C762001E567A /* insert.js */,
 				032408541140C762001E567A /* lookup.js */,
 			);
@@ -2725,11 +2805,19 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				030C01851144916200D27A1F /* aggregate */,
+				030C01951144917A00D27A1F /* Aggregates.cpp */,
+				030C01961144917A00D27A1F /* Aggregates.h */,
+				030C015E11448FD400D27A1F /* Aggregator.cpp */,
+				030C015F11448FD400D27A1F /* Aggregator.h */,
 				03240258113B9E95001E567A /* Commander.cpp */,
 				03240259113B9E95001E567A /* Commander.h */,
 				0324FB30113B2BE8001E567A /* Common.h */,
 				0324086F1140C8DC001E567A /* CommonOperations.cpp */,
 				032408701140C8DC001E567A /* CommonOperations.h */,
+				030C0162114490E100D27A1F /* condition */,
+				030C01731144910E00D27A1F /* Conditions.cpp */,
+				030C01741144910E00D27A1F /* Conditions.h */,
 				0324FB16113B29A4001E567A /* Dimension.cpp */,
 				0324FB17113B29A4001E567A /* Dimension.h */,
 				0324FB18113B29A4001E567A /* Dimensions.cpp */,
@@ -2749,6 +2837,10 @@
 				0324070B113F98AE001E567A /* Records.h */,
 				0324FB20113B29A4001E567A /* RIDList.cpp */,
 				0324FB21113B29A4001E567A /* RIDList.h */,
+				030C0108114219F000D27A1F /* RIDMap.cpp */,
+				030C0109114219F000D27A1F /* RIDMap.h */,
+				030C010A114219F000D27A1F /* RIDTree.cpp */,
+				030C010B114219F000D27A1F /* RIDTree.h */,
 				0324FB14113B29A4001E567A /* Table.cpp */,
 				0324FB15113B29A4001E567A /* Table.h */,
 				032403C4113CD32F001E567A /* TableOperations.cpp */,
@@ -2795,6 +2887,22 @@
 				032406AB113F9262001E567A /* Errors.h in Headers */,
 				0324070D113F98AE001E567A /* Records.h in Headers */,
 				032408721140C8DC001E567A /* CommonOperations.h in Headers */,
+				030C010D114219F000D27A1F /* RIDMap.h in Headers */,
+				030C010F114219F000D27A1F /* RIDTree.h in Headers */,
+				030C016111448FD400D27A1F /* Aggregator.h in Headers */,
+				030C016B114490E100D27A1F /* Base.h in Headers */,
+				030C016C114490E100D27A1F /* Eq.h in Headers */,
+				030C016D114490E100D27A1F /* Gt.h in Headers */,
+				030C016E114490E100D27A1F /* Gte.h in Headers */,
+				030C016F114490E100D27A1F /* In.h in Headers */,
+				030C0170114490E100D27A1F /* Lt.h in Headers */,
+				030C0171114490E100D27A1F /* Lte.h in Headers */,
+				030C0172114490E100D27A1F /* Neq.h in Headers */,
+				030C01761144910E00D27A1F /* Conditions.h in Headers */,
+				030C018D1144916200D27A1F /* Base.h in Headers */,
+				030C018F1144916200D27A1F /* Count.h in Headers */,
+				030C01911144916200D27A1F /* Sum.h in Headers */,
+				030C01981144917A00D27A1F /* Aggregates.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2918,6 +3026,14 @@
 				032406AA113F9262001E567A /* Errors.cpp in Sources */,
 				0324070C113F98AE001E567A /* Records.cpp in Sources */,
 				032408711140C8DC001E567A /* CommonOperations.cpp in Sources */,
+				030C010C114219F000D27A1F /* RIDMap.cpp in Sources */,
+				030C010E114219F000D27A1F /* RIDTree.cpp in Sources */,
+				030C016011448FD400D27A1F /* Aggregator.cpp in Sources */,
+				030C01751144910E00D27A1F /* Conditions.cpp in Sources */,
+				030C018C1144916200D27A1F /* Base.cpp in Sources */,
+				030C018E1144916200D27A1F /* Count.cpp in Sources */,
+				030C01901144916200D27A1F /* Sum.cpp in Sources */,
+				030C01971144917A00D27A1F /* Aggregates.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
