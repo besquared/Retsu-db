@@ -30,6 +30,10 @@ namespace Retsu {
     
     shared_ptr<Table> get(const string& table_name);
     
+    // create
+    // drop
+    // list
+    
     /* more (non-static) functions here */
   private:
     TableManager(); // ctor hidden
