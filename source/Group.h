@@ -20,6 +20,10 @@ namespace Retsu {
   public:
     vector<RecordID> records;
     map<string, string> values;
+    
+    double sum(const string& column);
+    double count(const string& column);
+    double count_unique(const string& column);
   };
 }
 

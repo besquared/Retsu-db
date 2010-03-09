@@ -274,13 +274,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>44</integer>
-									<integer>1</integer>
+									<integer>49</integer>
+									<integer>46</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 413}, {224, 760}}</string>
+							<string>{{0, 301}, {224, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -317,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TableOperations.cpp</string>
+								<string>group.js</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +325,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TableOperations.cpp</string>
+										<string>group.js</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>030C03861146248400D27A1F</string>
+										<string>030C040611462DBE00D27A1F</string>
 										<key>history</key>
 										<array>
 											<string>0324FAF411364340001E567A</string>
@@ -355,13 +355,10 @@
 											<string>0324085C1140C777001E567A</string>
 											<string>032408861140CA98001E567A</string>
 											<string>032408D91140CFEF001E567A</string>
-											<string>032408F51140D174001E567A</string>
 											<string>032409591140DADD001E567A</string>
 											<string>0324095A1140DADD001E567A</string>
 											<string>0324095B1140DADD001E567A</string>
 											<string>0324097C1140DD3A001E567A</string>
-											<string>030C00B21140EFD700D27A1F</string>
-											<string>030C00B31140EFD700D27A1F</string>
 											<string>030C011E11421B5D00D27A1F</string>
 											<string>030C011F11421B5D00D27A1F</string>
 											<string>030C012011421B5D00D27A1F</string>
@@ -387,20 +384,23 @@
 											<string>030C028A1145FC5A00D27A1F</string>
 											<string>030C02A41146000000D27A1F</string>
 											<string>030C02A51146000000D27A1F</string>
-											<string>030C02A71146000000D27A1F</string>
 											<string>030C02A81146000000D27A1F</string>
-											<string>030C0302114612C200D27A1F</string>
 											<string>030C0319114616D800D27A1F</string>
 											<string>030C031A114616D800D27A1F</string>
-											<string>030C03271146172F00D27A1F</string>
 											<string>030C032B1146186200D27A1F</string>
 											<string>030C03361146199100D27A1F</string>
 											<string>030C03461146216D00D27A1F</string>
-											<string>030C03471146216D00D27A1F</string>
 											<string>030C03481146216D00D27A1F</string>
 											<string>030C03791146242000D27A1F</string>
-											<string>030C03811146248400D27A1F</string>
-											<string>030C03821146248400D27A1F</string>
+											<string>030C03911146268E00D27A1F</string>
+											<string>030C03B11146284700D27A1F</string>
+											<string>030C03D91146292600D27A1F</string>
+											<string>030C03E7114629EA00D27A1F</string>
+											<string>030C03E8114629EA00D27A1F</string>
+											<string>030C03F011462BE300D27A1F</string>
+											<string>030C040011462DBE00D27A1F</string>
+											<string>030C040111462DBE00D27A1F</string>
+											<string>030C040211462DBE00D27A1F</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -668,6 +668,26 @@
 											<string>030C03831146248400D27A1F</string>
 											<string>030C03841146248400D27A1F</string>
 											<string>030C03851146248400D27A1F</string>
+											<string>030C03951146268E00D27A1F</string>
+											<string>030C03961146268E00D27A1F</string>
+											<string>030C03971146268E00D27A1F</string>
+											<string>030C03981146268E00D27A1F</string>
+											<string>030C03991146268E00D27A1F</string>
+											<string>030C039A1146268E00D27A1F</string>
+											<string>030C03A4114626E600D27A1F</string>
+											<string>030C03B31146284700D27A1F</string>
+											<string>030C03B41146284700D27A1F</string>
+											<string>030C03B91146289300D27A1F</string>
+											<string>030C03DA1146292600D27A1F</string>
+											<string>030C03DB1146292600D27A1F</string>
+											<string>030C03E01146299200D27A1F</string>
+											<string>030C03E11146299200D27A1F</string>
+											<string>030C03EA114629EA00D27A1F</string>
+											<string>030C03EB114629EA00D27A1F</string>
+											<string>030C03F211462BE300D27A1F</string>
+											<string>030C040311462DBE00D27A1F</string>
+											<string>030C040411462DBE00D27A1F</string>
+											<string>030C040511462DBE00D27A1F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -866,8 +886,8 @@
 		<string>030C00E21140F05100D27A1F</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>030FACCD112E67CF0047E4F7</string>
-		<string>/Users/Josh/Socialytical/retsudb/retsudb.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/Josh/Socialytical/retsudb/retsudb.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>1 162 1237 819 0 0 1280 1002 </string>
@@ -1208,7 +1228,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {650, 209}}</string>
 								<key>RubberWindowFrame</key>
-								<string>572 115 650 250 0 0 1280 1002 </string>
+								<string>529 85 650 250 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -1237,7 +1257,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>572 115 650 250 0 0 1280 1002 </string>
+			<string>529 85 650 250 0 0 1280 1002 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>

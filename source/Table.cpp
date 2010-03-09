@@ -38,12 +38,12 @@ void Retsu::Table::create(const string& database_path, const string& table_name)
 }
 
 double Retsu::Table::next_id() {
-  return rand() % 999999 + 1;
+  return records->size() + 1;
 }
 
 void Retsu::Table::insert(const Record& record) {
-  this->measures->insert(record);
-  this->dimensions->insert(record);
+  measures->insert(record);
+  dimensions->insert(record);
 }
 
 void Retsu::Table::insert(const RecordID& id, const string& dimension, const string& value) {

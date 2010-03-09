@@ -80,7 +80,6 @@ uint64_t Retsu::Records::cursor_next() {
   return tcfdbiternext(database);
 }
 
-
 void Retsu::Records::insert(const RecordID& key) {
   double new_value = tcfdbadddouble(database, key, FDBIDNEXT);
   
@@ -88,4 +87,8 @@ void Retsu::Records::insert(const RecordID& key) {
     throw StorageError("Could not insert into records database key => " + 
                        boost::lexical_cast<string>(key) + ". " + tcfdberrmsg(tcfdbecode(database)));
   }
+}
+
+uint64_t Retsu::Records::size() {
+  return tcfdbrnum(database);
 }

@@ -45,6 +45,11 @@ namespace Retsu {
      */
     void insert(const RecordID& key);
     void remove(const RecordID& key);
+    
+    /*
+     * Other
+     */
+    uint64_t size();
   };
 }
 
