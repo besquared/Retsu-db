@@ -7,17 +7,17 @@
  *
  */
 
-#ifndef _flow_condition_in_h_
-#define _flow_condition_in_h_
+#ifndef _RETSU_CONDITION_IN_H_
+#define _RETSU_CONDITION_IN_H_
 
 #include "Base.h"
 
-namespace Flow {
+namespace Retsu {
 	namespace Condition {
-		class In : public Condition::Base {
+		class In : public Base {
 		public:
+      bool negation;
 			vector<string> values;
-			bool negation;
 			
 			In(const string& column, const vector<string>& values) :
 			Condition::Base::Base(column) {
@@ -31,9 +31,9 @@ namespace Flow {
 				this->values = values;
 				this->negation = negation;
 				this->type = Condition::Base::IN;
-			}			
+			}      
 			
-      bool Check(string& value) {
+      bool check(string& value) {
         vector<string>::iterator found;
         found = find(values.begin(), values.end(), value);
         
@@ -44,15 +44,17 @@ namespace Flow {
         }
       }
       
-			void Apply(vector<string>& values) {
+			void apply(vector<string>& values) {
 				vector<string> intersected;
-				set_intersection(values.begin(), values.end(), this->values.begin(), this->values.end(), back_inserter(intersected));
+				set_intersection(values.begin(), values.end(), this->values.begin(), 
+                         this->values.end(), back_inserter(intersected));
 				values = intersected;
 			}
 			
-			void ApplyNegation(vector<string>& values) {
+			void apply_negation(vector<string>& values) {
 				vector<string> differenced;
-				set_difference(values.begin(), values.end(), this->values.begin(), this->values.end(), back_inserter(differenced));
+				set_difference(values.begin(), values.end(), this->values.begin(), 
+                       this->values.end(), back_inserter(differenced));
 				values = differenced;
 			}
       

@@ -14,7 +14,7 @@
 
 namespace Retsu {
 	namespace Condition {
-		class Eq : public Condition::Base {
+		class Eq : public Base {
 		public:
 			string value;
 			
@@ -24,21 +24,21 @@ namespace Retsu {
 				this->type = Condition::Base::EQ;
 			}
 			
-      bool Check(string& value) {
+      bool check(string& value) {
         return value == this->value;
       }
       
-			void Apply(vector<string>& values)  {
+			void apply(vector<string>& values)  {
         vector<string> results;
         results.reserve(values.size());
         size_t vsize = values.size();
         for(size_t i = 0; i < vsize; i++) {
-          if(this->Check(values[i])) {
+          if(this->check(values[i])) {
             results.push_back(values[i]);
           }
         }
         values = results;
-			}				
+			}
       
       void print(ostream& out) const {
         out << column << " = " << value;

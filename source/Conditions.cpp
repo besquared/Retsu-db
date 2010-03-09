@@ -10,38 +10,31 @@
 #include "Conditions.h"
 
 void Retsu::Conditions::eq(const string& name, const string& value) {
-	shared_ptr<Condition::Base> eq(new Condition::Eq(name, value));
-	vector< shared_ptr<Condition::Base> >::push_back(eq);
+	conditions.push_back(shared_ptr<Condition::Base>(new Condition::Eq(name, value)));
 }
 
 void Retsu::Conditions::neq(const string& name, const string& value) {
-	shared_ptr<Condition::Base> neq(new Condition::Neq(name, value));
-	vector< shared_ptr<Condition::Base> >::push_back(neq);
+	conditions.push_back(shared_ptr<Condition::Base>(new Condition::Neq(name, value)));
 }
 
 void Retsu::Conditions::gt(const string& name, const string& value) {
-	shared_ptr<Condition::Base> gt(new Condition::Gt(name, value));
-	vector< shared_ptr<Condition::Base> >::push_back(gt);
+	conditions.push_back(shared_ptr<Condition::Base>(new Condition::Gt(name, value)));
 }
 
 void Retsu::Conditions::gte(const string& name, const string& value) {
-	shared_ptr<Condition::Base> gte(new Condition::Gte(name, value));
-	vector< shared_ptr<Condition::Base> >::push_back(gte);
+	conditions.push_back(shared_ptr<Condition::Base>(new Condition::Gte(name, value)));
 }
 
 void Retsu::Conditions::lt(const string& name, const string& value) {
-	shared_ptr<Condition::Base> lt(new Condition::Lt(name, value));
-	vector< shared_ptr<Condition::Base> >::push_back(lt);
+	conditions.push_back(shared_ptr<Condition::Base>(new Condition::Lt(name, value)));
 }
 
 void Retsu::Conditions::lte(const string& name, const string& value) {
-	shared_ptr<Condition::Base> lte(new Condition::Lte(name, value));
-	vector< shared_ptr<Condition::Base> >::push_back(lte);
+	conditions.push_back(shared_ptr<Condition::Base>(new Condition::Lte(name, value)));
 }
 
 void Retsu::Conditions::in(const string& name, const vector<string>& values) {
-	shared_ptr<Condition::Base> in(new Condition::In(name, values));
-	vector< shared_ptr<Condition::Base> >::push_back(in);
+	conditions.push_back(shared_ptr<Condition::Base>(new Condition::In(name, values)));
 }
 
 /*
@@ -50,10 +43,10 @@ void Retsu::Conditions::in(const string& name, const vector<string>& values) {
 
 bool Retsu::Conditions::check(const string& column, string& value) const {
   shared_ptr<Condition::Base> condition;
-	for(size_t i = 0; i < this->size(); i++) {
-		condition = this->at(i);
+	for(size_t i = 0; i < conditions.size(); i++) {
+		condition = conditions[i];
 		if(condition != NULL && condition->column == column) {
-			if(!condition->Check(value)) {
+			if(!condition->check(value)) {
         return false;
       }
 		}
@@ -64,10 +57,10 @@ bool Retsu::Conditions::check(const string& column, string& value) const {
 
 void Retsu::Conditions::apply(const string& column, vector<string>& values) const {
 	shared_ptr<Condition::Base> condition;
-	for(size_t i = 0; i < this->size(); i++) {
-		condition = this->at(i);
+	for(size_t i = 0; i < conditions.size(); i++) {
+		condition = conditions[i];
 		if(condition != NULL && condition->column == column) {
-			condition->Apply(values);
+			condition->apply(values);
 		}
 	}
 }

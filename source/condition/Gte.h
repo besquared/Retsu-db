@@ -7,14 +7,14 @@
  *
  */
 
-#ifndef _flow_condition_gte_h_
-#define _flow_condition_gte_h_
+#ifndef _RETSU_CONDITION_GTE_H_
+#define _RETSU_CONDITION_GTE_H_
 
 #include "Base.h"
 
-namespace Flow {
+namespace Retsu {
 	namespace Condition {
-		class Gte : public Condition::Base {
+		class Gte : public Base {
 		public:
 			string value;
 			
@@ -24,16 +24,16 @@ namespace Flow {
 				this->type = Condition::Base::GTE;
 			}
       
-      bool Check(string& value) {
+      bool check(string& value) {
         return value >= this->value;
       }
       
-			void Apply(vector<string>& values)  {
+			void apply(vector<string>& values)  {
 				vector<string> results;
 				results.reserve(values.size());
 				size_t vsize = values.size();
 				for(size_t i = 0; i < vsize; i++) {
-					if(this->Check(values[i])) {
+					if(this->check(values[i])) {
 						results.push_back(values[i]);
 					}
 				}
@@ -42,7 +42,7 @@ namespace Flow {
       
       void print(ostream& out) const {
         out << column << " >= " << value;
-      }      
+      }
 		};
 	}
 }

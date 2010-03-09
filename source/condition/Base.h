@@ -7,16 +7,16 @@
  *
  */
 
-#ifndef _flow_engine_condition_base_h_
-#define _flow_engine_condition_base_h_
+#ifndef _RETSU_CONDITION_BASE_H_
+#define _RETSU_CONDITION_BASE_H_
 
 #include <Common.h>
 
 namespace Retsu {
 	namespace Condition {
-		class Base {
-      using namespace std;      
+    using namespace std;      
 
+		class Base {
 		public:
 			enum ConditionType { EQ, GT, GTE, LT, LTE, IN };
 
@@ -29,8 +29,8 @@ namespace Retsu {
 			
       virtual bool check(string& value) = 0;
 			virtual void apply(vector<string>& values) = 0;
-      
       virtual void print(ostream& out) const = 0;
+      
       friend ostream& operator<<(ostream& out, const Base& condition) {
         condition.print(out);
         return out;

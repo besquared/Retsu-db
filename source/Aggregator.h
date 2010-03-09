@@ -11,6 +11,8 @@
 #define _RETSU_AGGREGATOR_H_
 
 #include "Common.h"
+#include "Conditions.h"
+#include "Aggregates.h"
 
 namespace Retsu {
   using namespace v8;

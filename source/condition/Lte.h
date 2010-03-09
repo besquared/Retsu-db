@@ -7,14 +7,14 @@
  *
  */
 
-#ifndef _flow_condition_lte_h_
-#define _flow_condition_lte_h_
+#ifndef _RETSU_CONDITION_LTE_H_
+#define _RETSU_CONDITION_LTE_H_
 
 #include "Base.h"
 
-namespace Flow {
+namespace Retsu {
 	namespace Condition {
-		class Lte : public Condition::Base {
+		class Lte : public Base {
 		public:
 			string value;
 			
@@ -24,16 +24,16 @@ namespace Flow {
 				this->type = Condition::Base::LTE;
 			}
 			
-      bool Check(string& value) {
+      bool check(string& value) {
         return value <= this->value;
       }      
       
-			void Apply(vector<string>& values) {
+			void apply(vector<string>& values) {
 				vector<string> results;
 				results.reserve(values.size());
 				size_t vsize = values.size();
 				for(size_t i = 0; i < vsize; i++) {
-					if(this->Check(values[i])) {
+					if(this->check(values[i])) {
 						results.push_back(values[i]);
 					}
 				}

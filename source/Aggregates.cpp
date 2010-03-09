@@ -35,8 +35,8 @@ void Retsu::Aggregates::measure_names(set<string>& results) {
 std::set<std::string> Retsu::Aggregates::aliases() {
   set<string> results;
   
-  for(size_t i = 0; i < size(); i++) {
-		results.insert(Aggregates[i]->alias());
+  for(size_t i = 0; i < aggregates.size(); i++) {
+		results.insert(aggregates[i]->alias());
 	}
   
   return results;
