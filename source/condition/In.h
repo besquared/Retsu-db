@@ -31,7 +31,7 @@ namespace Retsu {
 				this->values = values;
 				this->negation = negation;
 				this->type = Condition::Base::IN;
-			}      
+			}
 			
       bool check(string& value) {
         vector<string>::iterator found;

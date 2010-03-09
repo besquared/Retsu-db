@@ -31,6 +31,8 @@
 		030C01911144916200D27A1F /* Sum.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C018B1144916200D27A1F /* Sum.h */; };
 		030C01971144917A00D27A1F /* Aggregates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C01951144917A00D27A1F /* Aggregates.cpp */; };
 		030C01981144917A00D27A1F /* Aggregates.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C01961144917A00D27A1F /* Aggregates.h */; };
+		030C029F1145FDD700D27A1F /* TableManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C029D1145FDD700D27A1F /* TableManager.cpp */; };
+		030C02A01145FDD700D27A1F /* TableManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C029E1145FDD700D27A1F /* TableManager.h */; };
 		030FACF6112E6A070047E4F7 /* libretsu.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 030FACF1112E69DA0047E4F7 /* libretsu.dylib */; };
 		0324020D113B9A95001E567A /* libboost_filesystem-xgcc40-mt-1_38.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324020C113B9A8B001E567A /* libboost_filesystem-xgcc40-mt-1_38.dylib */; };
 		0324021F113B9B1C001E567A /* libboost_system-xgcc40-mt-1_38.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324021E113B9B14001E567A /* libboost_system-xgcc40-mt-1_38.dylib */; };
@@ -172,6 +174,8 @@
 		030C018B1144916200D27A1F /* Sum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sum.h; sourceTree = "<group>"; };
 		030C01951144917A00D27A1F /* Aggregates.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Aggregates.cpp; path = source/Aggregates.cpp; sourceTree = "<group>"; };
 		030C01961144917A00D27A1F /* Aggregates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aggregates.h; path = source/Aggregates.h; sourceTree = "<group>"; };
+		030C029D1145FDD700D27A1F /* TableManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TableManager.cpp; path = source/TableManager.cpp; sourceTree = "<group>"; };
+		030C029E1145FDD700D27A1F /* TableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableManager.h; path = source/TableManager.h; sourceTree = "<group>"; };
 		030FACF1112E69DA0047E4F7 /* libretsu.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libretsu.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		03240181113B90AD001E567A /* TableOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableOperations.h; path = source/TableOperations.h; sourceTree = "<group>"; };
 		0324020C113B9A8B001E567A /* libboost_filesystem-xgcc40-mt-1_38.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_filesystem-xgcc40-mt-1_38.dylib"; path = "usr/lib/libboost_filesystem-xgcc40-mt-1_38.dylib"; sourceTree = DEVELOPER_DIR; };
@@ -2805,6 +2809,8 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				030C029D1145FDD700D27A1F /* TableManager.cpp */,
+				030C029E1145FDD700D27A1F /* TableManager.h */,
 				030C01851144916200D27A1F /* aggregate */,
 				030C01951144917A00D27A1F /* Aggregates.cpp */,
 				030C01961144917A00D27A1F /* Aggregates.h */,
@@ -2903,6 +2909,7 @@
 				030C018F1144916200D27A1F /* Count.h in Headers */,
 				030C01911144916200D27A1F /* Sum.h in Headers */,
 				030C01981144917A00D27A1F /* Aggregates.h in Headers */,
+				030C02A01145FDD700D27A1F /* TableManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3034,6 +3041,7 @@
 				030C018E1144916200D27A1F /* Count.cpp in Sources */,
 				030C01901144916200D27A1F /* Sum.cpp in Sources */,
 				030C01971144917A00D27A1F /* Aggregates.cpp in Sources */,
+				030C029F1145FDD700D27A1F /* TableManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

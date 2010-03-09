@@ -10,12 +10,6 @@
 #include "TableOperations.h"
 
 /*
- * Caches
- */
-
-static Retsu::TableCache table_cache;
-
-/*
  * Objects & Proxies
  */
 static v8::Handle<v8::ObjectTemplate> table_templ;
@@ -70,7 +64,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::insert(const Arguments& args) {
       Local<Value> tname_val = args.This()->Get(key);
       string table_name = *String::AsciiValue(tname_val);      
             
-      shared_ptr<Table> table = get_cached_table(".", table_name);
+      shared_ptr<Table> table = TableManager::instance().get(table_name);
       
       for(size_t i = 0; i < dimensions->Length(); i++) {
         Local<Value> key = dimensions->Get(Number::New(i));
@@ -117,7 +111,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::lookup_one(const Arguments& args) 
   Local<Value> tname_val = args.This()->Get(key);
   string table_name = *String::AsciiValue(tname_val);      
   
-  shared_ptr<Table> table = get_cached_table(".", table_name);
+  shared_ptr<Table> table = TableManager::instance().get(table_name);
   
   return table->lookup(args[0]->NumberValue(), *String::AsciiValue(args[1]));
 }
@@ -137,7 +131,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::each(const Arguments& args) {
   
   Local<String> key = String::New("name");
   Local<Value> table_name = args.This()->Get(key);
-  shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
+  shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
   
   Local<Function> callback = Local<Function>::Cast(args[0]);
 
@@ -171,7 +165,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name
   if(name->Equals(String::New("id"))) return id;
   
   Local<Value> table_name = record->GetRealNamedProperty(String::New("table"));
-  shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
+  shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
   
   return table->lookup(id->NumberValue(), *String::AsciiValue(name));
 }
@@ -197,7 +191,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
 v8::Handle<v8::Value> Retsu::TableOperations::aggregate_flat(const Arguments& args) {
   Local<String> key = String::New("name");
   Local<Value> table_name = args.This()->Get(key);
-  shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
+  shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
     
   Local<Object> filters;
   Local<Object> aggregates;
@@ -208,7 +202,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate_flat(const Arguments& ar
 v8::Handle<v8::Value> Retsu::TableOperations::aggregate_groups(const Arguments& args) {
   Local<String> key = String::New("name");
   Local<Value> table_name = args.This()->Get(key);
-  shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
+  shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
   
   return Handle<Value>();
 }
@@ -222,7 +216,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(const Arguments& args) {
   
   Local<String> key = String::New("name");
   Local<Value> table_name = args.This()->Get(key);
-  shared_ptr<Table> table = get_cached_table(".", *String::AsciiValue(table_name));
+  shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
   
   // lets just do the grouping straight up right here
   //  first lets run filter() to get a list of record id's that matter
@@ -261,17 +255,4 @@ v8::Handle<v8::Value> Retsu::TableOperations::construct(vector<string>& dimensio
 //		}
 //	}
   return Handle<Value>();
-}
-
-boost::shared_ptr<Retsu::Table> Retsu::TableOperations::get_cached_table(const string& db_path, const string& table_name) {
-  string key = db_path + "/" + table_name;
-  TableCache::iterator found = table_cache.find(key);
-  
-  if(found == table_cache.end()) {
-    shared_ptr<Table> table(new Table(db_path, table_name)); 
-    table_cache[key] = table;
-    return table;
-  } else {
-    return found->second;
-  }
 }
