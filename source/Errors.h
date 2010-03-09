@@ -19,6 +19,11 @@ namespace Retsu {
   public:
     StorageError(const string& message);
   };
+  
+  class DimensionNotFoundError : public logic_error {
+  public:
+    DimensionNotFoundError(const string& message);
+  };
 }
 
 #endif

@@ -67,6 +67,16 @@ void Retsu::Table::insert(const RecordID& id, const string& measure, const doubl
   }  
 }
 
+void Retsu::Table::lookup(const RecordID& id, const string& column, string& result) {
+  Dimension* dimension_db = dimensions->retrieve(column);
+  
+  if(dimension_db == NULL) {
+    throw DimensionNotFoundError("Could not find dimension " + column + " in table " + table_name.string());
+  } else {
+    dimension_db->Lookup(id, result);
+  }
+}
+
 v8::Handle<v8::Value> Retsu::Table::lookup(const RecordID& id, const string& column) {
   Dimension* dimension_db = dimensions->retrieve(column);
   

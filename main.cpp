@@ -23,7 +23,7 @@ string read_source(const string& path) {
 int main(int argc, char * const argv[]) { 
   Retsu::Commander* commander = new Retsu::Commander();
   
-  string source_file = "each.js";
+  string source_file = "group.js";
   string source = read_source(source_file);
   
   cout << "Executing " << source_file << "\n\n" << source << endl;

@@ -24,13 +24,19 @@ void Retsu::TableOperations::install(Handle<ObjectTemplate> scope) {
   tables_proxy->SetNamedPropertyHandler(get_table_proxy);
   scope->Set(String::New("tables"), tables_proxy);
   scope->Set(String::New("create_table"), FunctionTemplate::New(create));
+  
+  // create
+  // insert
+  // aggregate
+  
 }
 
 v8::Handle<v8::Value> Retsu::TableOperations::get_table_proxy(Local<String> name, const AccessorInfo& info) {  
   table_templ = ObjectTemplate::New();
   table_templ->Set(String::New("insert"), FunctionTemplate::New(insert));
   table_templ->Set(String::New("lookup"), FunctionTemplate::New(lookup));
-  table_templ->Set(String::New("each"), FunctionTemplate::New(each));   
+  table_templ->Set(String::New("each"), FunctionTemplate::New(each)); 
+  table_templ->Set(String::New("aggregate"), FunctionTemplate::New(aggregate));
   
   Local<Object> table_proxy = table_templ->NewInstance();
   table_proxy->Set(String::New("name"), name);
@@ -173,6 +179,8 @@ v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name
 
 // 
 v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
+  cout << "inside aggregate" << endl;
+  
   if(!args[0]->IsObject()) {
     return ThrowException(String::New("Argument must be an object"));
   }
@@ -200,9 +208,69 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate_flat(const Arguments& ar
 }
 
 v8::Handle<v8::Value> Retsu::TableOperations::aggregate_groups(const Arguments& args) {
-  Local<String> key = String::New("name");
-  Local<Value> table_name = args.This()->Get(key);
+  Local<Object> params = Local<Object>::Cast(args[0]);
+
+  Local<Value> table_name = args.This()->Get(String::New("name"));
+  Local<Value> grouping_dims = params->Get(String::New("group"));
+  
+  if(grouping_dims->IsNull()) {
+    return ThrowException(String::New("Could not find aggregate key group"));
+  }
+  
+  Local<Array> group_ary = Local<Array>::Cast(grouping_dims);
+  
+  vector<string> group_by;
+  for(size_t k = 0; k < group_ary->Length(); k++) {
+    group_by.push_back(*String::AsciiValue(group_ary->Get(Number::New(k))));
+  }
+  
+  for(size_t m = 0; m < group_by.size(); m++) {
+    cout << group_by[m] << endl;
+  }
+  
   shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
+
+  try {
+    string value;
+    uint64_t current;
+    vector<string> group_vals;
+    map<size_t, Group> groups;
+
+    table->cursor_init();
+    while((current = table->cursor_next()) > 0) {
+      for(size_t i = 0; i < group_by.size(); i++) {
+        table->lookup(current, group_by[i], value);
+        cout << value << endl;
+        group_vals.push_back(value);
+      }
+      
+      size_t hash_key = boost::hash_range(group_vals.begin(), group_vals.end());      
+//      // look up the key in the map
+//      map<size_t, Group>::iterator found = groups.find(hash_key);
+//      
+//      if(found != groups.end()) {
+//        Group group;
+//        
+//        group.records.push_back(current);
+//        for(size_t j = 0; j < group_by.size(); j++) {
+//          group.values[group_by[j]] = group_vals[j];
+//        }
+//        
+//        groups[hash_key] = group;
+//      } else {
+//        found->second.records.push_back(current);
+//      }
+//      
+//      group_vals.clear();
+    }
+    
+    // we have groups here, this could be fucking HUUUGE, 
+    //  can we do this on disk? indeed I think we can at least with a little help
+  } catch(StorageError e) {
+    return ThrowException(String::New(e.what()));
+  } catch(DimensionNotFoundError e) {
+    return ThrowException(String::New(e.what()));
+  }
   
   return Handle<Value>();
 }

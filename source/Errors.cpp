@@ -10,3 +10,4 @@
 #include "Errors.h"
 
 Retsu::StorageError::StorageError(const string& message) : runtime_error(message) {}
+Retsu::DimensionNotFoundError::DimensionNotFoundError(const string& message) : logic_error(message) {}

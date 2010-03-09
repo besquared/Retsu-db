@@ -12,6 +12,7 @@
 
 #include "Common.h"
 #include "Table.h"
+#include "Group.h"
 #include "RIDTree.h"
 #include "TableManager.h"
 

@@ -33,6 +33,9 @@
 		030C01981144917A00D27A1F /* Aggregates.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C01961144917A00D27A1F /* Aggregates.h */; };
 		030C029F1145FDD700D27A1F /* TableManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C029D1145FDD700D27A1F /* TableManager.cpp */; };
 		030C02A01145FDD700D27A1F /* TableManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C029E1145FDD700D27A1F /* TableManager.h */; };
+		030C030C1146140B00D27A1F /* Group.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C030A1146140B00D27A1F /* Group.cpp */; };
+		030C030D1146140B00D27A1F /* Group.h in Headers */ = {isa = PBXBuildFile; fileRef = 030C030B1146140B00D27A1F /* Group.h */; };
+		030C03581146217900D27A1F /* group.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 030C01431142D53500D27A1F /* group.js */; };
 		030FACF6112E6A070047E4F7 /* libretsu.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 030FACF1112E69DA0047E4F7 /* libretsu.dylib */; };
 		0324020D113B9A95001E567A /* libboost_filesystem-xgcc40-mt-1_38.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324020C113B9A8B001E567A /* libboost_filesystem-xgcc40-mt-1_38.dylib */; };
 		0324021F113B9B1C001E567A /* libboost_system-xgcc40-mt-1_38.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324021E113B9B14001E567A /* libboost_system-xgcc40-mt-1_38.dylib */; };
@@ -131,6 +134,7 @@
 			files = (
 				032408551140C768001E567A /* create.js in CopyFiles */,
 				032408561140C768001E567A /* each.js in CopyFiles */,
+				030C03581146217900D27A1F /* group.js in CopyFiles */,
 				032408571140C768001E567A /* insert.js in CopyFiles */,
 				032408581140C768001E567A /* lookup.js in CopyFiles */,
 			);
@@ -176,6 +180,8 @@
 		030C01961144917A00D27A1F /* Aggregates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aggregates.h; path = source/Aggregates.h; sourceTree = "<group>"; };
 		030C029D1145FDD700D27A1F /* TableManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TableManager.cpp; path = source/TableManager.cpp; sourceTree = "<group>"; };
 		030C029E1145FDD700D27A1F /* TableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableManager.h; path = source/TableManager.h; sourceTree = "<group>"; };
+		030C030A1146140B00D27A1F /* Group.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Group.cpp; path = source/Group.cpp; sourceTree = "<group>"; };
+		030C030B1146140B00D27A1F /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = source/Group.h; sourceTree = "<group>"; };
 		030FACF1112E69DA0047E4F7 /* libretsu.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libretsu.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		03240181113B90AD001E567A /* TableOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableOperations.h; path = source/TableOperations.h; sourceTree = "<group>"; };
 		0324020C113B9A8B001E567A /* libboost_filesystem-xgcc40-mt-1_38.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_filesystem-xgcc40-mt-1_38.dylib"; path = "usr/lib/libboost_filesystem-xgcc40-mt-1_38.dylib"; sourceTree = DEVELOPER_DIR; };
@@ -2809,8 +2815,6 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				030C029D1145FDD700D27A1F /* TableManager.cpp */,
-				030C029E1145FDD700D27A1F /* TableManager.h */,
 				030C01851144916200D27A1F /* aggregate */,
 				030C01951144917A00D27A1F /* Aggregates.cpp */,
 				030C01961144917A00D27A1F /* Aggregates.h */,
@@ -2830,6 +2834,8 @@
 				0324FB19113B29A4001E567A /* Dimensions.h */,
 				032406A8113F9262001E567A /* Errors.cpp */,
 				032406A9113F9262001E567A /* Errors.h */,
+				030C030A1146140B00D27A1F /* Group.cpp */,
+				030C030B1146140B00D27A1F /* Group.h */,
 				08FB7796FE84155DC02AAC07 /* Main.cpp */,
 				0324FB1A113B29A4001E567A /* Measure.cpp */,
 				0324FB1B113B29A4001E567A /* Measure.h */,
@@ -2849,6 +2855,8 @@
 				030C010B114219F000D27A1F /* RIDTree.h */,
 				0324FB14113B29A4001E567A /* Table.cpp */,
 				0324FB15113B29A4001E567A /* Table.h */,
+				030C029D1145FDD700D27A1F /* TableManager.cpp */,
+				030C029E1145FDD700D27A1F /* TableManager.h */,
 				032403C4113CD32F001E567A /* TableOperations.cpp */,
 				03240181113B90AD001E567A /* TableOperations.h */,
 			);
@@ -2910,6 +2918,7 @@
 				030C01911144916200D27A1F /* Sum.h in Headers */,
 				030C01981144917A00D27A1F /* Aggregates.h in Headers */,
 				030C02A01145FDD700D27A1F /* TableManager.h in Headers */,
+				030C030D1146140B00D27A1F /* Group.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3042,6 +3051,7 @@
 				030C01901144916200D27A1F /* Sum.cpp in Sources */,
 				030C01971144917A00D27A1F /* Aggregates.cpp in Sources */,
 				030C029F1145FDD700D27A1F /* TableManager.cpp in Sources */,
+				030C030C1146140B00D27A1F /* Group.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
