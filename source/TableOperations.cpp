@@ -178,8 +178,6 @@ v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name
   return table->lookup(id->NumberValue(), *String::AsciiValue(name));
 }
 
-
-// 
 v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
   cout << "inside aggregate" << endl;
   
@@ -190,9 +188,14 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
   Local<Object> params = Local<Object>::Cast(args[0]);
   Local<Value> table_name = args.This()->Get(String::New("name"));
   Local<Value> grouping_dims = params->Get(String::New("group"));
+  Local<Value> aggregate = params->Get(String::New("aggregates"));
   
   if(grouping_dims->IsNull()) {
     return ThrowException(String::New("Could not find key 'group' in aggregate parameters"));
+  }
+  
+  if(aggregate->IsNull()) {
+    return ThrowException(String::New("Could not find key 'aggregate' in aggregate parameters"));
   }
   
   Local<Array> group_ary = Local<Array>::Cast(grouping_dims);
@@ -225,7 +228,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
       map<size_t, Group>::iterator found = groups.find(hash_key);
       
       if(found == groups.end()) {
-        Group group;
+        Group group(table);
         
         group.records.push_back(current);
         for(size_t j = 0; j < group_by.size(); j++) {
@@ -238,7 +241,34 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
       }
     }
     
-    cout << groups.size() << endl;
+    Local<Object> agg_params = Local<Object>::Cast(aggregate);
+    Local<Array> agg_names = agg_params->GetPropertyNames();
+    
+    for(size_t i = 0; i < agg_names->Length(); i++) {
+      Local<Value> agg_name = agg_names->Get(Number::New(i));
+      Local<Value> agg_def = agg_params->Get(agg_name);
+      
+      if(agg_def->IsFunction()) {
+        // do the group function thing
+      } else if(agg_def->IsObject()) {
+        Local<Object> agg_obj = Local<Object>::Cast(agg_def);
+        
+        if(agg_obj->Has(String::New("sum"))) {
+          Local<Value> column = agg_obj->Get(String::New("sum"));
+          
+          cout << "I'm going to sum the shit out of this" << endl;
+          
+          map<size_t, Group>::iterator group;
+          for(group = groups.begin(); group != groups.end(); group++) {
+            group->second.sum(*String::AsciiValue(agg_name), *String::AsciiValue(column));
+          }
+          // loop through all the groups and do a sum
+        } else if(agg_obj->Has(String::New("count"))) {
+          
+        }
+        // look up what sort of object it is
+      }
+    }
   } catch(StorageError e) {
     return ThrowException(String::New(e.what()));
   } catch(DimensionNotFoundError e) {
@@ -246,57 +276,4 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
   }
   
   return Handle<Value>();  
-}
-
-v8::Handle<v8::Value> Retsu::TableOperations::aggregate_groups(const Arguments& args) {
-}
-
-v8::Handle<v8::Value> Retsu::TableOperations::group(const Arguments& args) {
-  // so we're gonna like hella group here and stuff, scan and then construct
-  vector<string> group_by;
-  for(size_t i = 0; i < args.Length() - 1; i++) {
-    group_by.push_back(*String::AsciiValue(args[i]));
-  }
-  
-  Local<String> key = String::New("name");
-  Local<Value> table_name = args.This()->Get(key);
-  shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
-  
-  // lets just do the grouping straight up right here
-  //  first lets run filter() to get a list of record id's that matter
-  //  then lets go through and group of all of them then return this group
-  
-  return Handle<Value>();
-}
-
-v8::Handle<v8::Value> Retsu::TableOperations::construct(vector<string>& dimensions, RIDTree& lookedup, size_t offset, map<string, string>& values, RIDList& records) {
-//	if(inquired_dims.size() == offset) {
-//		RIDList intersected = records & instantiated;
-//		
-//		if(intersected.size() > 0) {
-//      map<string, string> group_values;
-//      group_values.insert(values.begin(), values.end());
-//      group_values.insert(instantiate.begin(), instantiate.end());
-//      worksets.push_back(WorkSet(group_values, intersected));
-//		}
-//    
-//		return;
-//	}
-//	
-//  string& dimension = inquired_dims[offset];
-//  
-//  RIDMap::iterator rpair;
-//	RIDMap rmap = inquired[dimension];
-//	for(rpair = rmap.begin(); rpair != rmap.end(); rpair++) {
-//		RIDList intersection = 
-//		(records.empty() ? rpair->second : records & rpair->second);
-//		
-//		if(intersection.size() > 0) {
-//      values[dimension] = rpair->first;
-//			Construct(instantiate, instantiated, inquired_dims, 
-//								inquired, offset + 1, values, intersection, worksets);
-//      values.erase(dimension);
-//		}
-//	}
-  return Handle<Value>();
 }

@@ -12,18 +12,29 @@
 
 #include "Common.h"
 #include "Record.h"
+#include "Table.h"
+#include "RIDList.h"
 
 namespace Retsu {
   using namespace std;
+  using namespace v8;
+  using namespace boost;
   
   class Group {
   public:
-    vector<RecordID> records;
+    RIDList records;
+    shared_ptr<Table> table;
     map<string, string> values;
+    map<string, double> aggregates;
     
-    double sum(const string& column);
-    double count(const string& column);
-    double count_unique(const string& column);
+    Group();
+    Group(shared_ptr<Table> table);
+    
+    double sum(const string& name, const string& column);
+    double average(const string& name, const string& column);
+    double count(const string& name, const string& column);
+    double count_unique(const string& name, const string& column);
+    double aggregate(const string& name, Handle<Function> aggfunc);
   };
 }
 

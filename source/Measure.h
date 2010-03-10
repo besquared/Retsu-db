@@ -30,13 +30,14 @@ namespace Retsu {
      * I/O Management
      */
     string Path();
+    bool Exists();
     void Create();
     void Close();
     void Truncate();
     void OpenReader();
     void OpenWriter();
     bool Open(int mode);
-    
+
     /*
      * Reading
      */

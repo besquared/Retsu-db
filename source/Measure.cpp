@@ -28,10 +28,19 @@ std::string Retsu::Measure::Path() {
   return this->path + "/" + this->name + ".tcf";
 }
 
+bool Retsu::Measure::Exists() {
+  if(this->Open(FDBOREADER)) {
+    this->Close();
+    return true;
+  } else {
+    return false;
+  }
+}
+
 void Retsu::Measure::Create() {	
 	tcfdbtune(this->database, sizeof(double), INT_MAX);
 	
-	if(this->Open(FDBOWRITER | FDBOCREAT)) {
+	if(this->Open(FDBOCREAT)) {
     this->Close();
 	} else {
     throw StorageError("Could not create measure database at " + Path());
@@ -59,7 +68,7 @@ void Retsu::Measure::OpenReader() {
 }
 
 void Retsu::Measure::OpenWriter() {
-  if(!this->Open(FDBOWRITER | FDBOCREAT)) {
+  if(!this->Open(FDBOWRITER)) {
     throw StorageError("Could not open measure for writing at " + Path());
   }
 }

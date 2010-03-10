@@ -38,15 +38,23 @@ bool Retsu::Measures::insert(const Record& record) {
 	return true;
 }
 
-Retsu::Measure* Retsu::Measures::retrieve(const string& measure) {
+Retsu::Measure* Retsu::Measures::retrieve(const string& measure, bool create) {
   map<string, Measure*>::iterator found = cache.find(measure);
   
   if(found == cache.end()) {
     Measure* database = new Measure(this->table_path.string(), measure);
     
+    if(!database->Exists()) {
+      if(create) {
+        database->Create();
+      } else {
+        return NULL;
+      }
+    }
+    
     database->OpenWriter();
     cache[measure] = database;
-    return database;
+    return database;    
   } else {
     return found->second;
   }

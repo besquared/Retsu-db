@@ -28,7 +28,7 @@ namespace Retsu {
     bool insert(const Record& record);
 //			virtual void Lookup(const string& measure, const RIDList& records, vector<double>& results);
     
-    Measure* retrieve(const string& measure);
+    Measure* retrieve(const string& measure, bool create = true);
   };
 }
 
