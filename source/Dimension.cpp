@@ -28,6 +28,10 @@ std::string Retsu::Dimension::Path() {
   return this->path + "/" + this->name + ".tch";
 }
 
+bool Retsu::Dimension::Exists() {
+  return fs::exists(fs::path(Path()));
+}
+
 void Retsu::Dimension::Create() {
 	tchdbtune(database, -1, -1, -1, HDBTLARGE | HDBTDEFLATE);
 	

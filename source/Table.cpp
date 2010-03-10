@@ -61,7 +61,7 @@ void Retsu::Table::insert(const RecordID& id, const string& measure, const doubl
   Measure* database = measures->retrieve(measure);
   
   if(database != NULL) {
-    database->Insert(id, value);
+    database->insert(id, value);
   } else {
     return;
   }  
@@ -87,7 +87,7 @@ v8::Handle<v8::Value> Retsu::Table::lookup(const RecordID& id, const string& col
       return Handle<Value>();
     } else {
       double value = 0;
-      measure_db->Lookup(id, value);
+      measure_db->lookup(id, value);
       return Number::New(value);
     }
   } else {

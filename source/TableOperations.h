@@ -26,6 +26,7 @@ namespace Retsu {
     Handle<Value> get_table_proxy(v8::Local<v8::String> name, const v8::AccessorInfo &info);
     
     Handle<Value> create(const Arguments& args);
+    Handle<Value> drop(const Arguments& args);
     Handle<Value> insert(const Arguments& args);
     Handle<Value> lookup(const Arguments& args);
     Handle<Value> lookup_one(const Arguments& args);

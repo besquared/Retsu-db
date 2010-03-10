@@ -31,6 +31,7 @@ namespace Retsu {
      * I/O Management
      */
     string Path();
+    bool Exists();
     void Create();
     void Truncate();
     void Close();

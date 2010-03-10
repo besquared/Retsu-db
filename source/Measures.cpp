@@ -17,7 +17,7 @@ Retsu::Measures::~Measures() {
   map<string, Measure*>::iterator database;
   
   for(database = cache.begin(); database != cache.end(); database++) {
-    database->second->Close();
+    database->second->close();
     delete(database->second);
   }
 }
@@ -29,7 +29,7 @@ bool Retsu::Measures::insert(const Record& record) {
     Measure* database = this->retrieve(measure->first);
     
     if(database != NULL) {
-      database->Insert(record.id, measure->second);
+      database->insert(record.id, measure->second);
     } else {
       return false;
     }
@@ -44,15 +44,9 @@ Retsu::Measure* Retsu::Measures::retrieve(const string& measure, bool create) {
   if(found == cache.end()) {
     Measure* database = new Measure(this->table_path.string(), measure);
     
-    if(!database->Exists()) {
-      if(create) {
-        database->Create();
-      } else {
-        return NULL;
-      }
-    }
+    if(!database->exists() && !create) return NULL;
     
-    database->OpenWriter();
+    database->open_writer();
     cache[measure] = database;
     return database;    
   } else {

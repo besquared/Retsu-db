@@ -9,81 +9,83 @@
 
 #include "Measure.h"
 
-Retsu::Measure::Measure(string path, string name) {
-  this->path = path;
+Retsu::Measure::Measure(string table_path, string name) {
+  this->table_path = table_path;
   this->name = name;
   this->database = tcfdbnew();
 }
 
 Retsu::Measure::~Measure() {
-  this->Close();
-  tcfdbdel(this->database);
+  close();
+  tcfdbdel(database);
 }
 
 /*
  * I/O Management
  */
 
-std::string Retsu::Measure::Path() {
-  return this->path + "/" + this->name + ".tcf";
+std::string Retsu::Measure::path() {
+  return (table_path / fs::path(name + ".tcf")).string();
 }
 
-bool Retsu::Measure::Exists() {
-  if(this->Open(FDBOREADER)) {
-    this->Close();
-    return true;
-  } else {
-    return false;
-  }
+bool Retsu::Measure::exists() {
+  cout << "exists" << endl;
+  return fs::exists(fs::path(path()));
 }
 
-void Retsu::Measure::Create() {	
-	tcfdbtune(this->database, sizeof(double), INT_MAX);
-	
-	if(this->Open(FDBOCREAT)) {
-    this->Close();
+void Retsu::Measure::create() {
+  cout << "create" << endl;
+	tcfdbtune(database, sizeof(double), INT_MAX);
+
+	if(this->open(FDBOWRITER | FDBOCREAT)) {
+    this->close();
 	} else {
-    throw StorageError("Could not create measure database at " + Path());
+    throw StorageError("Could not create measure database at " + path()  + ", " + error());
 	}	
 }
 
-void Retsu::Measure::Close() {
-  if(!tcfdbclose(this->database)) {
+void Retsu::Measure::close() {
+  cout << "close" << endl;
+  if(!tcfdbclose(database)) {
 //		throw StorageError("Could not close measure at " + Path());
   }
 }
 
-void Retsu::Measure::Truncate() {
-	if(!this->Open(FDBOWRITER | FDBOTRUNC)) {
-		this->Close();
+void Retsu::Measure::truncate() {
+  cout << "truncate" << endl;
+	if(!open(FDBOWRITER | FDBOTRUNC)) {
+		this->close();
 	} else {
-		throw StorageError("Could not truncate measure at " + Path());
+		throw StorageError("Could not truncate measure at " + path());
 	}	
 }
 
-void Retsu::Measure::OpenReader() {
-  if(!this->Open(FDBOREADER)) {
-    throw StorageError("Could not open measure for reading at " + Path());
+void Retsu::Measure::open_reader() {
+  cout << "open_reader" << endl;
+  if(!open(FDBOREADER)) {
+    throw StorageError("Could not open measure for reading at " + path());
   }
 }
 
-void Retsu::Measure::OpenWriter() {
-  if(!this->Open(FDBOWRITER)) {
-    throw StorageError("Could not open measure for writing at " + Path());
+void Retsu::Measure::open_writer() {
+  cout << "open_writer" << endl;
+  if(!open(FDBOWRITER | FDBOCREAT)) {
+    throw StorageError("Could not open measure for writing at " + path());
   }
 }
 
-bool Retsu::Measure::Open(int mode) {
-	return tcfdbopen(this->database, this->Path().c_str(), mode);
+bool Retsu::Measure::open(int mode) {
+  cout << "open " << path() << endl;
+	return tcfdbopen(database, path().c_str(), mode);
 }
 
 /*
  * Reading
  */ 
 
-bool Retsu::Measure::Lookup(RecordID key, double& result) {
+bool Retsu::Measure::lookup(RecordID key, double& result) {
 	int size_v;
-	void* value = tcfdbget(this->database, key, &size_v);
+	void* value = tcfdbget(database, key, &size_v);
 	
 	if(value == NULL) {
 		return false;
@@ -94,13 +96,13 @@ bool Retsu::Measure::Lookup(RecordID key, double& result) {
 	}
 }
 
-void Retsu::Measure::Lookup(const RIDList& keys, vector<double>& results) {
+void Retsu::Measure::lookup(const RIDList& keys, vector<double>& results) {
 	results.reserve(keys.size());
 	
 	double buffer;
 	RIDList::const_iterator key;
 	for(key = keys.begin(); key != keys.end(); key++) {
-		if(tcfdbget4(this->database, *key, &buffer, sizeof(double)) != -1) {
+		if(tcfdbget4(database, *key, &buffer, sizeof(double)) != -1) {
 			results.push_back(buffer);
 		}
 	}
@@ -110,14 +112,14 @@ void Retsu::Measure::Lookup(const RIDList& keys, vector<double>& results) {
  * Writing
  */
 
-bool Retsu::Measure::Insert(RecordID key, double value) {
-	return tcfdbput(this->database, key, &value, sizeof(double));
+bool Retsu::Measure::insert(RecordID key, double value) {
+	return tcfdbput(database, key, &value, sizeof(double));
 }
 
 /*
  * Error Management
  */
 
-std::string Retsu::Measure::Error() {
-	return string(tcfdberrmsg(tcfdbecode(this->database)));
+std::string Retsu::Measure::error() {
+	return string(tcfdberrmsg(tcfdbecode(database)));
 }

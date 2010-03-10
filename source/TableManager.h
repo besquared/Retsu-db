@@ -28,8 +28,10 @@ namespace Retsu {
       return tableManager;
     }
     
+    bool exists(const string& table_name);
+    void drop(const string& table_name);
     shared_ptr<Table> get(const string& table_name);
-    
+
     // create
     // drop
     // list

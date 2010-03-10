@@ -19,7 +19,7 @@ namespace Retsu {
 
   class Measure {
   public:
-    string path;
+    fs::path table_path;
     string name;
     TCFDB* database;
     
@@ -29,30 +29,30 @@ namespace Retsu {
     /*
      * I/O Management
      */
-    string Path();
-    bool Exists();
-    void Create();
-    void Close();
-    void Truncate();
-    void OpenReader();
-    void OpenWriter();
-    bool Open(int mode);
+    string path();
+    bool exists();
+    void create();
+    void close();
+    void truncate();
+    void open_reader();
+    void open_writer();
+    bool open(int mode);
 
     /*
      * Reading
      */
-    bool Lookup(RecordID key, double& result);
-    void Lookup(const RIDList& keys, vector<double>& results);
+    bool lookup(RecordID key, double& result);
+    void lookup(const RIDList& keys, vector<double>& results);
     
     /*
      * Writing
      */
-    bool Insert(RecordID key, double value);
+    bool insert(RecordID key, double value);
     
     /*
      * Error Handling
      */
-    string Error();
+    string error();
   };
 }
 

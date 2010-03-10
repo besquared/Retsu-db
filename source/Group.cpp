@@ -18,20 +18,17 @@ Retsu::Group::Group(shared_ptr<Retsu::Table> table) {
 double Retsu::Group::sum(const string& name, const string& column) {
   Measure* measure_db = table->measures->retrieve(column, false);
   
-  cout << "Summing the grizoup!" << endl;
-  
   if(measure_db == NULL) {
-    cout << "Throwing a mighty error!" << endl;
     throw DimensionNotFoundError("Could not find measure " + column);
   } else {
-    cout << "FOR SHIZZLE MY SUMIZZLE" << endl;
     vector<double> values;
-    measure_db->Lookup(records, values);
+    measure_db->lookup(records, values);
     
     double result = 0;
     for(size_t i = 0; i < values.size(); i++) {
       result += values[i];
     }
+    
     return result;
   }
 }

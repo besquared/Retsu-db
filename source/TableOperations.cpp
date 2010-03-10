@@ -24,6 +24,7 @@ void Retsu::TableOperations::install(Handle<ObjectTemplate> scope) {
   tables_proxy->SetNamedPropertyHandler(get_table_proxy);
   scope->Set(String::New("tables"), tables_proxy);
   scope->Set(String::New("create_table"), FunctionTemplate::New(create));
+  scope->Set(String::New("drop_table"), FunctionTemplate::New(drop));
   
   // create
   // insert
@@ -56,6 +57,18 @@ v8::Handle<v8::Value> Retsu::TableOperations::create(const Arguments& args) {
   }
 }
 
+v8::Handle<v8::Value> Retsu::TableOperations::drop(const Arguments& args) {
+  Local<Value> tname_val = args[0]->ToString();
+  string table_name = *String::AsciiValue(tname_val);
+  
+  try {
+    TableManager::instance().drop(table_name);
+    return Boolean::New(true);
+  } catch(StorageError e) {
+    return ThrowException(String::New(e.what()));
+  }
+}
+
 v8::Handle<v8::Value> Retsu::TableOperations::insert(const Arguments& args) {  
   if(args.Length() < 1) {
     return ThrowException(String::New("Invalid arguments to tables.insert"));
@@ -72,17 +85,21 @@ v8::Handle<v8::Value> Retsu::TableOperations::insert(const Arguments& args) {
             
       shared_ptr<Table> table = TableManager::instance().get(table_name);
       
-      RecordID record = table->next_id();
-      for(size_t i = 0; i < dimensions->Length(); i++) {
-        Local<Value> key = dimensions->Get(Number::New(i));
-        Local<Value> value = values->Get(key);
+      try {
+        RecordID record = table->next_id();
+        for(size_t i = 0; i < dimensions->Length(); i++) {
+          Local<Value> key = dimensions->Get(Number::New(i));
+          Local<Value> value = values->Get(key);
 
-        if(value->IsNumber()) {
-          table->insert(record, *String::AsciiValue(key), value->NumberValue());
-        } else {
-//          cout << "Inserting " << record << ": " << *String::AsciiValue(key) << " => " << *String::AsciiValue(value) << endl;
-          table->insert(record, *String::AsciiValue(key), *String::AsciiValue(value));
+          if(value->IsNumber()) {
+            table->insert(record, *String::AsciiValue(key), value->NumberValue());
+          } else {
+            table->insert(record, *String::AsciiValue(key), *String::AsciiValue(value));
+          }
         }
+      } catch(StorageError e) {
+        cout << e.what() << endl;
+        return ThrowException(String::New(e.what()));
       }
       
       return Boolean::New(true);
