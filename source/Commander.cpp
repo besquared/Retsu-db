@@ -42,7 +42,6 @@ v8::Handle<v8::Value> Retsu::Commander::execute(const string& source) {
     String::Utf8Value error(try_catch.Exception());
     return Boolean::New(false);
   } else {
-    cout << *String::AsciiValue(result) << endl;
     return result;
   }
   return result;

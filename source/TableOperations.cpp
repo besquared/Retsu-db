@@ -231,6 +231,9 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
     vector<string> group_vals;
     map<size_t, Group> groups;
     
+    // Holds our javascript return value
+    Local<Array> results = Array::New();
+    
     table->cursor_init();
     while((current = table->cursor_next()) > 0) {
       group_vals.clear();
@@ -253,6 +256,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
         }
         
         groups[hash_key] = group;
+        results->Set(Number::New(results->Length()), Object::New());
       } else {
         found->second.records.push_back(current);
       }
@@ -265,27 +269,37 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
       Local<Value> agg_name = agg_names->Get(Number::New(i));
       Local<Value> agg_def = agg_params->Get(agg_name);
       
+      double value;
+      size_t idx = 0;
+      map<size_t, Group>::iterator group;
+      
       if(agg_def->IsFunction()) {
         // do the group function thing
       } else if(agg_def->IsObject()) {
         Local<Object> agg_obj = Local<Object>::Cast(agg_def);
         
-        if(agg_obj->Has(String::New("sum"))) {
+        if(agg_obj->Has(String::New("count"))) {
+          for(group = groups.begin(); group != groups.end(); group++, idx++) {
+            value = group->second.count();
+            Local<Object>::Cast(results->Get(Number::New(idx)))->Set(agg_name, Number::New(value));            
+          } 
+        } else if(agg_obj->Has(String::New("sum"))) {
           Local<Value> column = agg_obj->Get(String::New("sum"));
-          
-          cout << "I'm going to sum the shit out of this" << endl;
-          
-          map<size_t, Group>::iterator group;
-          for(group = groups.begin(); group != groups.end(); group++) {
-            group->second.sum(*String::AsciiValue(agg_name), *String::AsciiValue(column));
+          for(group = groups.begin(); group != groups.end(); group++, idx++) {
+            value = group->second.sum(*String::AsciiValue(column));
+            Local<Object>::Cast(results->Get(Number::New(idx)))->Set(agg_name, Number::New(value));            
           }
-          // loop through all the groups and do a sum
-        } else if(agg_obj->Has(String::New("count"))) {
-          
+        } else if(agg_obj->Has(String::New("average"))) {
+          Local<Value> column = agg_obj->Get(String::New("average"));
+          for(group = groups.begin(); group != groups.end(); group++, idx++) {
+            value = group->second.average(*String::AsciiValue(column));
+            Local<Object>::Cast(results->Get(Number::New(idx)))->Set(agg_name, Number::New(value));            
+          }
         }
-        // look up what sort of object it is
       }
     }
+    
+    return results;
   } catch(StorageError e) {
     return ThrowException(String::New(e.what()));
   } catch(DimensionNotFoundError e) {

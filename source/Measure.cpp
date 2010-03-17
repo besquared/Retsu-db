@@ -29,12 +29,10 @@ std::string Retsu::Measure::path() {
 }
 
 bool Retsu::Measure::exists() {
-  cout << "exists" << endl;
   return fs::exists(fs::path(path()));
 }
 
 void Retsu::Measure::create() {
-  cout << "create" << endl;
 	tcfdbtune(database, sizeof(double), INT_MAX);
 
 	if(this->open(FDBOWRITER | FDBOCREAT)) {
@@ -45,14 +43,12 @@ void Retsu::Measure::create() {
 }
 
 void Retsu::Measure::close() {
-  cout << "close" << endl;
   if(!tcfdbclose(database)) {
 //		throw StorageError("Could not close measure at " + Path());
   }
 }
 
 void Retsu::Measure::truncate() {
-  cout << "truncate" << endl;
 	if(!open(FDBOWRITER | FDBOTRUNC)) {
 		this->close();
 	} else {
@@ -61,21 +57,18 @@ void Retsu::Measure::truncate() {
 }
 
 void Retsu::Measure::open_reader() {
-  cout << "open_reader" << endl;
   if(!open(FDBOREADER)) {
     throw StorageError("Could not open measure for reading at " + path());
   }
 }
 
 void Retsu::Measure::open_writer() {
-  cout << "open_writer" << endl;
   if(!open(FDBOWRITER | FDBOCREAT)) {
     throw StorageError("Could not open measure for writing at " + path());
   }
 }
 
 bool Retsu::Measure::open(int mode) {
-  cout << "open " << path() << endl;
 	return tcfdbopen(database, path().c_str(), mode);
 }
 
