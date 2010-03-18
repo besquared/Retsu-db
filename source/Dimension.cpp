@@ -89,7 +89,7 @@ void Retsu::Dimension::Lookup(const RecordID key, string& result) {
 	void* value = tchdbget(this->database, &key, sizeof(RecordID), &vsize);
 	
 	if(value == NULL) {
-		result = string("NULL");
+		result = string("");
 	} else {
 		result = string((char*)value, (size_t)vsize);
 		free(value);

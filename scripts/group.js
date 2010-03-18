@@ -24,22 +24,20 @@ try {
       }
     },
   
-    'group': ['item_id', 'show_id'],
-  
-    'conditions': {'occurred_at': {'gt': 147000000}}
+    'group': ['item_id', 'show_id']
   });
 
   print(results);
-
-  print(results[0]['count']);
-  print(results[0]['total']);
-  print(results[0]['average']);
-  print(results[1]['count']);
-  print(results[1]['total']);
-  print(results[1]['average']);
-  print(results[2]['count']);
-  print(results[2]['total']);
-  print(results[2]['average']);
+  
+  if(results.length > 0) {
+    for(var i = 0; i < results.length; i++) {
+      print(results[i]['count']);
+      print(results[i]['total']);
+      print(results[i]['average']);
+    }
+  } else {
+    print("No results!");
+  }
 } catch(err) {
   print("An error occurred");
   print(err);

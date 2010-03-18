@@ -216,7 +216,8 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
     if(!grouped->IsTrue()) return grouped;
     
     Handle<Value> aggregated = aggregate(params, table, groups, results);
-    return aggregated;
+    
+    return results;
     
   } catch(StorageError e) {
     return ThrowException(String::New(e.what()));
@@ -267,9 +268,9 @@ v8::Handle<v8::Value> Retsu::TableOperations::condition(Local<Object> params, sh
         }
       }
     }
+    
+    return Boolean::New(true);
   }
-  
-  return Boolean::New(true);
 }
 
 // Iterate over the table with a cursor and group rows
@@ -298,10 +299,12 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const 
   string value;
   vector<string> values;
   
-  if(conditioned->IsTrue()) {
-    cursor = Cursor(table, conditions);
-  } else {
+  if(conditions->empty()) {
+    cout << "No conditions!" << endl;
     cursor = Cursor(table);
+  } else {
+    cout << "Some conditions!" << endl;
+    cursor = Cursor(table, conditions);
   }
   
   while((record_id = cursor.next()) > 0) {
@@ -336,6 +339,8 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const 
 
 v8::Handle<v8::Value> Retsu::TableOperations::aggregate(Local<Object> params, const shared_ptr<Table> table, 
                                                     map<size_t, Group>& groups, Local<Array> results) {
+  
+  if(groups.size() == 0) { return Boolean::New(false); }
   
   Local<Value> aggregate = params->Get(String::New("aggregates"));
   
@@ -380,5 +385,5 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(Local<Object> params, co
     }
   }
   
-  return results;  
+  return Boolean::New(true);
 }

@@ -69,3 +69,15 @@ void Retsu::Conditions::apply(const string& column, vector<string>& values) cons
 		}
 	}
 }
+
+/*
+ * Introspection
+ */
+
+size_t Retsu::Conditions::size() const {
+  return conditions.size();
+}
+
+bool Retsu::Conditions::empty() const {
+  return conditions.empty();
+}

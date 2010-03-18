@@ -49,11 +49,14 @@ uint64_t Retsu::Cursor::conditional_next() {
     
     for(column = conditions->columns.begin(); column != conditions->columns.end(); column++) {
       table->lookup(record_id, *column, value);
+      
+      if(value.empty()) { continue; }
+
       if(conditions->check(*column, value)) {
         return record_id;
       }
     }
-  }  
+  }
 }
 
 uint64_t Retsu::Cursor::unconditional_next() {

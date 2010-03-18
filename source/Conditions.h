@@ -47,6 +47,12 @@ namespace Retsu {
 		 */
     bool check(const string& column, string& value) const;
 		void apply(const string& column, vector<string>& values) const;
+    
+    /*
+     * Introspect
+     */
+    size_t size() const;
+    bool empty() const;
   };
 }
 
