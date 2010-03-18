@@ -61,7 +61,7 @@ void Retsu::Records::create(const fs::path& table_path) {
   TCFDB* database = tcfdbnew();
   string full_path = (table_path / fs::path("records.tcf")).string();
   
-	tcfdbtune(database, sizeof(double), 2147483647);	
+	tcfdbtune(database, sizeof(double), (1 << 31));	
 	if(!tcfdbopen(database, full_path.c_str(), FDBOCREAT)) {
     throw StorageError("Could not create records database at " + full_path);
 	} else {
