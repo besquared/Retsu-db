@@ -38,8 +38,10 @@ namespace Retsu {
     Handle<Value> aggregate(const Arguments& args);
     
     // operational handlers/helpers
+    Handle<Value> condition(Local<Object> params, Conditions& conditions);
+
     Handle<Value> group(Local<Object> params, const shared_ptr<Table> table, 
-                        map<size_t, Group>& groups, Local<Array> results);
+                        map<size_t, Group>& groups, Local<Array> results);    
     Handle<Value> aggregate(Local<Object> params, const shared_ptr<Table> table, 
                         map<size_t, Group>& groups, Local<Array> results);
   }

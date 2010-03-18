@@ -151,7 +151,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::lookup_query(const Arguments& args
 
 v8::Handle<v8::Value> Retsu::TableOperations::each(const Arguments& args) {
   if(!args[0]->IsFunction()) {
-    return ThrowException(String::New("Invalid arguments to each which takes a single function argment"));
+    return ThrowException(String::New("Each which takes a single function argment"));
   }
   
   Local<String> key = String::New("name");
@@ -195,6 +195,10 @@ v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name
   return table->lookup(id->NumberValue(), *String::AsciiValue(name));
 }
 
+/*
+ * Grouping & Aggregation
+ */
+
 v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
   if(!args[0]->IsObject()) {
     return ThrowException(String::New("First argument to aggregate must be an object with query parameters"));
@@ -223,8 +227,57 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
   return Handle<Value>();  
 }
 
+// Sometimes we have conditions
+v8::Handle<v8::Value> Retsu::TableOperations::condition(Local<Object> params, Conditions& conditions) {
+  Local<Value> cond_param = params->Get(String::New("conditions"));
+    
+  if(cond_param->IsNull()) {
+    return Boolean::New(false);
+  } else {
+    Local<Object> cond_params = Local<Object>::Cast(cond_param);
+    Local<Array> cond_columns = cond_params->GetPropertyNames();
+    
+    for(size_t i = 0; i < cond_columns->Length(); i++) {
+      Local<Value> column = cond_columns->Get(Number::New(i));
+      Local<Value> cond_val = cond_params->Get(column);
+      Local<Object> cond_obj = Local<Object>::Cast(cond_val);
+      Local<Array> cond_types = cond_obj->GetPropertyNames();
+
+      for(size_t k = 0; k < cond_types->Length(); k++) {
+        Local<Value> cond_type = cond_types->Get(Number::New(k));
+        Local<Value> cond_type_val = cond_obj->Get(cond_type);
+        
+        string type = *String::AsciiValue(cond_type);
+        string value = *String::AsciiValue(cond_type_val);
+        
+        if(type == "eq") {
+          conditions.eq(*String::AsciiValue(column), value);
+        } else if(type == "neq") {
+          conditions.neq(*String::AsciiValue(column), value);
+        } else if(type == "gt") {
+          conditions.gt(*String::AsciiValue(column), value);
+        } else if(type == "gte") {
+          conditions.gte(*String::AsciiValue(column), value);
+        } else if(type == "lt") {
+          conditions.lt(*String::AsciiValue(column), value);
+        } else if(type == "lte") {
+          conditions.lte(*String::AsciiValue(column), value); 
+        } else if(type == "in") {
+          // do some in stuff here, unwrap the array and whatnot
+        }
+      }
+    }
+  }
+  
+  return Boolean::New(true);
+}
+
+// Iterate over the table with a cursor and group rows
 v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const shared_ptr<Table> table, 
                                                     map<size_t, Group>& groups, Local<Array> results) {
+  
+  Conditions conditions;
+  Handle<Value> conditioned = condition(params, conditions);
   
   Local<Value> group_param = params->Get(String::New("group"));
   
@@ -273,10 +326,6 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const 
   
   return Boolean::New(true);
 }
-
-/*
- * Aggregates groups based on query options
- */
 
 v8::Handle<v8::Value> Retsu::TableOperations::aggregate(Local<Object> params, const shared_ptr<Table> table, 
                                                     map<size_t, Group>& groups, Local<Array> results) {
