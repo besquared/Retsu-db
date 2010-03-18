@@ -29,6 +29,8 @@ namespace Retsu {
     vector< shared_ptr<Condition::Base> > conditions;
     
   public:
+    set<string> columns;
+
 		/*
 		 * Shortcuts
 		 */
@@ -39,7 +41,7 @@ namespace Retsu {
 		void lt(const string& name, const string& value);
 		void lte(const string& name, const string& value);
 		void in(const string& name, const vector<string>& value);
-
+    
 		/*
 		 * Application
 		 */

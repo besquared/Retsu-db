@@ -196,110 +196,24 @@ v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name
 }
 
 v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
-  cout << "inside aggregate" << endl;
-  
   if(!args[0]->IsObject()) {
-    return ThrowException(String::New("Argument must be an object"));
+    return ThrowException(String::New("First argument to aggregate must be an object with query parameters"));
   }
-
-  Local<Object> params = Local<Object>::Cast(args[0]);
+  
   Local<Value> table_name = args.This()->Get(String::New("name"));
-  Local<Value> grouping_dims = params->Get(String::New("group"));
-  Local<Value> aggregate = params->Get(String::New("aggregates"));
-  
-  if(grouping_dims->IsNull()) {
-    return ThrowException(String::New("Could not find key 'group' in aggregate parameters"));
-  }
-  
-  if(aggregate->IsNull()) {
-    return ThrowException(String::New("Could not find key 'aggregate' in aggregate parameters"));
-  }
-  
-  Local<Array> group_ary = Local<Array>::Cast(grouping_dims);
-  
-  vector<string> group_by;
-  for(size_t k = 0; k < group_ary->Length(); k++) {
-    group_by.push_back(*String::AsciiValue(group_ary->Get(Number::New(k))));
-  }
-  
+      
+  map<size_t, Group> groups;
+  Local<Array> results = Array::New();
+  Local<Object> params = Local<Object>::Cast(args[0]);
   shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
-  
+
   try {
-    string value;
-    size_t hash_key;
-    uint64_t current;
-    vector<string> group_vals;
-    map<size_t, Group> groups;
+    Handle<Value> grouped = group(params, table, groups, results);
+    if(!grouped->IsTrue()) return grouped;
     
-    // Holds our javascript return value
-    Local<Array> results = Array::New();
+    Handle<Value> aggregated = aggregate(params, table, groups, results);
+    return aggregated;
     
-    table->cursor_init();
-    while((current = table->cursor_next()) > 0) {
-      group_vals.clear();
-      for(size_t i = 0; i < group_by.size(); i++) {
-        table->lookup(current, group_by[i], value);
-        group_vals.push_back(value);
-      }
-      
-      hash_key = boost::hash_range(group_vals.begin(), group_vals.end());      
-      
-      // lookup the key in the map
-      map<size_t, Group>::iterator found = groups.find(hash_key);
-      
-      if(found == groups.end()) {
-        Group group(table);
-        
-        group.records.push_back(current);
-        for(size_t j = 0; j < group_by.size(); j++) {
-          group.values[group_by[j]] = group_vals[j];
-        }
-        
-        groups[hash_key] = group;
-        results->Set(Number::New(results->Length()), Object::New());
-      } else {
-        found->second.records.push_back(current);
-      }
-    }
-    
-    Local<Object> agg_params = Local<Object>::Cast(aggregate);
-    Local<Array> agg_names = agg_params->GetPropertyNames();
-    
-    for(size_t i = 0; i < agg_names->Length(); i++) {
-      Local<Value> agg_name = agg_names->Get(Number::New(i));
-      Local<Value> agg_def = agg_params->Get(agg_name);
-      
-      double value;
-      size_t idx = 0;
-      map<size_t, Group>::iterator group;
-      
-      if(agg_def->IsFunction()) {
-        // do the group function thing
-      } else if(agg_def->IsObject()) {
-        Local<Object> agg_obj = Local<Object>::Cast(agg_def);
-        
-        if(agg_obj->Has(String::New("count"))) {
-          for(group = groups.begin(); group != groups.end(); group++, idx++) {
-            value = group->second.count();
-            Local<Object>::Cast(results->Get(Number::New(idx)))->Set(agg_name, Number::New(value));            
-          } 
-        } else if(agg_obj->Has(String::New("sum"))) {
-          Local<Value> column = agg_obj->Get(String::New("sum"));
-          for(group = groups.begin(); group != groups.end(); group++, idx++) {
-            value = group->second.sum(*String::AsciiValue(column));
-            Local<Object>::Cast(results->Get(Number::New(idx)))->Set(agg_name, Number::New(value));            
-          }
-        } else if(agg_obj->Has(String::New("average"))) {
-          Local<Value> column = agg_obj->Get(String::New("average"));
-          for(group = groups.begin(); group != groups.end(); group++, idx++) {
-            value = group->second.average(*String::AsciiValue(column));
-            Local<Object>::Cast(results->Get(Number::New(idx)))->Set(agg_name, Number::New(value));            
-          }
-        }
-      }
-    }
-    
-    return results;
   } catch(StorageError e) {
     return ThrowException(String::New(e.what()));
   } catch(DimensionNotFoundError e) {
@@ -307,4 +221,108 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
   }
   
   return Handle<Value>();  
+}
+
+v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const shared_ptr<Table> table, 
+                                                    map<size_t, Group>& groups, Local<Array> results) {
+  
+  Local<Value> group_param = params->Get(String::New("group"));
+  
+  if(group_param->IsNull()) {
+    return ThrowException(String::New("Could not find key 'group' in aggregate parameters"));
+  }
+  
+  Local<Array> group_columns = Local<Array>::Cast(group_param);
+  
+  vector<string> group_by;
+  for(size_t k = 0; k < group_columns->Length(); k++) {
+    group_by.push_back(*String::AsciiValue(group_columns->Get(Number::New(k))));
+  }  
+  
+  size_t hash_key;
+  uint64_t record_id;
+  string value;
+  vector<string> values;
+  table->cursor_init();
+  while((record_id = table->cursor_next()) > 0) {
+    values.clear();
+    for(size_t i = 0; i < group_by.size(); i++) {
+      table->lookup(record_id, group_by[i], value);
+      values.push_back(value);
+    }
+    
+    hash_key = boost::hash_range(values.begin(), values.end());      
+    
+    // lookup the key in the map
+    map<size_t, Group>::iterator found = groups.find(hash_key);
+    
+    if(found == groups.end()) {
+      Group group(table);
+      
+      group.records.push_back(record_id);
+      for(size_t j = 0; j < group_by.size(); j++) {
+        group.values[group_by[j]] = values[j];
+      }
+      
+      groups[hash_key] = group;
+      results->Set(Number::New(results->Length()), Object::New());
+    } else {
+      found->second.records.push_back(record_id);
+    }
+  }
+  
+  return Boolean::New(true);
+}
+
+/*
+ * Aggregates groups based on query options
+ */
+
+v8::Handle<v8::Value> Retsu::TableOperations::aggregate(Local<Object> params, const shared_ptr<Table> table, 
+                                                    map<size_t, Group>& groups, Local<Array> results) {
+  
+  Local<Value> aggregate = params->Get(String::New("aggregates"));
+  
+  if(aggregate->IsNull()) {
+    return ThrowException(String::New("Could not find key 'aggregate' in aggregate parameters"));
+  }
+  
+  Local<Object> agg_params = Local<Object>::Cast(aggregate);
+  Local<Array> agg_names = agg_params->GetPropertyNames();
+  
+  for(size_t i = 0; i < agg_names->Length(); i++) {
+    Local<Value> agg_name = agg_names->Get(Number::New(i));
+    Local<Value> agg_def = agg_params->Get(agg_name);
+    
+    double value;
+    size_t idx = 0;
+    map<size_t, Group>::iterator group;
+    
+    if(agg_def->IsFunction()) {
+      // do the group function thing
+    } else if(agg_def->IsObject()) {
+      Local<Object> agg_obj = Local<Object>::Cast(agg_def);
+      
+      if(agg_obj->Has(String::New("count"))) {
+        for(group = groups.begin(); group != groups.end(); group++, idx++) {
+          value = group->second.count();
+          Local<Object>::Cast(results->Get(Number::New(idx)))->Set(agg_name, Number::New(value));            
+        } 
+      } else if(agg_obj->Has(String::New("sum"))) {
+        Local<Value> column = agg_obj->Get(String::New("sum"));
+        for(group = groups.begin(); group != groups.end(); group++, idx++) {
+          value = group->second.sum(*String::AsciiValue(column));
+          Local<Object>::Cast(results->Get(Number::New(idx)))->Set(agg_name, Number::New(value));            
+        }
+      } else if(agg_obj->Has(String::New("average"))) {
+        Local<Value> column = agg_obj->Get(String::New("average"));
+        for(group = groups.begin(); group != groups.end(); group++, idx++) {
+          value = group->second.average(*String::AsciiValue(column));
+          Local<Object>::Cast(results->Get(Number::New(idx)))->Set(agg_name, Number::New(value));            
+        }
+      }
+    }
+  }
+  
+  return results;  
 }

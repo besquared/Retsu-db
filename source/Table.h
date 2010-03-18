@@ -14,6 +14,7 @@
 #include "Records.h"
 #include "Measures.h"
 #include "Dimensions.h"
+#include "Conditions.h"
 
 namespace Retsu {
   using namespace v8;
@@ -35,13 +36,14 @@ namespace Retsu {
     static void create(const string& database_path, const string& table_name);
     
     void cursor_init();
-    uint64_t cursor_next();    
+    uint64_t cursor_next();
+    uint64_t cursor_next(const Conditions& conditions);
     
     RecordID next_id();
     void insert(const Record& record);
     void insert(const RecordID& id, const string& measure, const double& value);
     void insert(const RecordID& id, const string& dimension, const string& value);
-    
+        
     /*
      * Reading
      */

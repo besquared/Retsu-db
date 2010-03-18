@@ -32,16 +32,16 @@ namespace Retsu {
     Handle<Value> lookup_one(const Arguments& args);
     Handle<Value> lookup_many(const Arguments& args);
     Handle<Value> lookup_query(const Arguments& args);
+    Handle<Value> get_record_data(Local<String> name, const AccessorInfo& info);
 
     Handle<Value> each(const Arguments& args);
     Handle<Value> aggregate(const Arguments& args);
-    Handle<Value> aggregate_flat(const Arguments& args);
-    Handle<Value> aggregate_groups(const Arguments& args);
-
-    Handle<Value> group(const Arguments& args);
-    Handle<Value> construct(vector<string>& dimensions, RIDTree& lookedup, size_t offset, map<string, string>& values, RIDList& records);
-
-    Handle<Value> get_record_data(Local<String> name, const AccessorInfo& info);
+    
+    // operational handlers/helpers
+    Handle<Value> group(Local<Object> params, const shared_ptr<Table> table, 
+                        map<size_t, Group>& groups, Local<Array> results);
+    Handle<Value> aggregate(Local<Object> params, const shared_ptr<Table> table, 
+                        map<size_t, Group>& groups, Local<Array> results);
   }
 }
 

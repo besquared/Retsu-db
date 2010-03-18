@@ -10,7 +10,7 @@
 #ifndef _RETSU_CONDITION_BASE_H_
 #define _RETSU_CONDITION_BASE_H_
 
-#include <Common.h>
+#include "Common.h"
 
 namespace Retsu {
 	namespace Condition {
