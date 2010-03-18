@@ -228,7 +228,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
 }
 
 // Sometimes we have conditions
-v8::Handle<v8::Value> Retsu::TableOperations::condition(Local<Object> params, Conditions& conditions) {
+v8::Handle<v8::Value> Retsu::TableOperations::condition(Local<Object> params, shared_ptr<Conditions> conditions) {
   Local<Value> cond_param = params->Get(String::New("conditions"));
     
   if(cond_param->IsNull()) {
@@ -251,17 +251,17 @@ v8::Handle<v8::Value> Retsu::TableOperations::condition(Local<Object> params, Co
         string value = *String::AsciiValue(cond_type_val);
         
         if(type == "eq") {
-          conditions.eq(*String::AsciiValue(column), value);
+          conditions->eq(*String::AsciiValue(column), value);
         } else if(type == "neq") {
-          conditions.neq(*String::AsciiValue(column), value);
+          conditions->neq(*String::AsciiValue(column), value);
         } else if(type == "gt") {
-          conditions.gt(*String::AsciiValue(column), value);
+          conditions->gt(*String::AsciiValue(column), value);
         } else if(type == "gte") {
-          conditions.gte(*String::AsciiValue(column), value);
+          conditions->gte(*String::AsciiValue(column), value);
         } else if(type == "lt") {
-          conditions.lt(*String::AsciiValue(column), value);
+          conditions->lt(*String::AsciiValue(column), value);
         } else if(type == "lte") {
-          conditions.lte(*String::AsciiValue(column), value); 
+          conditions->lte(*String::AsciiValue(column), value); 
         } else if(type == "in") {
           // do some in stuff here, unwrap the array and whatnot
         }
@@ -275,10 +275,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::condition(Local<Object> params, Co
 // Iterate over the table with a cursor and group rows
 v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const shared_ptr<Table> table, 
                                                     map<size_t, Group>& groups, Local<Array> results) {
-  
-  Conditions conditions;
-  Handle<Value> conditioned = condition(params, conditions);
-  
+    
   Local<Value> group_param = params->Get(String::New("group"));
   
   if(group_param->IsNull()) {
@@ -292,12 +289,22 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const 
     group_by.push_back(*String::AsciiValue(group_columns->Get(Number::New(k))));
   }  
   
+  shared_ptr<Conditions> conditions(new Conditions());
+  Handle<Value> conditioned = condition(params, conditions);
+  
+  Cursor cursor;
   size_t hash_key;
   uint64_t record_id;
   string value;
   vector<string> values;
-  table->cursor_init();
-  while((record_id = table->cursor_next()) > 0) {
+  
+  if(conditioned->IsTrue()) {
+    cursor = Cursor(table, conditions);
+  } else {
+    cursor = Cursor(table);
+  }
+  
+  while((record_id = cursor.next()) > 0) {
     values.clear();
     for(size_t i = 0; i < group_by.size(); i++) {
       table->lookup(record_id, group_by[i], value);

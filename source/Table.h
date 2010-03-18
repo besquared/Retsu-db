@@ -37,7 +37,6 @@ namespace Retsu {
     
     void cursor_init();
     uint64_t cursor_next();
-    uint64_t cursor_next(const Conditions& conditions);
     
     RecordID next_id();
     void insert(const Record& record);

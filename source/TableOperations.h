@@ -13,6 +13,7 @@
 #include "Common.h"
 #include "Table.h"
 #include "Group.h"
+#include "Cursor.h"
 #include "RIDTree.h"
 #include "TableManager.h"
 
@@ -38,7 +39,7 @@ namespace Retsu {
     Handle<Value> aggregate(const Arguments& args);
     
     // operational handlers/helpers
-    Handle<Value> condition(Local<Object> params, Conditions& conditions);
+    Handle<Value> condition(Local<Object> params, shared_ptr<Conditions> conditions);
 
     Handle<Value> group(Local<Object> params, const shared_ptr<Table> table, 
                         map<size_t, Group>& groups, Local<Array> results);    

@@ -76,6 +76,8 @@
 		0324FB0C113B28C7001E567A /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB0B113B28C7001E567A /* libv8.a */; };
 		0324FB43113B2C91001E567A /* libtokyocabinet.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB42113B2C91001E567A /* libtokyocabinet.dylib */; };
 		0324FB44113B2C99001E567A /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB0B113B28C7001E567A /* libv8.a */; };
+		0385165211529A43002AD50D /* Cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0385165011529A43002AD50D /* Cursor.cpp */; };
+		0385165311529A43002AD50D /* Cursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0385165111529A43002AD50D /* Cursor.h */; };
 		8DD76F650486A84900D96B5E /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */; settings = {ATTRIBUTES = (); }; };
 		8DD76F6A0486A84900D96B5E /* retsudb.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* retsudb.1 */; };
 /* End PBXBuildFile section */
@@ -1320,6 +1322,8 @@
 		0324FFDC113B2D09001E567A /* x64.vsprops */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = x64.vsprops; sourceTree = "<group>"; };
 		0324FFDD113B2D09001E567A /* windows-tick-processor.bat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "windows-tick-processor.bat"; sourceTree = "<group>"; };
 		0324FFDE113B2D09001E567A /* windows-tick-processor.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "windows-tick-processor.py"; sourceTree = "<group>"; };
+		0385165011529A43002AD50D /* Cursor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Cursor.cpp; path = source/Cursor.cpp; sourceTree = "<group>"; };
+		0385165111529A43002AD50D /* Cursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cursor.h; path = source/Cursor.h; sourceTree = "<group>"; };
 		08FB7796FE84155DC02AAC07 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		8DD76F6C0486A84900D96B5E /* retsudb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = retsudb; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859E8B029090EE04C91782 /* retsudb.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = retsudb.1; sourceTree = "<group>"; };
@@ -2828,6 +2832,8 @@
 				030C0162114490E100D27A1F /* condition */,
 				030C01731144910E00D27A1F /* Conditions.cpp */,
 				030C01741144910E00D27A1F /* Conditions.h */,
+				0385165011529A43002AD50D /* Cursor.cpp */,
+				0385165111529A43002AD50D /* Cursor.h */,
 				0324FB16113B29A4001E567A /* Dimension.cpp */,
 				0324FB17113B29A4001E567A /* Dimension.h */,
 				0324FB18113B29A4001E567A /* Dimensions.cpp */,
@@ -2919,6 +2925,7 @@
 				030C01981144917A00D27A1F /* Aggregates.h in Headers */,
 				030C02A01145FDD700D27A1F /* TableManager.h in Headers */,
 				030C030D1146140B00D27A1F /* Group.h in Headers */,
+				0385165311529A43002AD50D /* Cursor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3052,6 +3059,7 @@
 				030C01971144917A00D27A1F /* Aggregates.cpp in Sources */,
 				030C029F1145FDD700D27A1F /* TableManager.cpp in Sources */,
 				030C030C1146140B00D27A1F /* Group.cpp in Sources */,
+				0385165211529A43002AD50D /* Cursor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

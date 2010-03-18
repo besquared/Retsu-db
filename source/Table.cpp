@@ -104,21 +104,3 @@ void Retsu::Table::cursor_init() {
 uint64_t Retsu::Table::cursor_next() {
   return records->cursor_next();
 }
-
-uint64_t Retsu::Table::cursor_next(const Conditions& conditions) {
-  string value;
-  set<string>::iterator column;
-  uint64_t record_id;
-
-  while(true) {
-    record_id = cursor_next();
-    if(record_id == 0) { return 0; }
-    
-    for(column = conditions.columns.begin(); column != conditions.columns.end(); column++) {
-      lookup(record_id, *column, value);
-      if(conditions.check(*column, value)) {
-        return record_id;
-      }
-    }
-  }
-}
