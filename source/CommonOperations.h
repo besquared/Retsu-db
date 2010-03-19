@@ -19,6 +19,11 @@ namespace Retsu {
     
     void install(Handle<ObjectTemplate> scope);
     Handle<Value> print(const Arguments& args);
+    Handle<Value> inspect(const Arguments& args);
+    
+    string inspect_object(const Handle<Object> object);
+    string inspect_array(const Handle<Array> array);
+    string inspect_value(const Handle<Value> value);
   }
 }
 

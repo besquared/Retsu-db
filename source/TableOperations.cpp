@@ -278,7 +278,8 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const 
                                                     map<size_t, Group>& groups, Local<Array> results) {
     
   Local<Value> group_param = params->Get(String::New("group"));
-  
+  Local<Value> sample_size_param = params->Get(String::New("sample_size"));
+
   if(group_param->IsNull()) {
     return ThrowException(String::New("Could not find key 'group' in aggregate parameters"));
   }
@@ -292,6 +293,13 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const 
   
   shared_ptr<Conditions> conditions(new Conditions());
   Handle<Value> conditioned = condition(params, conditions);
+    
+  size_t sample_size;
+  if(sample_size_param->IsNull()) {
+    sample_size = 0;
+  } else {
+    sample_size = sample_size_param->NumberValue();
+  }
   
   Cursor cursor;
   size_t hash_key;
@@ -300,11 +308,9 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const 
   vector<string> values;
   
   if(conditions->empty()) {
-    cout << "No conditions!" << endl;
-    cursor = Cursor(table);
+    cursor = (sample_size == 0 ? Cursor(table) : Cursor(table, sample_size));    
   } else {
-    cout << "Some conditions!" << endl;
-    cursor = Cursor(table, conditions);
+    cursor = (sample_size == 0 ? Cursor(table, conditions) : Cursor(table, conditions, sample_size));    
   }
   
   while((record_id = cursor.next()) > 0) {

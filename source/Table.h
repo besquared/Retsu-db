@@ -49,6 +49,8 @@ namespace Retsu {
     
     void lookup(const RecordID& id, const string& column, string& result);
     v8::Handle<v8::Value> lookup(const RecordID& id, const string& column);
+    
+    uint64_t size();
   };
 }
 

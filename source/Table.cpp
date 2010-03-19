@@ -104,3 +104,7 @@ void Retsu::Table::cursor_init() {
 uint64_t Retsu::Table::cursor_next() {
   return records->cursor_next();
 }
+
+uint64_t Retsu::Table::size() {
+  return records->size();
+}

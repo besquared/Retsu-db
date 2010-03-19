@@ -17,15 +17,24 @@ namespace Retsu {
   using namespace v8;
   using namespace std;
   
-  class Cursor {    
-  public:
-    bool is_conditioned;
+  class Cursor {
+  protected:
     shared_ptr<Table> table;
     shared_ptr<Conditions> conditions;
+
+  public:
+    bool is_sampled;
+    bool is_conditioned;
+
+    size_t sampled;
+    size_t sample_size;
+    size_t population_size;
     
     Cursor();
     Cursor(shared_ptr<Table> table);
+    Cursor(shared_ptr<Table> table, size_t sample_size);
     Cursor(shared_ptr<Table> table, shared_ptr<Conditions> conditions);
+    Cursor(shared_ptr<Table> table, shared_ptr<Conditions> conditions, size_t sample_size);
 
     void init();
     uint64_t next();
