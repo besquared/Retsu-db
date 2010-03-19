@@ -9,26 +9,22 @@
 
 #include "Table.h"
 
-Retsu::Table::Table(const string& database_path, const string& table_name) {
-	this->database_path = fs::path(database_path);
+Retsu::Table::Table(const string& data_path, const string& table_name) {
+	this->data_path = fs::path(data_path);
 	this->table_name = fs::path(table_name);
   
-  this->records = new Records(this->database_path / this->table_name);
-  this->measures = new Measures(this->database_path / this->table_name);
-	this->dimensions = new Dimensions(this->database_path / this->table_name);
+  this->records = new Records(this->data_path / this->table_name);
   
   this->records->open_writer();
 }
 
 Retsu::Table::~Table() {
-  delete(this->records);
-	delete(this->measures);
-	delete(this->dimensions);
+  delete(records);
 }
 
 // make this static, wtf mate
-void Retsu::Table::create(const string& database_path, const string& table_name) {
-  fs::path full_path = fs::path(database_path) / fs::path(table_name);
+void Retsu::Table::create(const string& data_path, const string& table_name) {
+  fs::path full_path = fs::path(data_path) / fs::path(table_name);
   
   if(fs::exists(full_path) || fs::create_directory(full_path)) {
     Records::create(full_path);
@@ -37,65 +33,79 @@ void Retsu::Table::create(const string& database_path, const string& table_name)
   }
 }
 
-double Retsu::Table::next_id() {
-  return records->size() + 1;
+void Retsu::Table::lookup(const string& column, const RecordID& id, string& result, bool create) {
+  shared_ptr<Column> database = cache_get(column, create);
+  
+  if(database == NULL) {
+    throw DimensionNotFoundError("Could not find column " + column + " in table " + table_name.string());
+  } else {
+    database->lookup(id, result);
+  }
 }
 
-void Retsu::Table::insert(const Record& record) {
-  measures->insert(record);
-  dimensions->insert(record);
+void Retsu::Table::lookup(const string& column, const RecordID& id, double& result, bool create) {
+  shared_ptr<Column> database = cache_get(column, create);
+  
+  if(database == NULL) {
+    throw DimensionNotFoundError("Could not find column " + column + " in table " + table_name.string());
+  } else {
+    database->lookup(id, result);
+  }
 }
 
-void Retsu::Table::insert(const RecordID& id, const string& dimension, const string& value) {
-  Dimension* database = dimensions->retrieve(dimension);
+void Retsu::Table::lookup(const string& column, const RIDList& records, vector<double>& results, bool create) {
+  shared_ptr<Column> database = cache_get(column, create);
+  
+  if(database == NULL) {
+    throw DimensionNotFoundError("Could not find column " + column + " in table " + table_name.string());
+  } else {
+    database->lookup(records, results);
+  }
+}
+
+void Retsu::Table::lookup(const string& column, const RIDList& records, vector<string>& results, bool create) {
+  shared_ptr<Column> database = cache_get(column, create);
+  
+  if(database == NULL) {
+    throw DimensionNotFoundError("Could not find column " + column + " in table " + table_name.string());
+  } else {
+    database->lookup(records, results);
+  }
+}
+
+void Retsu::Table::insert(const string& column, const RecordID& id, const string& value) {
+  shared_ptr<Column> database = cache_get(column);
 
   if(database != NULL) {
     records->insert(id);
-    database->Insert(id, value);
-  } else {
-    return;
+    database->insert(id, value);
   }
 }
 
-void Retsu::Table::insert(const RecordID& id, const string& measure, const double& value) {
-  Measure* database = measures->retrieve(measure);
+void Retsu::Table::insert(const string& column, const RecordID& id, const double& value) {
+  shared_ptr<Column> database = cache_get(column);
   
   if(database != NULL) {
+    records->insert(id);
     database->insert(id, value);
-  } else {
-    return;
-  }  
-}
-
-void Retsu::Table::lookup(const RecordID& id, const string& column, string& result) {
-  Dimension* dimension_db = dimensions->retrieve(column);
-  
-  if(dimension_db == NULL) {
-    throw DimensionNotFoundError("Could not find dimension " + column + " in table " + table_name.string());
-  } else {
-    dimension_db->Lookup(id, result);
   }
 }
 
-v8::Handle<v8::Value> Retsu::Table::lookup(const RecordID& id, const string& column) {
-  Dimension* dimension_db = dimensions->retrieve(column);
-  
-  if(dimension_db == NULL) {
-    Measure* measure_db = measures->retrieve(column);
-    
-    if(measure_db == NULL) {
-      return Handle<Value>();
-    } else {
-      double value = 0;
-      measure_db->lookup(id, value);
-      return Number::New(value);
-    }
-  } else {
-    string value;
-    dimension_db->Lookup(id, value);
-    return String::New(value.c_str());
-  }
+/*
+ * Auto Increment
+ */
+
+uint64_t Retsu::Table::size() {
+  return records->size();
 }
+
+double Retsu::Table::next_id() {
+  return size() + 1;
+}
+
+/*
+ * Cursors
+ */
 
 void Retsu::Table::cursor_init() {
   records->cursor_init();
@@ -105,6 +115,29 @@ uint64_t Retsu::Table::cursor_next() {
   return records->cursor_next();
 }
 
-uint64_t Retsu::Table::size() {
-  return records->size();
+/*
+ * Cache Management
+ */
+
+boost::shared_ptr<Retsu::Column> Retsu::Table::cache_set(const string& column) {
+  fs::path full_path = data_path / table_name;
+  shared_ptr<Column> database(new Column(full_path.string(), column));
+  
+  database->open_writer();
+  columns[column] = database;
+  return database;
+}
+
+boost::shared_ptr<Retsu::Column> Retsu::Table::cache_get(const string& column, bool create) {
+  map< string, shared_ptr<Column> >::iterator found = columns.find(column);
+  
+  if(found == columns.end()) {
+    if(create) {
+      return cache_set(column);
+    } else {
+      return shared_ptr<Column>();
+    }
+  } else {
+    return found->second;
+  }
 }

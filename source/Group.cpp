@@ -16,50 +16,39 @@ Retsu::Group::Group(shared_ptr<Retsu::Table> table) {
 }
 
 double Retsu::Group::sum(const string& column) {
-  Measure* measure_db = table->measures->retrieve(column, false);
-  
-  if(measure_db == NULL) {
-    throw DimensionNotFoundError("Could not find measure " + column);
-  } else {
-    vector<double> values;
-    measure_db->lookup(records, values);
+  vector<double> values;
+  table->lookup(column, records, values, false);
     
-    double result = 0;
-    for(size_t i = 0; i < values.size(); i++) {
-      result += values[i];
-    }
-    
-    return result;
+  double result = 0;
+  for(size_t i = 0; i < values.size(); i++) {
+    result += values[i];
   }
+  
+  return result;
 }
 
 double Retsu::Group::average(const string& column) {
-  Measure* measure_db = table->measures->retrieve(column, false);
+  vector<double> values;
+  table->lookup(column, records, values, false);
   
-  if(measure_db == NULL) {
-    throw DimensionNotFoundError("Could not find measure " + column);
+  double sum = 0;
+  double count = 0;
+  for(size_t i = 0; i < values.size(); i++) {
+    sum += values[i];
+    count++;
+  }
+  
+  if(count > 0) {
+    return sum / count;
   } else {
-    vector<double> values;
-    measure_db->lookup(records, values);
-    
-    double sum = 0;
-    double count = 0;
-    for(size_t i = 0; i < values.size(); i++) {
-      sum += values[i];
-      count++;
-    }
-    
-    if(count > 0) {
-      return sum / count;
-    } else {
-      return 0.0;
-    }
+    return 0.0;
   }
 }
 
 double Retsu::Group::count() {
   return records.size();
 }
+
 double Retsu::Group::count_unique(const string& column) {
   return 0.0;
 }

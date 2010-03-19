@@ -5,9 +5,7 @@ try {
       'total': {'sum': 'amount'},
       'count': {'count': true},
       'average': {'average' : 'amount'},
-    }, 'conditions': {
-      'episode_id': {'eq': '00000001'}
-    }, 'sample_size': 1000
+    }, 'sample_size': 2000
   });
   
   inspect(results);

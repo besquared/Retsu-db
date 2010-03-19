@@ -88,13 +88,13 @@ v8::Handle<v8::Value> Retsu::TableOperations::insert(const Arguments& args) {
       try {
         RecordID record = table->next_id();
         for(size_t i = 0; i < dimensions->Length(); i++) {
-          Local<Value> key = dimensions->Get(Number::New(i));
+          Local<Value> column = dimensions->Get(Number::New(i));
           Local<Value> value = values->Get(key);
 
           if(value->IsNumber()) {
-            table->insert(record, *String::AsciiValue(key), value->NumberValue());
+            table->insert(*String::AsciiValue(column), record, value->NumberValue());
           } else {
-            table->insert(record, *String::AsciiValue(key), *String::AsciiValue(value));
+            table->insert(*String::AsciiValue(column), record, *String::AsciiValue(value));
           }
         }
       } catch(StorageError e) {
@@ -135,10 +135,12 @@ v8::Handle<v8::Value> Retsu::TableOperations::lookup_one(const Arguments& args) 
   Local<String> key = String::New("name");
   Local<Value> tname_val = args.This()->Get(key);
   string table_name = *String::AsciiValue(tname_val);      
-  
   shared_ptr<Table> table = TableManager::instance().get(table_name);
   
-  return table->lookup(args[0]->NumberValue(), *String::AsciiValue(args[1]));
+  // do we want a string or a number here?
+  string result;
+  table->lookup(*String::AsciiValue(args[1]), args[0]->NumberValue(), result);
+  return String::New(result.c_str());
 }
 
 v8::Handle<v8::Value> Retsu::TableOperations::lookup_many(const Arguments& args) {
@@ -192,7 +194,9 @@ v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name
   Local<Value> table_name = record->GetRealNamedProperty(String::New("table"));
   shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
   
-  return table->lookup(id->NumberValue(), *String::AsciiValue(name));
+  string result;
+  table->lookup(*String::AsciiValue(name), id->NumberValue(), result);
+  return String::New(result.c_str());
 }
 
 /*
@@ -316,7 +320,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const 
   while((record_id = cursor.next()) > 0) {
     values.clear();
     for(size_t i = 0; i < group_by.size(); i++) {
-      table->lookup(record_id, group_by[i], value);
+      table->lookup(group_by[i], record_id, value);
       values.push_back(value);
     }
     
@@ -380,7 +384,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(Local<Object> params, co
         for(group = groups.begin(); group != groups.end(); group++, idx++) {
           value = group->second.count();
           Local<Object>::Cast(results->Get(Number::New(idx)))->Set(agg_name, Number::New(value));            
-        } 
+        }
       } else if(agg_obj->Has(String::New("sum"))) {
         Local<Value> column = agg_obj->Get(String::New("sum"));
         for(group = groups.begin(); group != groups.end(); group++, idx++) {

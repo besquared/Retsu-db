@@ -35,6 +35,8 @@ namespace Retsu {
     double average(const string& column);
     double count_unique(const string& column);
     double aggregate(Handle<Function> aggfunc);
+    
+    void lookup(const string& column, vector<double>& results);
   };
 }
 

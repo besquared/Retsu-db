@@ -75,7 +75,7 @@ uint64_t Retsu::Cursor::conditional_next() {
     if(record_id == 0) { return 0; }
     
     for(column = conditions->columns.begin(); column != conditions->columns.end(); column++) {
-      table->lookup(record_id, *column, value);
+      table->lookup(*column, record_id, value);
       
       if(value.empty()) { continue; }
 
