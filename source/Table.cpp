@@ -119,11 +119,19 @@ uint64_t Retsu::Table::cursor_next() {
  * Cache Management
  */
 
-boost::shared_ptr<Retsu::Column> Retsu::Table::cache_set(const string& column) {
+boost::shared_ptr<Retsu::Column> Retsu::Table::cache_set(const string& column, bool create) {
   fs::path full_path = data_path / table_name;
   shared_ptr<Column> database(new Column(full_path.string(), column));
   
-  database->open_writer();
+  if(database->exists()) {
+    database->open_writer();
+  } else if(create) {
+    database->create();
+    database->open_writer();
+  } else {
+    return shared_ptr<Column>();
+  }
+  
   columns[column] = database;
   return database;
 }
@@ -132,11 +140,7 @@ boost::shared_ptr<Retsu::Column> Retsu::Table::cache_get(const string& column, b
   map< string, shared_ptr<Column> >::iterator found = columns.find(column);
   
   if(found == columns.end()) {
-    if(create) {
-      return cache_set(column);
-    } else {
-      return shared_ptr<Column>();
-    }
+    return cache_set(column, create);
   } else {
     return found->second;
   }

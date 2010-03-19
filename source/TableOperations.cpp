@@ -89,7 +89,7 @@ v8::Handle<v8::Value> Retsu::TableOperations::insert(const Arguments& args) {
         RecordID record = table->next_id();
         for(size_t i = 0; i < dimensions->Length(); i++) {
           Local<Value> column = dimensions->Get(Number::New(i));
-          Local<Value> value = values->Get(key);
+          Local<Value> value = values->Get(column);
 
           if(value->IsNumber()) {
             table->insert(*String::AsciiValue(column), record, value->NumberValue());

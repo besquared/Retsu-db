@@ -12,7 +12,6 @@
 
 #include "Common.h"
 #include "Errors.h"
-#include "Record.h"
 #include "RIDList.h"
 
 namespace Retsu {

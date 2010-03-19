@@ -11,7 +11,6 @@
 #define _RETSU_RID_LIST_H_
 
 #include "Common.h"
-#include "Record.h"
 
 namespace Retsu {
   using namespace std;

@@ -13,8 +13,6 @@
 #include "Common.h"
 #include "Records.h"
 #include "Column.h"
-#include "Measures.h"
-#include "Dimensions.h"
 #include "Conditions.h"
 
 namespace Retsu {
@@ -64,7 +62,7 @@ namespace Retsu {
     /*
      * Cache Management
      */
-    shared_ptr<Column> cache_set(const string& column);
+    shared_ptr<Column> cache_set(const string& column, bool create = true);
     shared_ptr<Column> cache_get(const string& column, bool create = true);
   };
 }

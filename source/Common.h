@@ -38,4 +38,6 @@
 
 namespace fs = boost::filesystem;
 
+typedef double RecordID;
+
 #endif

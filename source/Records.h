@@ -11,7 +11,6 @@
 #define _RETSU_RECORDS_H_
 
 #include "Common.h"
-#include "Record.h"
 #include "Errors.h"
 
 namespace Retsu {

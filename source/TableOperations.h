@@ -14,7 +14,6 @@
 #include "Table.h"
 #include "Group.h"
 #include "Cursor.h"
-#include "RIDTree.h"
 #include "TableManager.h"
 
 namespace Retsu {  

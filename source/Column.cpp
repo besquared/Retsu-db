@@ -81,7 +81,7 @@ bool Retsu::Column::open(int mode) {
 }
 
 /*
- * Reading
+ * Reading & Writing
  */ 
 
 void Retsu::Column::lookup(const RecordID key, string& result) {
@@ -140,10 +140,6 @@ void Retsu::Column::lookup(const RIDList& keys, vector<double>& results) {
     }
   }  
 }
-
-/*
- * Writing
- */
 
 bool Retsu::Column::insert(const RecordID key, const string& value) {
 	return tchdbput(database, &key, sizeof(RecordID), value.c_str(), value.size());

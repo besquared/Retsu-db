@@ -11,7 +11,6 @@
 #define _RETSU_GROUP_H_
 
 #include "Common.h"
-#include "Record.h"
 #include "Table.h"
 #include "RIDList.h"
 
