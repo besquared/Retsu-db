@@ -46,7 +46,6 @@ namespace Retsu {
 		 * Application
 		 */
     bool check(const string& column, string& value) const;
-		void apply(const string& column, vector<string>& values) const;
     
     /*
      * Introspect

@@ -23,22 +23,16 @@ namespace Retsu {
 				this->value = value;
 				this->type = Condition::Base::EQ;
 			}
+      
+      Eq(const string& column, const double& value) :
+      Condition::Base::Base(column) {
+        // need to store the double value here
+        this->type = Condition::Base::EQ;
+      }
 			
       bool check(string& value) {
         return value == this->value;
       }
-      
-			void apply(vector<string>& values)  {
-        vector<string> results;
-        results.reserve(values.size());
-        size_t vsize = values.size();
-        for(size_t i = 0; i < vsize; i++) {
-          if(this->check(values[i])) {
-            results.push_back(values[i]);
-          }
-        }
-        values = results;
-			}
       
       void print(ostream& out) const {
         out << column << " = " << value;

@@ -28,7 +28,6 @@ namespace Retsu {
 			}
 			
       virtual bool check(string& value) = 0;
-			virtual void apply(vector<string>& values) = 0;
       virtual void print(ostream& out) const = 0;
       
       friend ostream& operator<<(ostream& out, const Base& condition) {

@@ -15,8 +15,10 @@
 
 namespace Retsu {
   class Records {
-  public:
+  protected:
     TCFDB* database;    
+
+  public:
     fs::path table_path;
 
     Records(const fs::path& table_path);
@@ -34,16 +36,16 @@ namespace Retsu {
     static void create(const fs::path& table_path);
     
     /*
-     * Iteration
-     */
-    void cursor_init();
-    uint64_t cursor_next();
-    
-    /*
      * Writing
      */
     void insert(const RecordID& key);
     void remove(const RecordID& key);
+
+    /*
+     * Cursors
+     */
+    void cursor_init();
+    uint64_t cursor_next();    
     
     /*
      * Other

@@ -60,16 +60,6 @@ bool Retsu::Conditions::check(const string& column, string& value) const {
   return true;
 }
 
-void Retsu::Conditions::apply(const string& column, vector<string>& values) const {
-	shared_ptr<Condition::Base> condition;
-	for(size_t i = 0; i < conditions.size(); i++) {
-		condition = conditions[i];
-		if(condition != NULL && condition->column == column) {
-			condition->apply(values);
-		}
-	}
-}
-
 /*
  * Introspection
  */

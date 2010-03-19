@@ -44,20 +44,6 @@ namespace Retsu {
         }
       }
       
-			void apply(vector<string>& values) {
-				vector<string> intersected;
-				set_intersection(values.begin(), values.end(), this->values.begin(), 
-                         this->values.end(), back_inserter(intersected));
-				values = intersected;
-			}
-			
-			void apply_negation(vector<string>& values) {
-				vector<string> differenced;
-				set_difference(values.begin(), values.end(), this->values.begin(), 
-                       this->values.end(), back_inserter(differenced));
-				values = differenced;
-			}
-      
       void print(ostream& out) const {
         out << column << " IN (";
         for(size_t i = 0; i < values.size(); i++) {
