@@ -277,7 +277,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
+									<integer>46</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -320,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CommonOperations.cpp</string>
+								<string>TableOperations.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CommonOperations.cpp</string>
+										<string>TableOperations.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>038517DA1152FFAB002AD50D</string>
+										<string>038517E3115300DF002AD50D</string>
 										<key>history</key>
 										<array>
 											<string>0324FAF411364340001E567A</string>
@@ -406,8 +406,8 @@
 											<string>0385176E1152F620002AD50D</string>
 											<string>038517C51152FFAB002AD50D</string>
 											<string>038517C61152FFAB002AD50D</string>
-											<string>038517C71152FFAB002AD50D</string>
-											<string>038517C81152FFAB002AD50D</string>
+											<string>038517E0115300DF002AD50D</string>
+											<string>038517E1115300DF002AD50D</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -705,6 +705,7 @@
 											<string>038517D71152FFAB002AD50D</string>
 											<string>038517D81152FFAB002AD50D</string>
 											<string>038517D91152FFAB002AD50D</string>
+											<string>038517E2115300DF002AD50D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -903,8 +904,8 @@
 		<string>038514AD11478538002AD50D</string>
 		<string>030FACCD112E67CF0047E4F7</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/Josh/Socialytical/retsudb/retsudb.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>29 157 1237 819 0 0 1280 1002 </string>

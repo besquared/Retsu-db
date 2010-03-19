@@ -1,6 +1,6 @@
 try {
   results = tables.playback.aggregate({  
-    'group': ['item_id', 'show_id'],
+    'group': ['show_id', 'episode_id'],
     'aggregates': {
       'total': {'sum': 'amount'},
       'count': {'count': true},

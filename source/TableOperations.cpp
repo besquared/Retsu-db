@@ -334,7 +334,13 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const 
       }
       
       groups[hash_key] = group;
-      results->Set(Number::New(results->Length()), Object::New());
+      
+      Local<Value> idx_key = Number::New(results->Length());
+      
+      results->Set(idx_key, Object::New());
+      for(size_t j = 0; j < group_by.size(); j++) {
+        Local<Object>::Cast(results->Get(idx_key))->Set(String::New(group_by[j].c_str()), String::New(values[j].c_str()));
+      }      
     } else {
       found->second.records.push_back(record_id);
     }

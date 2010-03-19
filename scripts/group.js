@@ -13,7 +13,7 @@ try {
       }
     },
   
-    'group': ['item_id', 'show_id'],
+    'group': ['show_id', 'episode_id'],
     
     'sample_size': 500
   });

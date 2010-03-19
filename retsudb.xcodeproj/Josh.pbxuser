@@ -1201,9 +1201,9 @@
 	};
 	032403C4113CD32F001E567A /* TableOperations.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1211, 10250}}";
-			sepNavSelRange = "{11917, 114}";
-			sepNavVisRange = "{11230, 889}";
+			sepNavIntBoundsRect = "{{0, 0}, {1329.81, 10400}}";
+			sepNavSelRange = "{11377, 0}";
+			sepNavVisRange = "{10732, 768}";
 		};
 	};
 	032403CB113CD36D001E567A /* PBXTextBookmark */ = {
@@ -4690,7 +4690,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 281";
 		rLen = 0;
-		rLoc = 11261;
+		rLoc = 11502;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 8512;
@@ -4710,7 +4710,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 282";
 		rLen = 0;
-		rLoc = 11261;
+		rLoc = 11502;
 		rType = 0;
 		vrLen = 685;
 		vrLoc = 8486;
@@ -4720,7 +4720,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 282";
 		rLen = 0;
-		rLoc = 11261;
+		rLoc = 11502;
 		rType = 0;
 		vrLen = 642;
 		vrLoc = 8528;
@@ -4740,7 +4740,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 282";
 		rLen = 0;
-		rLoc = 11261;
+		rLoc = 11502;
 		rType = 0;
 		vrLen = 685;
 		vrLoc = 8486;
@@ -6122,7 +6122,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 341";
 		rLen = 0;
-		rLoc = 11532;
+		rLoc = 11773;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 8797;
@@ -7404,7 +7404,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 361";
 		rLen = 114;
-		rLoc = 11917;
+		rLoc = 12158;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 11230;
@@ -7434,7 +7434,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 358";
 		rLen = 0;
-		rLoc = 11814;
+		rLoc = 12055;
 		rType = 0;
 		vrLen = 877;
 		vrLoc = 11154;
@@ -7564,7 +7564,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 358";
 		rLen = 59;
-		rLoc = 11803;
+		rLoc = 12044;
 		rType = 0;
 		vrLen = 882;
 		vrLoc = 11154;
@@ -7584,7 +7584,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 361";
 		rLen = 114;
-		rLoc = 11917;
+		rLoc = 12158;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 11230;
@@ -7598,6 +7598,46 @@
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 1797;
+	};
+	038517E0115300DF002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
+		name = "CommonOperations.cpp: 86";
+		rLen = 0;
+		rLoc = 2296;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 1797;
+	};
+	038517E1115300DF002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
+		name = "TableOperations.cpp: 361";
+		rLen = 114;
+		rLoc = 12158;
+		rType = 0;
+		vrLen = 889;
+		vrLoc = 11230;
+	};
+	038517E2115300DF002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
+		name = "CommonOperations.cpp: 86";
+		rLen = 0;
+		rLoc = 2296;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 1797;
+	};
+	038517E3115300DF002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
+		name = "TableOperations.cpp: 342";
+		rLen = 0;
+		rLoc = 11377;
+		rType = 0;
+		vrLen = 768;
+		vrLoc = 10732;
 	};
 	03C299AA11478178004731B5 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -8417,6 +8457,10 @@
 			038517D81152FFAB002AD50D /* PBXTextBookmark */ = 038517D81152FFAB002AD50D /* PBXTextBookmark */;
 			038517D91152FFAB002AD50D /* PBXTextBookmark */ = 038517D91152FFAB002AD50D /* PBXTextBookmark */;
 			038517DA1152FFAB002AD50D /* PBXTextBookmark */ = 038517DA1152FFAB002AD50D /* PBXTextBookmark */;
+			038517E0115300DF002AD50D /* PBXTextBookmark */ = 038517E0115300DF002AD50D /* PBXTextBookmark */;
+			038517E1115300DF002AD50D /* PBXTextBookmark */ = 038517E1115300DF002AD50D /* PBXTextBookmark */;
+			038517E2115300DF002AD50D /* PBXTextBookmark */ = 038517E2115300DF002AD50D /* PBXTextBookmark */;
+			038517E3115300DF002AD50D /* PBXTextBookmark */ = 038517E3115300DF002AD50D /* PBXTextBookmark */;
 			03C299AA11478178004731B5 = 03C299AA11478178004731B5 /* PBXTextBookmark */;
 			03C299AB11478178004731B5 = 03C299AB11478178004731B5 /* PBXTextBookmark */;
 			03C299AC11478178004731B5 = 03C299AC11478178004731B5 /* PBXTextBookmark */;
