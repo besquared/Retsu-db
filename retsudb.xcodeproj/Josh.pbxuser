@@ -171,9 +171,9 @@
 	};
 	030C0164114490E100D27A1F /* Eq.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {930, 950}}";
-			sepNavSelRange = "{553, 0}";
-			sepNavVisRange = "{215, 450}";
+			sepNavIntBoundsRect = "{{0, 0}, {930, 1200}}";
+			sepNavSelRange = "{798, 0}";
+			sepNavVisRange = "{284, 610}";
 		};
 	};
 	030C0165114490E100D27A1F /* Gt.h */ = {
@@ -719,8 +719,8 @@
 	030C029D1145FDD700D27A1F /* TableManager.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {930, 1200}}";
-			sepNavSelRange = "{1200, 0}";
-			sepNavVisRange = "{606, 629}";
+			sepNavSelRange = "{1205, 0}";
+			sepNavVisRange = "{649, 587}";
 		};
 	};
 	030C029E1145FDD700D27A1F /* TableManager.h */ = {
@@ -899,7 +899,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 89";
 		rLen = 0;
-		rLoc = 2160;
+		rLoc = 2150;
 		rType = 0;
 		vrLen = 637;
 		vrLoc = 1591;
@@ -1279,9 +1279,9 @@
 	};
 	032403C4113CD32F001E567A /* TableOperations.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1329.81, 10125}}";
-			sepNavSelRange = "{2986, 1}";
-			sepNavVisRange = "{2281, 995}";
+			sepNavIntBoundsRect = "{{0, 0}, {1243.4, 10535}}";
+			sepNavSelRange = "{8530, 0}";
+			sepNavVisRange = "{7923, 1036}";
 		};
 	};
 	032403CB113CD36D001E567A /* PBXTextBookmark */ = {
@@ -1396,9 +1396,9 @@
 	};
 	0324070A113F98AE001E567A /* Records.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1092.18, 2350}}";
-			sepNavSelRange = "{1341, 0}";
-			sepNavVisRange = "{1088, 507}";
+			sepNavIntBoundsRect = "{{0, 0}, {1092.18, 2375}}";
+			sepNavSelRange = "{1319, 0}";
+			sepNavVisRange = "{1007, 741}";
 		};
 	};
 	0324070B113F98AE001E567A /* Records.h */ = {
@@ -1443,7 +1443,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 12";
 		rLen = 0;
-		rLoc = 2230;
+		rLoc = 2220;
 		rType = 0;
 		vrLen = 165;
 		vrLoc = 0;
@@ -1518,9 +1518,9 @@
 	};
 	0324086F1140C8DC001E567A /* CommonOperations.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {991, 2350}}";
-			sepNavSelRange = "{1258, 0}";
-			sepNavVisRange = "{1083, 559}";
+			sepNavIntBoundsRect = "{{0, 0}, {930, 2650}}";
+			sepNavSelRange = "{2548, 0}";
+			sepNavVisRange = "{2119, 581}";
 		};
 	};
 	032408701140C8DC001E567A /* CommonOperations.h */ = {
@@ -3450,7 +3450,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 65";
 		rLen = 0;
-		rLoc = 1415;
+		rLoc = 1405;
 		rType = 0;
 		vrLen = 668;
 		vrLoc = 929;
@@ -3490,7 +3490,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 65";
 		rLen = 0;
-		rLoc = 1415;
+		rLoc = 1405;
 		rType = 0;
 		vrLen = 668;
 		vrLoc = 929;
@@ -4562,7 +4562,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 282";
 		rLen = 724;
-		rLoc = 9281;
+		rLoc = 9561;
 		rType = 0;
 		vrLen = 579;
 		vrLoc = 9252;
@@ -4582,7 +4582,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 283";
 		rLen = 0;
-		rLoc = 10005;
+		rLoc = 10285;
 		rType = 0;
 		vrLen = 501;
 		vrLoc = 10005;
@@ -4700,7 +4700,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 267";
 		rLen = 21;
-		rLoc = 9281;
+		rLoc = 9561;
 		rType = 0;
 		vrLen = 448;
 		vrLoc = 8852;
@@ -4720,7 +4720,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 267";
 		rLen = 31;
-		rLoc = 9353;
+		rLoc = 9633;
 		rType = 0;
 		vrLen = 665;
 		vrLoc = 8887;
@@ -4740,7 +4740,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 301";
 		rLen = 0;
-		rLoc = 10953;
+		rLoc = 11233;
 		rType = 0;
 		vrLen = 516;
 		vrLoc = 9756;
@@ -4760,7 +4760,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 270";
 		rLen = 0;
-		rLoc = 9467;
+		rLoc = 9747;
 		rType = 0;
 		vrLen = 563;
 		vrLoc = 8928;
@@ -4820,7 +4820,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 227";
 		rLen = 0;
-		rLoc = 9280;
+		rLoc = 9560;
 		rType = 0;
 		vrLen = 524;
 		vrLoc = 6951;
@@ -4840,7 +4840,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 281";
 		rLen = 0;
-		rLoc = 11666;
+		rLoc = 11946;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 8512;
@@ -4860,7 +4860,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 282";
 		rLen = 0;
-		rLoc = 11666;
+		rLoc = 11946;
 		rType = 0;
 		vrLen = 685;
 		vrLoc = 8486;
@@ -4870,7 +4870,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 282";
 		rLen = 0;
-		rLoc = 11666;
+		rLoc = 11946;
 		rType = 0;
 		vrLen = 642;
 		vrLoc = 8528;
@@ -4890,7 +4890,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 282";
 		rLen = 0;
-		rLoc = 11666;
+		rLoc = 11946;
 		rType = 0;
 		vrLen = 685;
 		vrLoc = 8486;
@@ -4910,7 +4910,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 241";
 		rLen = 0;
-		rLoc = 9280;
+		rLoc = 9560;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 7270;
@@ -4920,7 +4920,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 239";
 		rLen = 0;
-		rLoc = 9181;
+		rLoc = 9461;
 		rType = 0;
 		vrLen = 879;
 		vrLoc = 7239;
@@ -4930,7 +4930,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 243";
 		rLen = 0;
-		rLoc = 9176;
+		rLoc = 9456;
 		rType = 0;
 		vrLen = 849;
 		vrLoc = 7242;
@@ -4940,7 +4940,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 243";
 		rLen = 0;
-		rLoc = 9176;
+		rLoc = 9456;
 		rType = 0;
 		vrLen = 845;
 		vrLoc = 7242;
@@ -4980,7 +4980,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 265";
 		rLen = 0;
-		rLoc = 9493;
+		rLoc = 9773;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 8119;
@@ -5000,7 +5000,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 265";
 		rLen = 0;
-		rLoc = 9493;
+		rLoc = 9773;
 		rType = 0;
 		vrLen = 724;
 		vrLoc = 8181;
@@ -5020,7 +5020,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 267";
 		rLen = 0;
-		rLoc = 9493;
+		rLoc = 9773;
 		rType = 0;
 		vrLen = 723;
 		vrLoc = 8181;
@@ -5120,7 +5120,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 63";
 		rLen = 0;
-		rLoc = 1343;
+		rLoc = 1333;
 		rType = 0;
 		vrLen = 703;
 		vrLoc = 931;
@@ -5160,7 +5160,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 63";
 		rLen = 0;
-		rLoc = 1343;
+		rLoc = 1333;
 		rType = 0;
 		vrLen = 703;
 		vrLoc = 931;
@@ -5180,7 +5180,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 269";
 		rLen = 0;
-		rLoc = 9169;
+		rLoc = 9449;
 		rType = 0;
 		vrLen = 962;
 		vrLoc = 8167;
@@ -5190,7 +5190,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 270";
 		rLen = 0;
-		rLoc = 9183;
+		rLoc = 9463;
 		rType = 0;
 		vrLen = 1167;
 		vrLoc = 7809;
@@ -5200,7 +5200,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 281";
 		rLen = 0;
-		rLoc = 9495;
+		rLoc = 9775;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 8976;
@@ -5224,7 +5224,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 281";
 		rLen = 0;
-		rLoc = 9495;
+		rLoc = 9775;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 8976;
@@ -5264,7 +5264,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 281";
 		rLen = 0;
-		rLoc = 9495;
+		rLoc = 9775;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 8976;
@@ -5614,7 +5614,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 275";
 		rLen = 0;
-		rLoc = 9280;
+		rLoc = 9560;
 		rType = 0;
 		vrLen = 627;
 		vrLoc = 6437;
@@ -5632,7 +5632,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 275";
 		rLen = 0;
-		rLoc = 9280;
+		rLoc = 9560;
 		rType = 0;
 		vrLen = 627;
 		vrLoc = 6437;
@@ -5682,7 +5682,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 281";
 		rLen = 0;
-		rLoc = 9495;
+		rLoc = 9775;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 8976;
@@ -5702,7 +5702,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 279";
 		rLen = 0;
-		rLoc = 9493;
+		rLoc = 9773;
 		rType = 0;
 		vrLen = 798;
 		vrLoc = 8976;
@@ -5752,7 +5752,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 301";
 		rLen = 0;
-		rLoc = 10490;
+		rLoc = 10770;
 		rType = 0;
 		vrLen = 729;
 		vrLoc = 9423;
@@ -5782,7 +5782,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 299";
 		rLen = 0;
-		rLoc = 10380;
+		rLoc = 10660;
 		rType = 0;
 		vrLen = 658;
 		vrLoc = 9588;
@@ -5792,7 +5792,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 299";
 		rLen = 0;
-		rLoc = 10380;
+		rLoc = 10660;
 		rType = 0;
 		vrLen = 658;
 		vrLoc = 9588;
@@ -5832,7 +5832,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 307";
 		rLen = 0;
-		rLoc = 10642;
+		rLoc = 10922;
 		rType = 0;
 		vrLen = 553;
 		vrLoc = 9755;
@@ -5842,7 +5842,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 306";
 		rLen = 0;
-		rLoc = 10613;
+		rLoc = 10893;
 		rType = 0;
 		vrLen = 623;
 		vrLoc = 9755;
@@ -5852,7 +5852,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 270";
 		rLen = 0;
-		rLoc = 9187;
+		rLoc = 9467;
 		rType = 0;
 		vrLen = 924;
 		vrLoc = 8601;
@@ -6272,7 +6272,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 341";
 		rLen = 0;
-		rLoc = 11937;
+		rLoc = 12217;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 8797;
@@ -6302,7 +6302,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 301";
 		rLen = 0;
-		rLoc = 10379;
+		rLoc = 10659;
 		rType = 0;
 		vrLen = 676;
 		vrLoc = 9594;
@@ -6312,7 +6312,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 302";
 		rLen = 0;
-		rLoc = 10395;
+		rLoc = 10675;
 		rType = 0;
 		vrLen = 578;
 		vrLoc = 9594;
@@ -6382,7 +6382,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 301";
 		rLen = 0;
-		rLoc = 10379;
+		rLoc = 10659;
 		rType = 0;
 		vrLen = 676;
 		vrLoc = 9594;
@@ -6412,7 +6412,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 306";
 		rLen = 106;
-		rLoc = 10501;
+		rLoc = 10781;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 9594;
@@ -6422,7 +6422,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 306";
 		rLen = 106;
-		rLoc = 10501;
+		rLoc = 10781;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 9594;
@@ -6452,7 +6452,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 306";
 		rLen = 106;
-		rLoc = 10501;
+		rLoc = 10781;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 9594;
@@ -6532,7 +6532,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 63";
 		rLen = 0;
-		rLoc = 1343;
+		rLoc = 1333;
 		rType = 0;
 		vrLen = 703;
 		vrLoc = 931;
@@ -6572,7 +6572,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 64";
 		rLen = 0;
-		rLoc = 1390;
+		rLoc = 1380;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 1007;
@@ -6582,7 +6582,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 64";
 		rLen = 0;
-		rLoc = 1369;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 1007;
@@ -6592,7 +6592,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 71";
 		rLen = 0;
-		rLoc = 1594;
+		rLoc = 1584;
 		rType = 0;
 		vrLen = 641;
 		vrLoc = 1589;
@@ -6612,7 +6612,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 71";
 		rLen = 0;
-		rLoc = 1594;
+		rLoc = 1584;
 		rType = 0;
 		vrLen = 641;
 		vrLoc = 1589;
@@ -6912,7 +6912,7 @@
 		comments = "error: no matching function for call to 'Retsu::Cursor::Cursor(const boost::shared_ptr<Retsu::Table>&, boost::shared_ptr<Retsu::Conditions>&)'";
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		rLen = 0;
-		rLoc = 317;
+		rLoc = 325;
 		rType = 1;
 	};
 	038517231152F1C7002AD50D /* PBXTextBookmark */ = {
@@ -6930,7 +6930,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 303";
 		rLen = 0;
-		rLoc = 10408;
+		rLoc = 10688;
 		rType = 0;
 		vrLen = 702;
 		vrLoc = 9059;
@@ -6950,7 +6950,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 303";
 		rLen = 0;
-		rLoc = 10408;
+		rLoc = 10688;
 		rType = 0;
 		vrLen = 702;
 		vrLoc = 9059;
@@ -7138,7 +7138,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 303";
 		rLen = 0;
-		rLoc = 10408;
+		rLoc = 10688;
 		rType = 0;
 		vrLen = 702;
 		vrLoc = 9059;
@@ -7148,7 +7148,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 303";
 		rLen = 0;
-		rLoc = 10408;
+		rLoc = 10688;
 		rType = 0;
 		vrLen = 702;
 		vrLoc = 9059;
@@ -7218,7 +7218,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 315";
 		rLen = 0;
-		rLoc = 10529;
+		rLoc = 10809;
 		rType = 0;
 		vrLen = 728;
 		vrLoc = 9965;
@@ -7248,7 +7248,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 301";
 		rLen = 0;
-		rLoc = 10270;
+		rLoc = 10550;
 		rType = 0;
 		vrLen = 797;
 		vrLoc = 9332;
@@ -7268,7 +7268,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 315";
 		rLen = 0;
-		rLoc = 10508;
+		rLoc = 10788;
 		rType = 0;
 		vrLen = 688;
 		vrLoc = 9899;
@@ -7288,7 +7288,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 315";
 		rLen = 0;
-		rLoc = 10529;
+		rLoc = 10809;
 		rType = 0;
 		vrLen = 728;
 		vrLoc = 9965;
@@ -7514,7 +7514,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 47";
 		rLen = 0;
-		rLoc = 1258;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 1186;
@@ -7554,7 +7554,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 361";
 		rLen = 114;
-		rLoc = 12322;
+		rLoc = 12602;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 11230;
@@ -7564,7 +7564,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 47";
 		rLen = 0;
-		rLoc = 1750;
+		rLoc = 1761;
 		rType = 0;
 		vrLen = 647;
 		vrLoc = 651;
@@ -7584,7 +7584,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 358";
 		rLen = 0;
-		rLoc = 12219;
+		rLoc = 12499;
 		rType = 0;
 		vrLen = 877;
 		vrLoc = 11154;
@@ -7604,7 +7604,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 31";
 		rLen = 0;
-		rLoc = 2520;
+		rLoc = 2701;
 		rType = 0;
 		vrLen = 657;
 		vrLoc = 147;
@@ -7624,7 +7624,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 31";
 		rLen = 0;
-		rLoc = 2520;
+		rLoc = 2701;
 		rType = 0;
 		vrLen = 660;
 		vrLoc = 144;
@@ -7644,7 +7644,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 31";
 		rLen = 0;
-		rLoc = 2520;
+		rLoc = 2701;
 		rType = 0;
 		vrLen = 660;
 		vrLoc = 144;
@@ -7664,7 +7664,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 43";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2433;
 		rType = 0;
 		vrLen = 513;
 		vrLoc = 555;
@@ -7684,7 +7684,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 54";
 		rLen = 0;
-		rLoc = 2402;
+		rLoc = 2413;
 		rType = 0;
 		vrLen = 450;
 		vrLoc = 995;
@@ -7704,7 +7704,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 44";
 		rLen = 0;
-		rLoc = 1754;
+		rLoc = 1765;
 		rType = 0;
 		vrLen = 641;
 		vrLoc = 651;
@@ -7714,7 +7714,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 358";
 		rLen = 59;
-		rLoc = 12208;
+		rLoc = 12488;
 		rType = 0;
 		vrLen = 882;
 		vrLoc = 11154;
@@ -7724,7 +7724,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 47";
 		rLen = 0;
-		rLoc = 1750;
+		rLoc = 1761;
 		rType = 0;
 		vrLen = 647;
 		vrLoc = 651;
@@ -7734,7 +7734,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 361";
 		rLen = 114;
-		rLoc = 12322;
+		rLoc = 12602;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 11230;
@@ -7744,7 +7744,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 86";
 		rLen = 0;
-		rLoc = 2296;
+		rLoc = 2307;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 1797;
@@ -7754,7 +7754,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 86";
 		rLen = 0;
-		rLoc = 2296;
+		rLoc = 2307;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 1797;
@@ -7764,7 +7764,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 361";
 		rLen = 114;
-		rLoc = 12322;
+		rLoc = 12602;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 11230;
@@ -7774,7 +7774,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 86";
 		rLen = 0;
-		rLoc = 2296;
+		rLoc = 2307;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 1797;
@@ -7784,7 +7784,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 342";
 		rLen = 0;
-		rLoc = 11541;
+		rLoc = 11821;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 10732;
@@ -7808,7 +7808,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 304";
 		rLen = 0;
-		rLoc = 10294;
+		rLoc = 10574;
 		rType = 0;
 		vrLen = 716;
 		vrLoc = 9899;
@@ -7908,7 +7908,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 304";
 		rLen = 0;
-		rLoc = 10294;
+		rLoc = 10574;
 		rType = 0;
 		vrLen = 716;
 		vrLoc = 9899;
@@ -8108,7 +8108,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 47";
 		rLen = 0;
-		rLoc = 1258;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 559;
 		vrLoc = 1083;
@@ -8126,7 +8126,7 @@
 		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
 		name = "CommonOperations.cpp: 47";
 		rLen = 0;
-		rLoc = 1258;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 559;
 		vrLoc = 1083;
@@ -9038,7 +9038,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 304";
 		rLen = 0;
-		rLoc = 10294;
+		rLoc = 10574;
 		rType = 0;
 		vrLen = 716;
 		vrLoc = 9939;
@@ -9058,7 +9058,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 308";
 		rLen = 0;
-		rLoc = 10294;
+		rLoc = 10574;
 		rType = 0;
 		vrLen = 710;
 		vrLoc = 9655;
@@ -9096,7 +9096,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 308";
 		rLen = 0;
-		rLoc = 10294;
+		rLoc = 10574;
 		rType = 0;
 		vrLen = 710;
 		vrLoc = 9655;
@@ -9106,7 +9106,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 397";
 		rLen = 0;
-		rLoc = 13596;
+		rLoc = 13876;
 		rType = 0;
 		vrLen = 1174;
 		vrLoc = 12618;
@@ -9126,7 +9126,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 397";
 		rLen = 0;
-		rLoc = 13596;
+		rLoc = 13876;
 		rType = 0;
 		vrLen = 1174;
 		vrLoc = 12618;
@@ -9654,7 +9654,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 397";
 		rLen = 0;
-		rLoc = 13596;
+		rLoc = 13876;
 		rType = 0;
 		vrLen = 1282;
 		vrLoc = 12467;
@@ -9674,7 +9674,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 397";
 		rLen = 0;
-		rLoc = 13596;
+		rLoc = 13876;
 		rType = 0;
 		vrLen = 1282;
 		vrLoc = 12467;
@@ -9724,7 +9724,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 397";
 		rLen = 0;
-		rLoc = 13596;
+		rLoc = 13876;
 		rType = 0;
 		vrLen = 1282;
 		vrLoc = 12467;
@@ -9874,7 +9874,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 397";
 		rLen = 0;
-		rLoc = 13596;
+		rLoc = 13876;
 		rType = 0;
 		vrLen = 1282;
 		vrLoc = 12467;
@@ -10014,7 +10014,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 323";
 		rLen = 0;
-		rLoc = 10747;
+		rLoc = 11027;
 		rType = 0;
 		vrLen = 521;
 		vrLoc = 10405;
@@ -10042,7 +10042,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 323";
 		rLen = 0;
-		rLoc = 10747;
+		rLoc = 11027;
 		rType = 0;
 		vrLen = 521;
 		vrLoc = 10405;
@@ -10082,7 +10082,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 397";
 		rLen = 0;
-		rLoc = 13596;
+		rLoc = 13876;
 		rType = 0;
 		vrLen = 1294;
 		vrLoc = 12456;
@@ -10102,7 +10102,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 387";
 		rLen = 0;
-		rLoc = 12981;
+		rLoc = 13261;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 12433;
@@ -10112,7 +10112,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 387";
 		rLen = 0;
-		rLoc = 12981;
+		rLoc = 13261;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 12433;
@@ -10132,7 +10132,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 387";
 		rLen = 0;
-		rLoc = 12981;
+		rLoc = 13261;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 12433;
@@ -10542,7 +10542,7 @@
 		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
 		name = "TableOperations.cpp: 387";
 		rLen = 0;
-		rLoc = 12981;
+		rLoc = 13261;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 12433;
@@ -10812,7 +10812,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 63";
 		rLen = 0;
-		rLoc = 1341;
+		rLoc = 1331;
 		rType = 0;
 		vrLen = 507;
 		vrLoc = 1088;
@@ -10920,7 +10920,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 63";
 		rLen = 0;
-		rLoc = 1341;
+		rLoc = 1331;
 		rType = 0;
 		vrLen = 507;
 		vrLoc = 1088;
@@ -10980,7 +10980,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 71";
 		rLen = 0;
-		rLoc = 1594;
+		rLoc = 1584;
 		rType = 0;
 		vrLen = 641;
 		vrLoc = 1589;
@@ -11030,7 +11030,7 @@
 		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
 		name = "Records.cpp: 71";
 		rLen = 0;
-		rLoc = 1594;
+		rLoc = 1584;
 		rType = 0;
 		vrLen = 641;
 		vrLoc = 1589;
@@ -11074,6 +11074,553 @@
 		rType = 0;
 		vrLen = 443;
 		vrLoc = 408;
+	};
+	0385199B11535F5A002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03240259113B9E95001E567A /* Commander.h */;
+		name = "Commander.h: 15";
+		rLen = 29;
+		rLoc = 251;
+		rType = 0;
+		vrLen = 274;
+		vrLoc = 136;
+	};
+	0385199C11535F5A002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: no return statement in function returning non-void";
+		fRef = 0385199D11535F5A002AD50D /* Eq.h */;
+		rLen = 1;
+		rLoc = 38;
+		rType = 1;
+	};
+	0385199D11535F5A002AD50D /* Eq.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = Eq.h;
+		path = /Users/Josh/Socialytical/retsudb/source/Condition/Eq.h;
+		sourceTree = "<absolute>";
+	};
+	0385199E11535F5A002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03240259113B9E95001E567A /* Commander.h */;
+		name = "Commander.h: 15";
+		rLen = 29;
+		rLoc = 251;
+		rType = 0;
+		vrLen = 274;
+		vrLoc = 136;
+	};
+	0385199F11535F5A002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 038519A011535F5A002AD50D /* Eq.h */;
+		name = "Eq.h: 43";
+		rLen = 0;
+		rLoc = 914;
+		rType = 0;
+		vrLen = 307;
+		vrLoc = 616;
+	};
+	038519A011535F5A002AD50D /* Eq.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = Eq.h;
+		path = /Users/Josh/Socialytical/retsudb/source/Condition/Eq.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {930, 1200}}";
+			sepNavSelRange = "{755, 0}";
+			sepNavVisRange = "{427, 505}";
+		};
+	};
+	038519A111535F5A002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C029E1145FDD700D27A1F /* TableManager.h */;
+		name = "TableManager.h: 31";
+		rLen = 6;
+		rLoc = 567;
+		rType = 0;
+		vrLen = 175;
+		vrLoc = 520;
+	};
+	038519A211535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C01741144910E00D27A1F /* Conditions.h */;
+		name = "Conditions.h: 49";
+		rLen = 0;
+		rLoc = 1130;
+		rType = 0;
+		vrLen = 623;
+		vrLoc = 594;
+	};
+	038519A311535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C01731144910E00D27A1F /* Conditions.cpp */;
+		name = "Conditions.cpp: 57";
+		rLen = 0;
+		rLoc = 1735;
+		rType = 0;
+		vrLen = 471;
+		vrLoc = 1455;
+	};
+	038519A411535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0165114490E100D27A1F /* Gt.h */;
+		name = "Gt.h: 29";
+		rLen = 0;
+		rLoc = 552;
+		rType = 0;
+		vrLen = 466;
+		vrLoc = 198;
+	};
+	038519A511535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0166114490E100D27A1F /* Gte.h */;
+		name = "Gte.h: 30";
+		rLen = 0;
+		rLoc = 562;
+		rType = 0;
+		vrLen = 456;
+		vrLoc = 219;
+	};
+	038519A611535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0167114490E100D27A1F /* In.h */;
+		name = "In.h: 46";
+		rLen = 0;
+		rLoc = 1025;
+		rType = 0;
+		vrLen = 722;
+		vrLoc = 543;
+	};
+	038519A711535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0168114490E100D27A1F /* Lt.h */;
+		name = "Lt.h: 30";
+		rLen = 0;
+		rLoc = 560;
+		rType = 0;
+		vrLen = 475;
+		vrLoc = 196;
+	};
+	038519A811535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0169114490E100D27A1F /* Lte.h */;
+		name = "Lte.h: 30";
+		rLen = 0;
+		rLoc = 565;
+		rType = 0;
+		vrLen = 477;
+		vrLoc = 201;
+	};
+	038519A911535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C016A114490E100D27A1F /* Neq.h */;
+		name = "Neq.h: 20";
+		rLen = 0;
+		rLoc = 318;
+		rType = 0;
+		vrLen = 506;
+		vrLoc = 167;
+	};
+	038519AA11535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0163114490E100D27A1F /* Base.h */;
+		name = "Base.h: 28";
+		rLen = 0;
+		rLoc = 488;
+		rType = 0;
+		vrLen = 522;
+		vrLoc = 208;
+	};
+	038519AB11535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0164114490E100D27A1F /* Eq.h */;
+		name = "Eq.h: 38";
+		rLen = 0;
+		rLoc = 798;
+		rType = 0;
+		vrLen = 610;
+		vrLoc = 284;
+	};
+	038519AC11535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324070B113F98AE001E567A /* Records.h */;
+		name = "Records.h: 43";
+		rLen = 0;
+		rLoc = 739;
+		rType = 0;
+		vrLen = 443;
+		vrLoc = 408;
+	};
+	038519AD11535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
+		name = "Records.cpp: 62";
+		rLen = 0;
+		rLoc = 1319;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 1007;
+	};
+	038519AE11535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324070B113F98AE001E567A /* Records.h */;
+		name = "Records.h: 43";
+		rLen = 0;
+		rLoc = 739;
+		rType = 0;
+		vrLen = 443;
+		vrLoc = 408;
+	};
+	038519AF11535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C01731144910E00D27A1F /* Conditions.cpp */;
+		name = "Conditions.cpp: 62";
+		rLen = 0;
+		rLoc = 1759;
+		rType = 0;
+		vrLen = 471;
+		vrLoc = 1455;
+	};
+	038519B011535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C01741144910E00D27A1F /* Conditions.h */;
+		name = "Conditions.h: 49";
+		rLen = 0;
+		rLoc = 1130;
+		rType = 0;
+		vrLen = 623;
+		vrLoc = 594;
+	};
+	038519B111535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C01731144910E00D27A1F /* Conditions.cpp */;
+		name = "Conditions.cpp: 57";
+		rLen = 0;
+		rLoc = 1735;
+		rType = 0;
+		vrLen = 471;
+		vrLoc = 1455;
+	};
+	038519B211535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0163114490E100D27A1F /* Base.h */;
+		name = "Base.h: 31";
+		rLen = 0;
+		rLoc = 538;
+		rType = 0;
+		vrLen = 472;
+		vrLoc = 270;
+	};
+	038519B311535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0164114490E100D27A1F /* Eq.h */;
+		name = "Eq.h: 30";
+		rLen = 0;
+		rLoc = 807;
+		rType = 0;
+		vrLen = 450;
+		vrLoc = 215;
+	};
+	038519B411535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0165114490E100D27A1F /* Gt.h */;
+		name = "Gt.h: 29";
+		rLen = 0;
+		rLoc = 552;
+		rType = 0;
+		vrLen = 466;
+		vrLoc = 198;
+	};
+	038519B511535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0166114490E100D27A1F /* Gte.h */;
+		name = "Gte.h: 30";
+		rLen = 0;
+		rLoc = 562;
+		rType = 0;
+		vrLen = 456;
+		vrLoc = 219;
+	};
+	038519B611535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0167114490E100D27A1F /* In.h */;
+		name = "In.h: 46";
+		rLen = 0;
+		rLoc = 1025;
+		rType = 0;
+		vrLen = 722;
+		vrLoc = 543;
+	};
+	038519B711535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0168114490E100D27A1F /* Lt.h */;
+		name = "Lt.h: 30";
+		rLen = 0;
+		rLoc = 560;
+		rType = 0;
+		vrLen = 475;
+		vrLoc = 196;
+	};
+	038519B811535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0169114490E100D27A1F /* Lte.h */;
+		name = "Lte.h: 30";
+		rLen = 0;
+		rLoc = 565;
+		rType = 0;
+		vrLen = 477;
+		vrLoc = 201;
+	};
+	038519B911535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C016A114490E100D27A1F /* Neq.h */;
+		name = "Neq.h: 20";
+		rLen = 0;
+		rLoc = 318;
+		rType = 0;
+		vrLen = 506;
+		vrLoc = 167;
+	};
+	038519BA11535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0163114490E100D27A1F /* Base.h */;
+		name = "Base.h: 28";
+		rLen = 0;
+		rLoc = 488;
+		rType = 0;
+		vrLen = 522;
+		vrLoc = 208;
+	};
+	038519BB11535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C0164114490E100D27A1F /* Eq.h */;
+		name = "Eq.h: 38";
+		rLen = 0;
+		rLoc = 798;
+		rType = 0;
+		vrLen = 610;
+		vrLoc = 284;
+	};
+	038519BC11535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324070B113F98AE001E567A /* Records.h */;
+		name = "Records.h: 43";
+		rLen = 0;
+		rLoc = 739;
+		rType = 0;
+		vrLen = 443;
+		vrLoc = 408;
+	};
+	038519BD11535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324070A113F98AE001E567A /* Records.cpp */;
+		name = "Records.cpp: 62";
+		rLen = 0;
+		rLoc = 1319;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 1007;
+	};
+	038519BE11535F62002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 038519A011535F5A002AD50D /* Eq.h */;
+		name = "Eq.h: 40";
+		rLen = 0;
+		rLoc = 826;
+		rType = 0;
+		vrLen = 505;
+		vrLoc = 427;
+	};
+	038519BF11536107002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 038519A011535F5A002AD50D /* Eq.h */;
+		name = "Eq.h: 36";
+		rLen = 0;
+		rLoc = 755;
+		rType = 0;
+		vrLen = 505;
+		vrLoc = 427;
+	};
+	038519C011536107002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C029D1145FDD700D27A1F /* TableManager.cpp */;
+		name = "TableManager.cpp: 45";
+		rLen = 0;
+		rLoc = 1205;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 649;
+	};
+	038519C111536107002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
+		name = "TableOperations.cpp: 92";
+		rLen = 1;
+		rLoc = 2986;
+		rType = 0;
+		vrLen = 995;
+		vrLoc = 2281;
+	};
+	038519C211536107002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 038519A011535F5A002AD50D /* Eq.h */;
+		name = "Eq.h: 36";
+		rLen = 0;
+		rLoc = 755;
+		rType = 0;
+		vrLen = 505;
+		vrLoc = 427;
+	};
+	038519C311536107002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
+		name = "TableOperations.cpp: 92";
+		rLen = 1;
+		rLoc = 2986;
+		rType = 0;
+		vrLen = 995;
+		vrLoc = 2281;
+	};
+	038519C411536107002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 030C029D1145FDD700D27A1F /* TableManager.cpp */;
+		name = "TableManager.cpp: 45";
+		rLen = 0;
+		rLoc = 1205;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 649;
+	};
+	038519C511536107002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
+		name = "TableOperations.cpp: 260";
+		rLen = 0;
+		rLoc = 8574;
+		rType = 0;
+		vrLen = 1073;
+		vrLoc = 7923;
+	};
+	038519C611536128002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
+		name = "TableOperations.cpp: 277";
+		rLen = 0;
+		rLoc = 9359;
+		rType = 0;
+		vrLen = 958;
+		vrLoc = 8520;
+	};
+	038519C711536155002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
+		name = "TableOperations.cpp: 259";
+		rLen = 0;
+		rLoc = 8530;
+		rType = 0;
+		vrLen = 1093;
+		vrLoc = 7866;
+	};
+	038519C811536174002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
+		name = "TableOperations.cpp: 259";
+		rLen = 0;
+		rLoc = 8530;
+		rType = 0;
+		vrLen = 1010;
+		vrLoc = 7654;
+	};
+	038519CB115361AA002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
+		name = "TableOperations.cpp: 259";
+		rLen = 0;
+		rLoc = 8530;
+		rType = 0;
+		vrLen = 1073;
+		vrLoc = 7923;
+	};
+	038519D911536320002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
+		name = "TableOperations.cpp: 259";
+		rLen = 0;
+		rLoc = 8530;
+		rType = 0;
+		vrLen = 972;
+		vrLoc = 7923;
+	};
+	038519DA11536320002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
+		name = "CommonOperations.cpp: 86";
+		rLen = 0;
+		rLoc = 2307;
+		rType = 0;
+		vrLen = 570;
+		vrLoc = 1795;
+	};
+	038519DB11536320002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 032403C4113CD32F001E567A /* TableOperations.cpp */;
+		name = "TableOperations.cpp: 259";
+		rLen = 0;
+		rLoc = 8530;
+		rType = 0;
+		vrLen = 972;
+		vrLoc = 7923;
+	};
+	038519DC11536320002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
+		name = "CommonOperations.cpp: 98";
+		rLen = 0;
+		rLoc = 2602;
+		rType = 0;
+		vrLen = 541;
+		vrLoc = 2119;
+	};
+	038519DD11536345002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
+		name = "CommonOperations.cpp: 98";
+		rLen = 0;
+		rLoc = 2602;
+		rType = 0;
+		vrLen = 541;
+		vrLoc = 2119;
+	};
+	038519DE1153635A002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
+		name = "CommonOperations.cpp: 99";
+		rLen = 0;
+		rLoc = 2602;
+		rType = 0;
+		vrLen = 570;
+		vrLoc = 2119;
+	};
+	038519E311536398002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
+		name = "CommonOperations.cpp: 98";
+		rLen = 0;
+		rLoc = 2522;
+		rType = 0;
+		vrLen = 582;
+		vrLoc = 2119;
+	};
+	038519EF11536409002AD50D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0324086F1140C8DC001E567A /* CommonOperations.cpp */;
+		name = "CommonOperations.cpp: 99";
+		rLen = 0;
+		rLoc = 2548;
+		rType = 0;
+		vrLen = 581;
+		vrLoc = 2119;
 	};
 	03C299AA11478178004731B5 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -12227,6 +12774,59 @@
 			0385198D1153599C002AD50D /* PBXTextBookmark */ = 0385198D1153599C002AD50D /* PBXTextBookmark */;
 			0385198E1153599C002AD50D /* PBXTextBookmark */ = 0385198E1153599C002AD50D /* PBXTextBookmark */;
 			0385199011535A0A002AD50D /* PBXTextBookmark */ = 0385199011535A0A002AD50D /* PBXTextBookmark */;
+			0385199B11535F5A002AD50D /* PBXTextBookmark */ = 0385199B11535F5A002AD50D /* PBXTextBookmark */;
+			0385199C11535F5A002AD50D /* PBXTextBookmark */ = 0385199C11535F5A002AD50D /* PBXTextBookmark */;
+			0385199E11535F5A002AD50D /* PBXTextBookmark */ = 0385199E11535F5A002AD50D /* PBXTextBookmark */;
+			0385199F11535F5A002AD50D /* PBXTextBookmark */ = 0385199F11535F5A002AD50D /* PBXTextBookmark */;
+			038519A111535F5A002AD50D /* PBXTextBookmark */ = 038519A111535F5A002AD50D /* PBXTextBookmark */;
+			038519A211535F62002AD50D /* PBXTextBookmark */ = 038519A211535F62002AD50D /* PBXTextBookmark */;
+			038519A311535F62002AD50D /* PBXTextBookmark */ = 038519A311535F62002AD50D /* PBXTextBookmark */;
+			038519A411535F62002AD50D /* PBXTextBookmark */ = 038519A411535F62002AD50D /* PBXTextBookmark */;
+			038519A511535F62002AD50D /* PBXTextBookmark */ = 038519A511535F62002AD50D /* PBXTextBookmark */;
+			038519A611535F62002AD50D /* PBXTextBookmark */ = 038519A611535F62002AD50D /* PBXTextBookmark */;
+			038519A711535F62002AD50D /* PBXTextBookmark */ = 038519A711535F62002AD50D /* PBXTextBookmark */;
+			038519A811535F62002AD50D /* PBXTextBookmark */ = 038519A811535F62002AD50D /* PBXTextBookmark */;
+			038519A911535F62002AD50D /* PBXTextBookmark */ = 038519A911535F62002AD50D /* PBXTextBookmark */;
+			038519AA11535F62002AD50D /* PBXTextBookmark */ = 038519AA11535F62002AD50D /* PBXTextBookmark */;
+			038519AB11535F62002AD50D /* PBXTextBookmark */ = 038519AB11535F62002AD50D /* PBXTextBookmark */;
+			038519AC11535F62002AD50D /* PBXTextBookmark */ = 038519AC11535F62002AD50D /* PBXTextBookmark */;
+			038519AD11535F62002AD50D /* PBXTextBookmark */ = 038519AD11535F62002AD50D /* PBXTextBookmark */;
+			038519AE11535F62002AD50D /* PBXTextBookmark */ = 038519AE11535F62002AD50D /* PBXTextBookmark */;
+			038519AF11535F62002AD50D /* PBXTextBookmark */ = 038519AF11535F62002AD50D /* PBXTextBookmark */;
+			038519B011535F62002AD50D /* PBXTextBookmark */ = 038519B011535F62002AD50D /* PBXTextBookmark */;
+			038519B111535F62002AD50D /* PBXTextBookmark */ = 038519B111535F62002AD50D /* PBXTextBookmark */;
+			038519B211535F62002AD50D /* PBXTextBookmark */ = 038519B211535F62002AD50D /* PBXTextBookmark */;
+			038519B311535F62002AD50D /* PBXTextBookmark */ = 038519B311535F62002AD50D /* PBXTextBookmark */;
+			038519B411535F62002AD50D /* PBXTextBookmark */ = 038519B411535F62002AD50D /* PBXTextBookmark */;
+			038519B511535F62002AD50D /* PBXTextBookmark */ = 038519B511535F62002AD50D /* PBXTextBookmark */;
+			038519B611535F62002AD50D /* PBXTextBookmark */ = 038519B611535F62002AD50D /* PBXTextBookmark */;
+			038519B711535F62002AD50D /* PBXTextBookmark */ = 038519B711535F62002AD50D /* PBXTextBookmark */;
+			038519B811535F62002AD50D /* PBXTextBookmark */ = 038519B811535F62002AD50D /* PBXTextBookmark */;
+			038519B911535F62002AD50D /* PBXTextBookmark */ = 038519B911535F62002AD50D /* PBXTextBookmark */;
+			038519BA11535F62002AD50D /* PBXTextBookmark */ = 038519BA11535F62002AD50D /* PBXTextBookmark */;
+			038519BB11535F62002AD50D /* PBXTextBookmark */ = 038519BB11535F62002AD50D /* PBXTextBookmark */;
+			038519BC11535F62002AD50D /* PBXTextBookmark */ = 038519BC11535F62002AD50D /* PBXTextBookmark */;
+			038519BD11535F62002AD50D /* PBXTextBookmark */ = 038519BD11535F62002AD50D /* PBXTextBookmark */;
+			038519BE11535F62002AD50D /* PBXTextBookmark */ = 038519BE11535F62002AD50D /* PBXTextBookmark */;
+			038519BF11536107002AD50D /* PBXTextBookmark */ = 038519BF11536107002AD50D /* PBXTextBookmark */;
+			038519C011536107002AD50D /* PBXTextBookmark */ = 038519C011536107002AD50D /* PBXTextBookmark */;
+			038519C111536107002AD50D /* PBXTextBookmark */ = 038519C111536107002AD50D /* PBXTextBookmark */;
+			038519C211536107002AD50D /* PBXTextBookmark */ = 038519C211536107002AD50D /* PBXTextBookmark */;
+			038519C311536107002AD50D /* PBXTextBookmark */ = 038519C311536107002AD50D /* PBXTextBookmark */;
+			038519C411536107002AD50D /* PBXTextBookmark */ = 038519C411536107002AD50D /* PBXTextBookmark */;
+			038519C511536107002AD50D /* PBXTextBookmark */ = 038519C511536107002AD50D /* PBXTextBookmark */;
+			038519C611536128002AD50D /* PBXTextBookmark */ = 038519C611536128002AD50D /* PBXTextBookmark */;
+			038519C711536155002AD50D /* PBXTextBookmark */ = 038519C711536155002AD50D /* PBXTextBookmark */;
+			038519C811536174002AD50D /* PBXTextBookmark */ = 038519C811536174002AD50D /* PBXTextBookmark */;
+			038519CB115361AA002AD50D /* PBXTextBookmark */ = 038519CB115361AA002AD50D /* PBXTextBookmark */;
+			038519D911536320002AD50D /* PBXTextBookmark */ = 038519D911536320002AD50D /* PBXTextBookmark */;
+			038519DA11536320002AD50D /* PBXTextBookmark */ = 038519DA11536320002AD50D /* PBXTextBookmark */;
+			038519DB11536320002AD50D /* PBXTextBookmark */ = 038519DB11536320002AD50D /* PBXTextBookmark */;
+			038519DC11536320002AD50D /* PBXTextBookmark */ = 038519DC11536320002AD50D /* PBXTextBookmark */;
+			038519DD11536345002AD50D /* PBXTextBookmark */ = 038519DD11536345002AD50D /* PBXTextBookmark */;
+			038519DE1153635A002AD50D /* PBXTextBookmark */ = 038519DE1153635A002AD50D /* PBXTextBookmark */;
+			038519E311536398002AD50D /* PBXTextBookmark */ = 038519E311536398002AD50D /* PBXTextBookmark */;
+			038519EF11536409002AD50D /* PBXTextBookmark */ = 038519EF11536409002AD50D /* PBXTextBookmark */;
 			03C299AA11478178004731B5 = 03C299AA11478178004731B5 /* PBXTextBookmark */;
 			03C299AB11478178004731B5 = 03C299AB11478178004731B5 /* PBXTextBookmark */;
 			03C299AC11478178004731B5 = 03C299AC11478178004731B5 /* PBXTextBookmark */;

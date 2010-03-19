@@ -41,7 +41,7 @@ v8::Handle<v8::Value> Retsu::CommonOperations::inspect(const Arguments& args) {
 std::string Retsu::CommonOperations::inspect_object(const Handle<Object> object) {
   string result;
   
-  result += "{";
+  result += "\n{";
   
   Local<Array> keys = object->GetPropertyNames();
   
@@ -49,7 +49,7 @@ std::string Retsu::CommonOperations::inspect_object(const Handle<Object> object)
     Local<Value> key = keys->Get(Number::New(i));
     Local<Value> value = object->Get(key);
     
-    result += string(*String::AsciiValue(key)) + ": ";
+    result += "\"" + string(*String::AsciiValue(key)) + "\": ";
 
     if(value->IsArray()) {
       result += inspect_array(Handle<Array>::Cast(value));
@@ -93,6 +93,13 @@ std::string Retsu::CommonOperations::inspect_array(const Handle<Array> array) {
 
 std::string Retsu::CommonOperations::inspect_value(const Handle<Value> value) {
   string result;
-  result += *String::AsciiValue(value);
+  
+  if(value->IsNumber()) {
+    char buffer[64];
+    sprintf(buffer, "%.2f", value->NumberValue());
+    result += string(buffer);
+  } else {
+    result += "\"" + string(*String::AsciiValue(value)) + "\"";
+  }
   return result;
 }

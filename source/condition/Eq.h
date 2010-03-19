@@ -34,6 +34,10 @@ namespace Retsu {
         return value == this->value;
       }
       
+      bool check(double& value) {
+        return false;
+      }
+      
       void print(ostream& out) const {
         out << column << " = " << value;
       }
