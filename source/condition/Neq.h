@@ -16,20 +16,31 @@ namespace Retsu {
 	namespace Condition {
 		class Neq : public Base {
 		public:
-			string value;
-			
+			string strvalue;
+			double dblvalue;
+      
 			Neq(const string& column, const string& value)  :
-			Condition::Base::Base(column) {
-				this->value = value;
+			Condition::Base::Base(column, Base::STRING) {
+				this->strvalue = value;
 				this->type = Condition::Base::EQ;
 			}
-						
+
+      Neq(const string& column, const double& value)  :
+			Condition::Base::Base(column, Base::NUMBER) {
+				this->dblvalue = value;
+				this->type = Condition::Base::EQ;
+			}
+      
       bool check(string& value) {
-        return value != this->value;
+        return value != strvalue;
+      }
+      
+      bool check(double& value) {
+        return value != dblvalue;
       }
       
       void print(ostream& out) const {
-        out << column << " != " << value;
+        out << column << " != " << strvalue;
       }      
 		};
 	}

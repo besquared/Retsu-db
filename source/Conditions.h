@@ -35,18 +35,26 @@ namespace Retsu {
 		 * Shortcuts
 		 */
 		void eq(const string& name, const string& value);
+    void eq(const string& name, const double& value);
     void neq(const string& name, const string& value);
+    void neq(const string& name, const double& value);
 		void gt(const string& name, const string& value);
+    void gt(const string& name, const double& value);
 		void gte(const string& name, const string& value);
+    void gte(const string& name, const double& value);
 		void lt(const string& name, const string& value);
+    void lt(const string& name, const double& value);
 		void lte(const string& name, const string& value);
+    void lte(const string& name, const double& value);
 		void in(const string& name, const vector<string>& value);
-    
+    void in(const string& name, const vector<double>& value);
+
 		/*
 		 * Application
 		 */
     bool check(const string& column, string& value) const;
-    
+    Condition::Base::ValueType value_type(const string& column) const;
+
     /*
      * Introspect
      */

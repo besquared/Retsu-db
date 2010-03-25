@@ -6,6 +6,7 @@ try {
       'count': {'count': true},
       'average': {'average' : 'amount'},
     }, 'conditions': {
+      'amount': {'lt': 100},
       'show_id': {'eq': 'Nocturnal Sunshine'}
     }, 'sample_size': 2000
   });

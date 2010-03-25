@@ -18,16 +18,25 @@ namespace Retsu {
 
 		class Base {
 		public:
+      enum ValueType { STRING, NUMBER };
 			enum ConditionType { EQ, GT, GTE, LT, LTE, IN };
 
 			string column;
 			ConditionType type;
-			
+      ValueType value_type;
+
 			Base(const string& column) {
 				this->column = column;
+        this->value_type = STRING;
 			}
+      
+      Base(const string& column, ValueType value_type) {
+        this->column = column;
+        this->value_type = value_type;
+      }
 			
       virtual bool check(string& value) = 0;
+      virtual bool check(double& value) = 0;
       virtual void print(ostream& out) const = 0;
       
       friend ostream& operator<<(ostream& out, const Base& condition) {

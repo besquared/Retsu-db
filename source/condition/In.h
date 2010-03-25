@@ -17,38 +17,58 @@ namespace Retsu {
 		class In : public Base {
 		public:
       bool negation;
-			vector<string> values;
+      vector<string> strvalues;
+      vector<double> dblvalues;
 			
 			In(const string& column, const vector<string>& values) :
-			Condition::Base::Base(column) {
-				this->values = values;
+			Condition::Base::Base(column, Base::STRING) {
+				this->strvalues = values;
 				this->negation = false;
 				this->type = Condition::Base::IN;
 			}
 			
 			In(const string& column, const vector<string>& values, bool negation)  :
-			Condition::Base::Base(column) {
-				this->values = values;
+			Condition::Base::Base(column, Base::STRING) {
+				this->strvalues = values;
 				this->negation = negation;
 				this->type = Condition::Base::IN;
 			}
 			
+      In(const string& column, const vector<double>& values) :
+			Condition::Base::Base(column, Base::NUMBER) {
+				this->dblvalues = values;
+				this->negation = false;
+				this->type = Condition::Base::IN;
+			}
+			
+			In(const string& column, const vector<double>& values, bool negation)  :
+			Condition::Base::Base(column, Base::NUMBER) {
+				this->dblvalues = values;
+				this->negation = negation;
+				this->type = Condition::Base::IN;
+			}
+      
       bool check(string& value) {
         vector<string>::iterator found;
-        found = find(values.begin(), values.end(), value);
+        found = find(strvalues.begin(), strvalues.end(), value);
         
-        if(found == this->values.end()) {
+        if(found == strvalues.end()) {
           return false;
         } else {
           return true;
         }
       }
       
+      // TODO implement this
+      bool check(double& value) {
+        return true;
+      }
+      
       void print(ostream& out) const {
         out << column << " IN (";
-        for(size_t i = 0; i < values.size(); i++) {
-          out << values[i];
-          if(i < values.size() - 1) out << ", "; 
+        for(size_t i = 0; i < strvalues.size(); i++) {
+          out << strvalues[i];
+          if(i < strvalues.size() - 1) out << ", "; 
         }
         out << ")";
       }

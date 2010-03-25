@@ -256,8 +256,23 @@ v8::Handle<v8::Value> Retsu::TableOperations::condition(Local<Object> params, sh
         
         if(cond_type_val->IsNumber()) {
           double value = cond_type_val->NumberValue();
-          
-          // do some double conditions here
+                    
+          if(type == "eq") {
+            conditions->eq(*String::AsciiValue(column), value);
+          } else if(type == "neq") {
+            conditions->neq(*String::AsciiValue(column), value);
+          } else if(type == "gt") {
+            conditions->gt(*String::AsciiValue(column), value);
+          } else if(type == "gte") {
+            conditions->gte(*String::AsciiValue(column), value);
+          } else if(type == "lt") {
+            conditions->lt(*String::AsciiValue(column), value);
+          } else if(type == "lte") {
+            conditions->lte(*String::AsciiValue(column), value); 
+          } else if(type == "in") {
+            // this could be an array of strings or numbers
+            // do some in stuff here, unwrap the array and whatnot
+          }
         } else {
           string value = *String::AsciiValue(cond_type_val);
           

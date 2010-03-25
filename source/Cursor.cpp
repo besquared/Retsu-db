@@ -74,10 +74,15 @@ uint64_t Retsu::Cursor::conditional_next() {
     record_id = unconditional_next();
     if(record_id == 0) { return 0; }
     
+    // I need to know about the column conditions
+    //  to know how I'm supposed to read the data here
     for(column = conditions->columns.begin(); column != conditions->columns.end(); column++) {
       table->lookup(*column, record_id, value);
       
       if(value.empty()) { continue; }
+      
+      // sometimes the value isn't a string
+      cout << "Checking column " << *column << " against value " << value << endl;
 
       if(conditions->check(*column, value)) {
         return record_id;
