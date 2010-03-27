@@ -52,9 +52,10 @@
 		0324FB44113B2C99001E567A /* libv8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324FB0B113B28C7001E567A /* libv8.a */; };
 		0385165211529A43002AD50D /* Cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0385165011529A43002AD50D /* Cursor.cpp */; };
 		0385165311529A43002AD50D /* Cursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0385165111529A43002AD50D /* Cursor.h */; };
-		0385175F1152F54C002AD50D /* sample.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0385175E1152F53D002AD50D /* sample.js */; };
 		038517FA11533EAA002AD50D /* Column.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 038517F811533EAA002AD50D /* Column.cpp */; };
 		038517FB11533EAA002AD50D /* Column.h in Headers */ = {isa = PBXBuildFile; fileRef = 038517F911533EAA002AD50D /* Column.h */; };
+		03851BF6115EA6BA002AD50D /* aggregate.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03851BF4115EA6B2002AD50D /* aggregate.js */; };
+		03851BF7115EA6BA002AD50D /* estimate.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03851BF5115EA6B2002AD50D /* estimate.js */; };
 		8DD76F650486A84900D96B5E /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */; settings = {ATTRIBUTES = (); }; };
 		8DD76F6A0486A84900D96B5E /* retsudb.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* retsudb.1 */; };
 /* End PBXBuildFile section */
@@ -111,7 +112,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				0385175F1152F54C002AD50D /* sample.js in CopyFiles */,
+				03851BF6115EA6BA002AD50D /* aggregate.js in CopyFiles */,
+				03851BF7115EA6BA002AD50D /* estimate.js in CopyFiles */,
 				032408551140C768001E567A /* create.js in CopyFiles */,
 				032408561140C768001E567A /* each.js in CopyFiles */,
 				030C03581146217900D27A1F /* group.js in CopyFiles */,
@@ -1276,9 +1278,10 @@
 		0324FFDE113B2D09001E567A /* windows-tick-processor.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "windows-tick-processor.py"; sourceTree = "<group>"; };
 		0385165011529A43002AD50D /* Cursor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Cursor.cpp; path = source/Cursor.cpp; sourceTree = "<group>"; };
 		0385165111529A43002AD50D /* Cursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cursor.h; path = source/Cursor.h; sourceTree = "<group>"; };
-		0385175E1152F53D002AD50D /* sample.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = sample.js; path = scripts/sample.js; sourceTree = "<group>"; };
 		038517F811533EAA002AD50D /* Column.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Column.cpp; path = source/Column.cpp; sourceTree = "<group>"; };
 		038517F911533EAA002AD50D /* Column.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Column.h; path = source/Column.h; sourceTree = "<group>"; };
+		03851BF4115EA6B2002AD50D /* aggregate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = aggregate.js; path = scripts/aggregate.js; sourceTree = "<group>"; };
+		03851BF5115EA6B2002AD50D /* estimate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = estimate.js; path = scripts/estimate.js; sourceTree = "<group>"; };
 		08FB7796FE84155DC02AAC07 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		8DD76F6C0486A84900D96B5E /* retsudb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = retsudb; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859E8B029090EE04C91782 /* retsudb.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = retsudb.1; sourceTree = "<group>"; };
@@ -1341,7 +1344,8 @@
 		0324084E1140C73A001E567A /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				0385175E1152F53D002AD50D /* sample.js */,
+				03851BF4115EA6B2002AD50D /* aggregate.js */,
+				03851BF5115EA6B2002AD50D /* estimate.js */,
 				032408511140C762001E567A /* create.js */,
 				032408521140C762001E567A /* each.js */,
 				030C01431142D53500D27A1F /* group.js */,

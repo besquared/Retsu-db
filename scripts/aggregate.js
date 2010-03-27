@@ -7,7 +7,7 @@ try {
     }, 'conditions': {
       'amount': {'lt': 500, 'gt': 100},
       'show_id': {'eq': 'Nocturnal Sunshine'}
-    }, 'group': ['show_id', 'episode_id'], 'sample_size': 10000
+    }, 'group': ['show_id', 'episode_id']
   });
   
   inspect(results);

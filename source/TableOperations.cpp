@@ -38,7 +38,8 @@ v8::Handle<v8::Value> Retsu::TableOperations::get_table_proxy(Local<String> name
   table_templ->Set(String::New("lookup"), FunctionTemplate::New(lookup));
   table_templ->Set(String::New("each"), FunctionTemplate::New(each)); 
   table_templ->Set(String::New("aggregate"), FunctionTemplate::New(aggregate));
-  
+  table_templ->Set(String::New("estimate"), FunctionTemplate::New(estimate));
+
   Local<Object> table_proxy = table_templ->NewInstance();
   table_proxy->Set(String::New("name"), name);
   
@@ -216,13 +217,19 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
   shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
 
   try {
-    Handle<Value> grouped = group(params, table, groups, results);
-    if(!grouped->IsTrue()) return grouped;
+    shared_ptr<Conditions> conditions(new Conditions());
+    Handle<Value> conditioned = condition(params, conditions);
     
-    Handle<Value> aggregated = aggregate(params, table, groups, results);
-    
+    Cursor cursor;  
+    if(conditions->empty()) {
+      cursor = Cursor(table);    
+    } else {
+      cursor = Cursor(table, conditions);    
+    }
+
+    group(cursor, params, table, groups, results);
+    aggregate(params, table, groups, results);
     return results;
-    
   } catch(StorageError e) {
     return ThrowException(String::New(e.what()));
   } catch(DimensionNotFoundError e) {
@@ -232,50 +239,57 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
   return Handle<Value>();  
 }
 
-// Sometimes we have conditions
-v8::Handle<v8::Value> Retsu::TableOperations::condition(Local<Object> params, shared_ptr<Conditions> conditions) {
-  Local<Value> cond_param = params->Get(String::New("conditions"));
-    
-  if(cond_param->IsNull()) {
-    return Boolean::New(false);
-  } else {
-    Local<Object> cond_params = Local<Object>::Cast(cond_param);
-    Local<Array> cond_columns = cond_params->GetPropertyNames();
-    
-    for(size_t i = 0; i < cond_columns->Length(); i++) {
-      Local<Value> column = cond_columns->Get(Number::New(i));
-      Local<Value> cond_val = cond_params->Get(column);
-      
-      Local<Object> cond_obj = Local<Object>::Cast(cond_val);
-      Local<Array> cond_types = cond_obj->GetPropertyNames();
-      
-      for(size_t k = 0; k < cond_types->Length(); k++) {
-        Local<Value> cond_type = cond_types->Get(Number::New(k));
-        Local<Value> cond_type_val = cond_obj->Get(cond_type);
-        
-        string type = *String::AsciiValue(cond_type);
-        
-        if(cond_type_val->IsNumber()) {
-          conditions->add(type, *String::AsciiValue(column), cond_type_val->NumberValue());
-        } else {
-          conditions->add(type, *String::AsciiValue(column), *String::AsciiValue(cond_type_val));
-        }
-      }      
+v8::Handle<v8::Value> Retsu::TableOperations::estimate(const Arguments& args) {
+  if(!args[0]->IsObject()) {
+    return ThrowException(String::New("First argument to estimate must be an object with query parameters"));
+  }
+  
+  Local<Value> table_name = args.This()->Get(String::New("name"));
+  
+  map<size_t, Group> groups;
+  Local<Array> results = Array::New();
+  Local<Object> params = Local<Object>::Cast(args[0]);
+  shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
+  
+  try {
+    Local<Value> sample_param = params->Get(String::New("sample"));
+
+    size_t sample_size;
+    if(sample_param->IsNull()) {
+      return ThrowException(String::New("Could not find required key 'sample' in parameters"));
+    } else {
+      sample_size = sample_param->NumberValue();
     }
     
-    return Boolean::New(true);
+    shared_ptr<Conditions> conditions(new Conditions());
+    Handle<Value> conditioned = condition(params, conditions);
+  
+    Cursor cursor;  
+    if(conditions->empty()) {
+      cursor = Cursor(table, sample_size);
+    } else {
+      cursor = Cursor(table, conditions, sample_size);
+    }
+
+    group(cursor, params, table, groups, results);
+    estimate(params, table, groups, results);
+    return results;    
+  } catch(StorageError e) {
+    return ThrowException(String::New(e.what()));
+  } catch(DimensionNotFoundError e) {
+    return ThrowException(String::New(e.what()));
   }
+  
+  return Handle<Value>();  
 }
 
-// Iterate over the table with a cursor and group rows
-v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const shared_ptr<Table> table, 
-                                                    map<size_t, Group>& groups, Local<Array> results) {
-    
+v8::Handle<v8::Value> Retsu::TableOperations::group(Cursor& cursor, Local<Object> params, 
+  const shared_ptr<Table> table, map<size_t, Group>& groups, Local<Array> results) {
+  
   Local<Value> group_param = params->Get(String::New("group"));
-  Local<Value> sample_size_param = params->Get(String::New("sample_size"));
-
+  
   if(group_param->IsNull()) {
-    return ThrowException(String::New("Could not find key 'group' in aggregate parameters"));
+    return ThrowException(String::New("Could not find key 'group' in parameters"));
   }
   
   Local<Array> group_columns = Local<Array>::Cast(group_param);
@@ -283,30 +297,13 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const 
   vector<string> group_by;
   for(size_t k = 0; k < group_columns->Length(); k++) {
     group_by.push_back(*String::AsciiValue(group_columns->Get(Number::New(k))));
-  }  
-  
-  shared_ptr<Conditions> conditions(new Conditions());
-  Handle<Value> conditioned = condition(params, conditions);
-    
-  size_t sample_size;
-  if(sample_size_param->IsNull()) {
-    sample_size = 0;
-  } else {
-    sample_size = sample_size_param->NumberValue();
   }
-  
-  Cursor cursor;
+
   size_t hash_key;
   uint64_t record_id;
+  
   string value;
   vector<string> values;
-  
-  if(conditions->empty()) {
-    cursor = (sample_size == 0 ? Cursor(table) : Cursor(table, sample_size));    
-  } else {
-    cursor = (sample_size == 0 ? Cursor(table, conditions) : Cursor(table, conditions, sample_size));    
-  }
-  
   while((record_id = cursor.next()) > 0) {
     values.clear();
     for(size_t i = 0; i < group_by.size(); i++) {
@@ -343,8 +340,8 @@ v8::Handle<v8::Value> Retsu::TableOperations::group(Local<Object> params, const 
   return Boolean::New(true);
 }
 
-v8::Handle<v8::Value> Retsu::TableOperations::aggregate(Local<Object> params, const shared_ptr<Table> table, 
-                                                    map<size_t, Group>& groups, Local<Array> results) {
+v8::Handle<v8::Value> Retsu::TableOperations::aggregate(Local<Object> params, 
+  const shared_ptr<Table> table, map<size_t, Group>& groups, Local<Array> results) {
   
   if(groups.size() == 0) { return Boolean::New(false); }
   
@@ -392,4 +389,49 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(Local<Object> params, co
   }
   
   return Boolean::New(true);
+}
+
+v8::Handle<v8::Value> Retsu::TableOperations::estimate(Local<Object> params, 
+  const shared_ptr<Table> table, map<size_t, Group>& groups, Local<Array> results) {
+  
+}
+
+/*
+ * Operation Helpers
+ */
+
+v8::Handle<v8::Value> Retsu::TableOperations::condition(Local<Object> params, shared_ptr<Conditions> conditions) {
+  Local<Value> cond_param = params->Get(String::New("conditions"));
+    
+  if(cond_param->IsNull()) {
+    return Boolean::New(false);
+  } else {
+    Local<Object> cond_params = Local<Object>::Cast(cond_param);
+    Local<Array> cond_columns = cond_params->GetPropertyNames();
+    
+    for(size_t i = 0; i < cond_columns->Length(); i++) {
+      Local<Value> column = cond_columns->Get(Number::New(i));
+      Local<Value> cond_val = cond_params->Get(column);
+      
+      Local<Object> cond_obj = Local<Object>::Cast(cond_val);
+      Local<Array> cond_types = cond_obj->GetPropertyNames();
+      
+      for(size_t k = 0; k < cond_types->Length(); k++) {
+        Local<Value> cond_type = cond_types->Get(Number::New(k));
+        Local<Value> cond_type_val = cond_obj->Get(cond_type);
+        
+        string type = *String::AsciiValue(cond_type);
+        
+        if(cond_type_val->IsNumber()) {
+          conditions->add(type, *String::AsciiValue(column), cond_type_val->NumberValue());
+        } else if(cond_type_val->IsString()) {
+          conditions->add(type, *String::AsciiValue(column), *String::AsciiValue(cond_type_val));
+        } else {
+          // it's an array for 'in' get them all out
+        }
+      }
+    }
+    
+    return Boolean::New(true);
+  }
 }
