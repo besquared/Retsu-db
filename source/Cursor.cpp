@@ -66,13 +66,10 @@ uint64_t Retsu::Cursor::next() {
 }
 
 uint64_t Retsu::Cursor::conditional_next() {
+  int vsize;
   uint64_t record_id;
   set<string>::iterator column;
 
-  int vsize;
-  void* datum;
-  
-  string value;
   while(true) {
     record_id = unconditional_next();
     if(record_id == 0) { return 0; }
@@ -80,14 +77,18 @@ uint64_t Retsu::Cursor::conditional_next() {
     // I need to know about the column conditions
     //  to know how I'm supposed to read the data here
     for(column = conditions->columns.begin(); column != conditions->columns.end(); column++) {
-      
       // do a raw lookup here
-      datum = table->lookup(*column, record_id, vsize);
+      void* datum = table->lookup(*column, record_id, vsize);
       
       // we need to have a way to deal with NULL's in conditions
       if(datum == NULL) { continue; }
       
-      if(conditions->check(*column, datum, vsize)) { return record_id; }
+      if(conditions->check(*column, datum, vsize)) { 
+        return record_id;
+      } else {
+        free(datum);
+        break;
+      }
       
       free(datum);
     }

@@ -79,6 +79,44 @@ void Retsu::Conditions::in(const string& name, const vector<double>& values) {
 	conditions.push_back(shared_ptr<Condition::Base>(new Condition::In(name, values)));
 }
 
+void Retsu::Conditions::add(const string& type, const string& column, const string& value) {
+  if(type == "eq") {
+    eq(column, value);
+  } else if(type == "neq") {
+    neq(column, value);
+  } else if(type == "gt") {
+    gt(column, value);
+  } else if(type == "gte") {
+    gte(column, value);
+  } else if(type == "lt") {
+    lt(column, value);
+  } else if(type == "lte") {
+    lte(column, value); 
+  } else if(type == "in") {
+    // this could be an array of strings or numbers
+    // do some in stuff here, unwrap the array and whatnot
+  }  
+}
+
+void Retsu::Conditions::add(const string& type, const string& column, const double& value) {
+  if(type == "eq") {
+    eq(column, value);
+  } else if(type == "neq") {
+    neq(column, value);
+  } else if(type == "gt") {
+    gt(column, value);
+  } else if(type == "gte") {
+    gte(column, value);
+  } else if(type == "lt") {
+    lt(column, value);
+  } else if(type == "lte") {
+    lte(column, value); 
+  } else if(type == "in") {
+    // this could be an array of strings or numbers
+    // do some in stuff here, unwrap the array and whatnot
+  }  
+}
+
 /*
  * Application
  */

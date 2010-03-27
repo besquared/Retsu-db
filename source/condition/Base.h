@@ -42,12 +42,10 @@ namespace Retsu {
         if(value_type == Base::STRING) {
           string value;
           intern(datum, vsize, value);
-          cout << "Checking column " << column << " against value " << value << endl;
           return check(value);
         } else {
           double value;
           intern(datum, vsize, value);
-          cout << "Checking column " << column << " against value " << value << endl;
           return check(value);
         }
       }      

@@ -245,9 +245,10 @@ v8::Handle<v8::Value> Retsu::TableOperations::condition(Local<Object> params, sh
     for(size_t i = 0; i < cond_columns->Length(); i++) {
       Local<Value> column = cond_columns->Get(Number::New(i));
       Local<Value> cond_val = cond_params->Get(column);
+      
       Local<Object> cond_obj = Local<Object>::Cast(cond_val);
       Local<Array> cond_types = cond_obj->GetPropertyNames();
-
+      
       for(size_t k = 0; k < cond_types->Length(); k++) {
         Local<Value> cond_type = cond_types->Get(Number::New(k));
         Local<Value> cond_type_val = cond_obj->Get(cond_type);
@@ -255,45 +256,11 @@ v8::Handle<v8::Value> Retsu::TableOperations::condition(Local<Object> params, sh
         string type = *String::AsciiValue(cond_type);
         
         if(cond_type_val->IsNumber()) {
-          double value = cond_type_val->NumberValue();
-                    
-          if(type == "eq") {
-            conditions->eq(*String::AsciiValue(column), value);
-          } else if(type == "neq") {
-            conditions->neq(*String::AsciiValue(column), value);
-          } else if(type == "gt") {
-            conditions->gt(*String::AsciiValue(column), value);
-          } else if(type == "gte") {
-            conditions->gte(*String::AsciiValue(column), value);
-          } else if(type == "lt") {
-            conditions->lt(*String::AsciiValue(column), value);
-          } else if(type == "lte") {
-            conditions->lte(*String::AsciiValue(column), value); 
-          } else if(type == "in") {
-            // this could be an array of strings or numbers
-            // do some in stuff here, unwrap the array and whatnot
-          }
+          conditions->add(type, *String::AsciiValue(column), cond_type_val->NumberValue());
         } else {
-          string value = *String::AsciiValue(cond_type_val);
-          
-          if(type == "eq") {
-            conditions->eq(*String::AsciiValue(column), value);
-          } else if(type == "neq") {
-            conditions->neq(*String::AsciiValue(column), value);
-          } else if(type == "gt") {
-            conditions->gt(*String::AsciiValue(column), value);
-          } else if(type == "gte") {
-            conditions->gte(*String::AsciiValue(column), value);
-          } else if(type == "lt") {
-            conditions->lt(*String::AsciiValue(column), value);
-          } else if(type == "lte") {
-            conditions->lte(*String::AsciiValue(column), value); 
-          } else if(type == "in") {
-            // this could be an array of strings or numbers
-            // do some in stuff here, unwrap the array and whatnot
-          }
+          conditions->add(type, *String::AsciiValue(column), *String::AsciiValue(cond_type_val));
         }
-      }
+      }      
     }
     
     return Boolean::New(true);

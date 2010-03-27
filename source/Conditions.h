@@ -48,7 +48,10 @@ namespace Retsu {
     void lte(const string& name, const double& value);
 		void in(const string& name, const vector<string>& value);
     void in(const string& name, const vector<double>& value);
-
+    
+    void add(const string& type, const string& column, const string& value);
+    void add(const string& type, const string& column, const double& value);
+    
 		/*
 		 * Application
 		 */
