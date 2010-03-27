@@ -1,6 +1,5 @@
 try {
-  results = tables.playback.aggregate({  
-    'group': ['show_id', 'episode_id'],
+  results = tables.playback.aggregate({
     'aggregates': {
       'total': {'sum': 'amount'},
       'count': {'count': true},
@@ -8,7 +7,7 @@ try {
     }, 'conditions': {
       'amount': {'lt': 500, 'gt': 100},
       'show_id': {'eq': 'Nocturnal Sunshine'}
-    }, 'sample_size': 2000
+    }, 'group': ['show_id', 'episode_id'], 'sample_size': 10000
   });
   
   inspect(results);

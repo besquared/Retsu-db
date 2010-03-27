@@ -80,17 +80,16 @@ uint64_t Retsu::Cursor::conditional_next() {
       // do a raw lookup here
       void* datum = table->lookup(*column, record_id, vsize);
       
-      // we need to have a way to deal with NULL's in conditions
+      // TODO have a way to deal with NULL's in conditions
       if(datum == NULL) { continue; }
       
-      if(conditions->check(*column, datum, vsize)) { 
+      if(conditions->check(*column, datum, vsize)) {
+        free(datum);
         return record_id;
       } else {
         free(datum);
         break;
       }
-      
-      free(datum);
     }
   }
 }
