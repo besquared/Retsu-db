@@ -22,13 +22,13 @@ namespace Retsu {
 			Eq(const string& column, const string& value)  :
 			Condition::Base::Base(column, Base::STRING) {
 				this->strvalue = value;
-				this->type = Condition::Base::EQ;
+				this->type = Base::EQ;
 			}
       
       Eq(const string& column, const double& value) :
       Condition::Base::Base(column, Base::NUMBER) {
         this->dblvalue = value;
-        this->type = Condition::Base::EQ;
+        this->type = Base::EQ;
       }
 			
       bool check(string& value) {
@@ -38,7 +38,7 @@ namespace Retsu {
       bool check(double& value) {
         return value == dblvalue;
       }
-      
+            
       void print(ostream& out) const {
         out << column << " = " << strvalue;
       }

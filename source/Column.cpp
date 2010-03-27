@@ -111,6 +111,10 @@ void Retsu::Column::lookup(const RecordID key, double& result) {
 	}
 }
 
+void* Retsu::Column::lookup(const RecordID key, int& vsize) {
+	return tchdbget(database, &key, sizeof(RecordID), &vsize);
+}
+
 void Retsu::Column::lookup(const RIDList& keys, vector<string>& results) {
   results.reserve(keys.size());
   

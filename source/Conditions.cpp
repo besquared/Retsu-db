@@ -85,18 +85,22 @@ void Retsu::Conditions::in(const string& name, const vector<double>& values) {
 
 bool Retsu::Conditions::check(const string& column, string& value) const {
 	for(size_t i = 0; i < conditions.size(); i++) {
-		if(conditions[i] != NULL && conditions[i]->column == column) {
-			if(!conditions[i]->check(value)) {
-        return false;
-      }
+		if(conditions[i]->column == column && !conditions[i]->check(value)) {
+      return false;
 		}
 	}
   
   return true;
 }
 
-Retsu::Condition::Base::ValueType Retsu::Conditions::value_type(const string& column) const {
-  // get the value type of the conditioned columns
+bool Retsu::Conditions::check(const string& column, void* datum, int vsize) const {
+  for(size_t i = 0; i < conditions.size(); i++) {
+		if(conditions[i]->column == column && !conditions[i]->check(datum, vsize)) {
+      return false;
+		}
+	}
+  
+  return true;  
 }
 
 /*

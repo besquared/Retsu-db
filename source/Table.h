@@ -39,6 +39,7 @@ namespace Retsu {
     /*
      * Reading & Writing
      */
+    void* lookup(const string& column, const RecordID& id, int& vsize, bool create = true);
     void lookup(const string& column, const RecordID& id, string& result, bool create = true);
     void lookup(const string& column, const RecordID& id, double& result, bool create = true);
     void lookup(const string& column, const RIDList& records, vector<string>& results, bool create = true);

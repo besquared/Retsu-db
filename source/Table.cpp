@@ -53,6 +53,16 @@ void Retsu::Table::lookup(const string& column, const RecordID& id, double& resu
   }
 }
 
+void* Retsu::Table::lookup(const string& column, const RecordID& id, int& vsize, bool create) {
+  shared_ptr<Column> database = cache_get(column, create);
+  
+  if(database == NULL) {
+    throw DimensionNotFoundError("Could not find column " + column + " in table " + table_name.string());
+  } else {
+    return database->lookup(id, vsize);
+  }  
+}
+
 void Retsu::Table::lookup(const string& column, const RIDList& records, vector<double>& results, bool create) {
   shared_ptr<Column> database = cache_get(column, create);
   

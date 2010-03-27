@@ -44,8 +44,11 @@ namespace Retsu {
     /*
      * Reading
      */
+    void* lookup(const RecordID key, int& vsize);    
     void lookup(const RecordID key, string& result);
     void lookup(const RecordID key, double& result);
+    
+    // Look up multiple values at once
     void lookup(const RIDList& keys, vector<string>& results);
     void lookup(const RIDList& keys, vector<double>& results);
 

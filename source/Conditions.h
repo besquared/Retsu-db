@@ -53,7 +53,7 @@ namespace Retsu {
 		 * Application
 		 */
     bool check(const string& column, string& value) const;
-    Condition::Base::ValueType value_type(const string& column) const;
+    bool check(const string& column, void* datum, int vsize) const;
 
     /*
      * Introspect

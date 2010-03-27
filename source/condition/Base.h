@@ -37,8 +37,32 @@ namespace Retsu {
 			
       virtual bool check(string& value) = 0;
       virtual bool check(double& value) = 0;
-      virtual void print(ostream& out) const = 0;
       
+      bool check(void* datum, int vsize) {
+        if(value_type == Base::STRING) {
+          string value;
+          intern(datum, vsize, value);
+          cout << "Checking column " << column << " against value " << value << endl;
+          return check(value);
+        } else {
+          double value;
+          intern(datum, vsize, value);
+          cout << "Checking column " << column << " against value " << value << endl;
+          return check(value);
+        }
+      }      
+      
+      void intern(void* value, int vsize, string& result) {
+        result = string((char*)value, (size_t)vsize);
+      }
+      
+      void intern(void* value, int vsize, double& result) {
+        if(vsize == sizeof(double)) {
+          result = *((double*)value);
+        }
+      }
+      
+      virtual void print(ostream& out) const = 0;
       friend ostream& operator<<(ostream& out, const Base& condition) {
         condition.print(out);
         return out;
