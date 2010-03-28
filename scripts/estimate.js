@@ -1,11 +1,8 @@
 try {
   results = tables.playback.estimate({
     'estimates': {
-      'total': {'sum': 'amount'},
-      'count': {'count': true},
-      'average': {
-        'mean' : 'amount', 'confidence': 99.0, 
-        // '
+      'purchase_amount': {
+        'mean' : 'amount', 'confidence': 99.0,
         // 'bootstrap': {'replicate': 1000, 'interval': 'basic'},
         // 'variance': true, 'stderr': true, 'skew': false, 'kurtosis': false
       }
@@ -16,9 +13,11 @@ try {
     'sample': 10000
   });
   
-  // bootstrap methods are basic, percentile, bca 
-  //  and studentized with basic being the default
+  // bootstrap methods are normal, percentile, bca 
+  //  and studentized with normal being the default
   
+  // example return
+  // {..., 'average': {'estimate': 28.9, 'interval': [24.6, 38.8], 'variance': 10.86, ...}}
   inspect(results);
 } catch(err) {
   print("An error occurred");
