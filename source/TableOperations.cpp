@@ -394,6 +394,52 @@ v8::Handle<v8::Value> Retsu::TableOperations::aggregate(Local<Object> params,
 v8::Handle<v8::Value> Retsu::TableOperations::estimate(Local<Object> params, 
   const shared_ptr<Table> table, map<size_t, Group>& groups, Local<Array> results) {
   
+  if(groups.size() == 0) { return Boolean::New(false); }
+  
+  Local<Value> estimates = params->Get(String::New("estimates"));
+  
+  if(estimates->IsNull()) {
+    return ThrowException(String::New("Could not find required key 'estimates'"));
+  }
+  
+  Local<Object> est_params = Local<Object>::Cast(estimates);
+  Local<Array> est_names = est_params->GetPropertyNames();
+  
+  for(size_t i = 0; i < est_names->Length(); i++) {
+    Local<Value> est_name = est_names->Get(Number::New(i));
+    Local<Value> est_def = est_params->Get(est_name);
+    
+    double value;
+    size_t idx = 0;
+    map<size_t, Group>::iterator group;
+    
+    if(est_def->IsFunction()) {
+      // do the group function thing
+    } else if(est_def->IsObject()) {
+      Local<Object> est_obj = Local<Object>::Cast(est_def);
+      
+      if(est_obj->Has(String::New("count"))) {
+        for(group = groups.begin(); group != groups.end(); group++, idx++) {
+          value = group->second.count();
+          Local<Object>::Cast(results->Get(Number::New(idx)))->Set(est_name, Number::New(value));            
+        }
+      } else if(est_obj->Has(String::New("sum"))) {
+        Local<Value> column = est_obj->Get(String::New("sum"));
+        for(group = groups.begin(); group != groups.end(); group++, idx++) {
+          value = group->second.sum(*String::AsciiValue(column));
+          Local<Object>::Cast(results->Get(Number::New(idx)))->Set(est_name, Number::New(value));            
+        }
+      } else if(est_obj->Has(String::New("mean"))) {
+        Local<Value> column = est_obj->Get(String::New("mean"));
+        for(group = groups.begin(); group != groups.end(); group++, idx++) {
+          value = group->second.average(*String::AsciiValue(column));
+          Local<Object>::Cast(results->Get(Number::New(idx)))->Set(est_name, Number::New(value));            
+        }
+      }
+    }
+  }
+  
+  return Boolean::New(true);
 }
 
 /*
