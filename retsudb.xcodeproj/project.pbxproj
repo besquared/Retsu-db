@@ -56,6 +56,15 @@
 		038517FB11533EAA002AD50D /* Column.h in Headers */ = {isa = PBXBuildFile; fileRef = 038517F911533EAA002AD50D /* Column.h */; };
 		03851BF6115EA6BA002AD50D /* aggregate.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03851BF4115EA6B2002AD50D /* aggregate.js */; };
 		03851BF7115EA6BA002AD50D /* estimate.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03851BF5115EA6B2002AD50D /* estimate.js */; };
+		03851C4A116063C7002AD50D /* mean.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03851C49116063C2002AD50D /* mean.js */; };
+		03851C5411606555002AD50D /* mean.h in Headers */ = {isa = PBXBuildFile; fileRef = 03851C5211606555002AD50D /* mean.h */; };
+		03851C5511606555002AD50D /* mean.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03851C5311606555002AD50D /* mean.cpp */; };
+		03851C581160659C002AD50D /* grouping.h in Headers */ = {isa = PBXBuildFile; fileRef = 03851C561160659C002AD50D /* grouping.h */; };
+		03851C591160659C002AD50D /* grouping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03851C571160659C002AD50D /* grouping.cpp */; };
+		03851C5E116065E0002AD50D /* statistical.h in Headers */ = {isa = PBXBuildFile; fileRef = 03851C5C116065E0002AD50D /* statistical.h */; };
+		03851C5F116065E0002AD50D /* statistical.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03851C5D116065E0002AD50D /* statistical.cpp */; };
+		03851C6511606917002AD50D /* conditional.h in Headers */ = {isa = PBXBuildFile; fileRef = 03851C6311606917002AD50D /* conditional.h */; };
+		03851C6611606917002AD50D /* conditional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03851C6411606917002AD50D /* conditional.cpp */; };
 		8DD76F650486A84900D96B5E /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Main.cpp */; settings = {ATTRIBUTES = (); }; };
 		8DD76F6A0486A84900D96B5E /* retsudb.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* retsudb.1 */; };
 /* End PBXBuildFile section */
@@ -112,6 +121,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				03851C4A116063C7002AD50D /* mean.js in CopyFiles */,
 				03851BF6115EA6BA002AD50D /* aggregate.js in CopyFiles */,
 				03851BF7115EA6BA002AD50D /* estimate.js in CopyFiles */,
 				032408551140C768001E567A /* create.js in CopyFiles */,
@@ -1282,6 +1292,15 @@
 		038517F911533EAA002AD50D /* Column.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Column.h; path = source/Column.h; sourceTree = "<group>"; };
 		03851BF4115EA6B2002AD50D /* aggregate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = aggregate.js; path = scripts/aggregate.js; sourceTree = "<group>"; };
 		03851BF5115EA6B2002AD50D /* estimate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = estimate.js; path = scripts/estimate.js; sourceTree = "<group>"; };
+		03851C49116063C2002AD50D /* mean.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = mean.js; path = scripts/mean.js; sourceTree = "<group>"; };
+		03851C5211606555002AD50D /* mean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mean.h; sourceTree = "<group>"; };
+		03851C5311606555002AD50D /* mean.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mean.cpp; sourceTree = "<group>"; };
+		03851C561160659C002AD50D /* grouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = grouping.h; sourceTree = "<group>"; };
+		03851C571160659C002AD50D /* grouping.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = grouping.cpp; sourceTree = "<group>"; };
+		03851C5C116065E0002AD50D /* statistical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = statistical.h; sourceTree = "<group>"; };
+		03851C5D116065E0002AD50D /* statistical.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = statistical.cpp; sourceTree = "<group>"; };
+		03851C6311606917002AD50D /* conditional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conditional.h; sourceTree = "<group>"; };
+		03851C6411606917002AD50D /* conditional.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = conditional.cpp; sourceTree = "<group>"; };
 		08FB7796FE84155DC02AAC07 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		8DD76F6C0486A84900D96B5E /* retsudb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = retsudb; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859E8B029090EE04C91782 /* retsudb.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = retsudb.1; sourceTree = "<group>"; };
@@ -1344,6 +1363,7 @@
 		0324084E1140C73A001E567A /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
+				03851C49116063C2002AD50D /* mean.js */,
 				03851BF4115EA6B2002AD50D /* aggregate.js */,
 				03851BF5115EA6B2002AD50D /* estimate.js */,
 				032408511140C762001E567A /* create.js */,
@@ -2747,6 +2767,22 @@
 			path = visual_studio;
 			sourceTree = "<group>";
 		};
+		03851C4F1160653F002AD50D /* operation */ = {
+			isa = PBXGroup;
+			children = (
+				03851C6411606917002AD50D /* conditional.cpp */,
+				03851C6311606917002AD50D /* conditional.h */,
+				03851C571160659C002AD50D /* grouping.cpp */,
+				03851C561160659C002AD50D /* grouping.h */,
+				03851C5311606555002AD50D /* mean.cpp */,
+				03851C5211606555002AD50D /* mean.h */,
+				03851C5D116065E0002AD50D /* statistical.cpp */,
+				03851C5C116065E0002AD50D /* statistical.h */,
+			);
+			name = operation;
+			path = source/operation;
+			sourceTree = "<group>";
+		};
 		08FB7794FE84155DC02AAC07 /* retsudb */ = {
 			isa = PBXGroup;
 			children = (
@@ -2782,6 +2818,7 @@
 				030C030A1146140B00D27A1F /* Group.cpp */,
 				030C030B1146140B00D27A1F /* Group.h */,
 				08FB7796FE84155DC02AAC07 /* Main.cpp */,
+				03851C4F1160653F002AD50D /* operation */,
 				0324070A113F98AE001E567A /* Records.cpp */,
 				0324070B113F98AE001E567A /* Records.h */,
 				0324FB20113B29A4001E567A /* RIDList.cpp */,
@@ -2841,6 +2878,10 @@
 				030C030D1146140B00D27A1F /* Group.h in Headers */,
 				0385165311529A43002AD50D /* Cursor.h in Headers */,
 				038517FB11533EAA002AD50D /* Column.h in Headers */,
+				03851C5411606555002AD50D /* mean.h in Headers */,
+				03851C581160659C002AD50D /* grouping.h in Headers */,
+				03851C5E116065E0002AD50D /* statistical.h in Headers */,
+				03851C6511606917002AD50D /* conditional.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2963,6 +3004,10 @@
 				030C030C1146140B00D27A1F /* Group.cpp in Sources */,
 				0385165211529A43002AD50D /* Cursor.cpp in Sources */,
 				038517FA11533EAA002AD50D /* Column.cpp in Sources */,
+				03851C5511606555002AD50D /* mean.cpp in Sources */,
+				03851C591160659C002AD50D /* grouping.cpp in Sources */,
+				03851C5F116065E0002AD50D /* statistical.cpp in Sources */,
+				03851C6611606917002AD50D /* conditional.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

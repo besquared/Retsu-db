@@ -16,6 +16,8 @@
 #include "Cursor.h"
 #include "TableManager.h"
 
+#include <source/operation/mean.h>
+
 namespace Retsu {  
   namespace TableOperations {
     using namespace v8;
@@ -35,8 +37,9 @@ namespace Retsu {
     Handle<Value> get_record_data(Local<String> name, const AccessorInfo& info);
 
     Handle<Value> each(const Arguments& args);
-    Handle<Value> aggregate(const Arguments& args);
+    Handle<Value> mean(const Arguments& args);
     Handle<Value> estimate(const Arguments& args);
+    Handle<Value> aggregate(const Arguments& args);
 
     Handle<Value> group(Cursor& cursor, Local<Object> params, 
       const shared_ptr<Table> table, map<size_t, Group>& groups, Local<Array> results);

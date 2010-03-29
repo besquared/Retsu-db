@@ -33,6 +33,7 @@ namespace Retsu {
     Cursor();
     Cursor(shared_ptr<Table> table);
     Cursor(shared_ptr<Table> table, size_t sample_size);
+    Cursor(shared_ptr<Table> table, Conditions& conditions);
     Cursor(shared_ptr<Table> table, shared_ptr<Conditions> conditions);
     Cursor(shared_ptr<Table> table, shared_ptr<Conditions> conditions, size_t sample_size);
 

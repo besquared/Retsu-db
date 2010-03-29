@@ -37,8 +37,9 @@ v8::Handle<v8::Value> Retsu::TableOperations::get_table_proxy(Local<String> name
   table_templ->Set(String::New("insert"), FunctionTemplate::New(insert));
   table_templ->Set(String::New("lookup"), FunctionTemplate::New(lookup));
   table_templ->Set(String::New("each"), FunctionTemplate::New(each)); 
-  table_templ->Set(String::New("aggregate"), FunctionTemplate::New(aggregate));
+  table_templ->Set(String::New("mean"), FunctionTemplate::New(mean));
   table_templ->Set(String::New("estimate"), FunctionTemplate::New(estimate));
+  table_templ->Set(String::New("aggregate"), FunctionTemplate::New(aggregate));
 
   Local<Object> table_proxy = table_templ->NewInstance();
   table_proxy->Set(String::New("name"), name);
@@ -203,6 +204,19 @@ v8::Handle<v8::Value> Retsu::TableOperations::get_record_data(Local<String> name
 /*
  * Grouping & Aggregation
  */
+ 
+v8::Handle<v8::Value> Retsu::TableOperations::mean(const Arguments& args) {  
+  if(!args[0]->IsString()) {
+    return ThrowException(String::New("First argument to mean must be a string"));
+  }
+  
+  Local<Value> table_name = args.This()->Get(String::New("name"));
+  
+  string column = *String::AsciiValue(args[0]);
+  shared_ptr<Table> table = TableManager::instance().get(*String::AsciiValue(table_name));
+
+  return Retsu::Operation::Mean(table, column, args[1]).perform();
+}
 
 v8::Handle<v8::Value> Retsu::TableOperations::aggregate(const Arguments& args) {
   if(!args[0]->IsObject()) {
