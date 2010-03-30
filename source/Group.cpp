@@ -9,8 +9,6 @@
 
 #include "Group.h"
 
-Retsu::Group::Group() {}
-
 //double Retsu::Group::sum(const string& column) {
 //  vector<double> values;
 //  table->lookup(column, records, values, false);

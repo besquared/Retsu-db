@@ -15,11 +15,15 @@
 namespace Retsu {
   namespace Operation {
     using namespace std;
-    using namespace v8;
-    using namespace boost;
     
     class Statistical {
     public:
+      
+      // These provide estimates of some statistic including
+      //  value, variance, stderr and confidence intervals
+      void normal(const vector<double>& values, map<string, double>& results);
+      void bootstrap(const vector<double>& values, map<string, double>& results);
+      void jackknife(const vector<double>& values, map<string, double>& results);
     };
   }
 }

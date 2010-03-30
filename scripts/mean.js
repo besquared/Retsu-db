@@ -2,7 +2,6 @@ try {
   results = tables.playback.mean('amount', {
     'sample': 10000, 'confidence': 99.0,
     // 'bootstrap': {'replicate': 1000, 'interval': 'basic'},
-    // 'variance': true, 'stderr': true, 'skew': false, 'kurtosis': false
     'conditions': {
       'amount': {'lt': 500, 'gt': 100},
       'show_id': {'eq': 'Nocturnal Sunshine'}

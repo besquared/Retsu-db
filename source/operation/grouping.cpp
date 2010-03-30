@@ -44,12 +44,7 @@ v8::Handle<v8::Value> Retsu::Operation::Grouping::group(
     
     if(found == groups.end()) {
       Group group = groups[hash_key];
-      
-      group.records.push_back(cursor.current);
-      for(size_t j = 0; j < group_by.size(); j++) {
-        group.values[group_by[j]] = values[j];
-      }
-      
+      group.records.push_back(cursor.current);      
       Local<Value> idx_key = Number::New(results->Length());
       
       results->Set(idx_key, Object::New());

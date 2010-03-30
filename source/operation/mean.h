@@ -35,7 +35,9 @@ namespace Retsu {
       Mean(shared_ptr<Table> table, const string& column, Handle<Value> options);
       
       Handle<Value> perform();
-      Handle<Value> calculate();
+        
+    protected:
+      Handle<Value> calculate(Local<Object> params, map<size_t, Group>& groups, Handle<Array> results);
     };
   }
 }

@@ -17,17 +17,16 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::perform() {
   map<size_t, Group> groups;
   Handle<Array> results = Array::New();
   Local<Object> params = options->ToObject();
-  
-  try {
-    Local<Value> sample_param = params->Get(String::New("sample"));
+  Local<Value> sample = params->Get(String::New("sample"));
 
-    size_t sample_size;
-    if(sample_param->IsNull()) {
-      return ThrowException(String::New("Could not find required key 'sample' in parameters"));
-    } else {
-      sample_size = sample_param->NumberValue();
-    }
-    
+  size_t sample_size;
+  if(sample->IsNull()) {
+    return ThrowException(String::New("Could not find required key 'sample' in parameters"));
+  } else {
+    sample_size = sample->NumberValue();
+  }
+
+  try {
     Cursor cursor;
     if(has_conditions(options)) {
       cursor = Cursor(table, sample_size);
@@ -36,19 +35,39 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::perform() {
     }
     
     group(cursor, params, groups, results);
-    
-    // do the estimation here, we need to do it once for each group
-//    estimate(params, table, groups, results);
-    return results;
+    calculate(params, groups, results);
   } catch(StorageError e) {
     return ThrowException(String::New(e.what()));
   } catch(DimensionNotFoundError e) {
     return ThrowException(String::New(e.what()));
   }
+  
+  return results;
 }
 
 // do the actual calculation
-v8::Handle<v8::Value> Retsu::Operation::Mean::calculate() {
-  // hrmm..
+v8::Handle<v8::Value> Retsu::Operation::Mean::calculate(
+  Local<Object> params, map<size_t, Group>& groups, Handle<Array> results) {
+ 
+  Local<Value> confidence = params->Get(String::New("confidence"));
+  Local<Value> bootstrapped = params->Get(String::New("bootstrap"));
+  
+  double value;
+  size_t idx = 0;
+  vector<double> values;
+  map<size_t, Group>::iterator group;
+  for(group = groups.begin(); group != groups.end(); group++, idx++) {
+    values.clear();
+    table->lookup(column, group->second.records, values, false);
+    
+    if(bootstrapped->IsNull()) {
+      // normal it
+    } else {
+      // bootstrap it
+    }
+    
+    results->Get(Number::New(idx))->ToObject()->Set(String::New("value"), Number::New(value));
+  }
+  
   return Handle<Value>();
 }
