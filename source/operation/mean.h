@@ -35,6 +35,7 @@ namespace Retsu {
       Mean(shared_ptr<Table> table, const string& column, Handle<Value> options);
       
       Handle<Value> perform();
+      Handle<Value> calculate();
     };
   }
 }

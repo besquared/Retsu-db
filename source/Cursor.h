@@ -23,6 +23,7 @@ namespace Retsu {
     shared_ptr<Conditions> conditions;
 
   public:
+    RecordID current;
     bool is_sampled;
     bool is_conditioned;
 
@@ -38,11 +39,14 @@ namespace Retsu {
     Cursor(shared_ptr<Table> table, shared_ptr<Conditions> conditions, size_t sample_size);
 
     void init();
-    uint64_t next();
+    bool next();
     
+    void* lookup(const string& column, int& vsize, bool create = true);
+    void lookup(const string& column, string& result, bool create = true);
+    void lookup(const string& column, double& result, bool create = true);
   protected:
-    uint64_t conditional_next();
-    uint64_t unconditional_next();
+    bool conditional_next();
+    bool unconditional_next();
   };
 }
 

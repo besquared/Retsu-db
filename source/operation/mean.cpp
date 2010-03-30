@@ -15,7 +15,7 @@ Retsu::Operation::Mean::Mean(shared_ptr<Table> table, const string& column, Hand
 
 v8::Handle<v8::Value> Retsu::Operation::Mean::perform() {
   map<size_t, Group> groups;
-  Local<Array> results = Array::New();
+  Handle<Array> results = Array::New();
   Local<Object> params = options->ToObject();
   
   try {
@@ -34,12 +34,12 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::perform() {
     } else {
       cursor = Cursor(table, conditions(options), sample_size);
     }
-
-//    group(cursor, params, table, groups, results);
+    
+    group(cursor, params, groups, results);
     
     // do the estimation here, we need to do it once for each group
 //    estimate(params, table, groups, results);
-    return results;    
+    return results;
   } catch(StorageError e) {
     return ThrowException(String::New(e.what()));
   } catch(DimensionNotFoundError e) {
@@ -47,3 +47,8 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::perform() {
   }
 }
 
+// do the actual calculation
+v8::Handle<v8::Value> Retsu::Operation::Mean::calculate() {
+  // hrmm..
+  return Handle<Value>();
+}

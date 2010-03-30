@@ -1,5 +1,5 @@
 try {
-  tables.playback.mean('amount', {
+  results = tables.playback.mean('amount', {
     'sample': 10000, 'confidence': 99.0,
     // 'bootstrap': {'replicate': 1000, 'interval': 'basic'},
     // 'variance': true, 'stderr': true, 'skew': false, 'kurtosis': false

@@ -32,15 +32,15 @@ namespace Retsu {
     // Add versions of these that take samples into account
     //  and give back estimations and confidence intervals. Also
     /// add median, stdev, var and correlation coefficient
-    double count();
-    double sum(const string& column);
-    double average(const string& column);
-    double count_unique(const string& column);
-    
-    double estimate(Handle<Function> aggfunc);
-    double aggregate(Handle<Function> aggfunc);
-    
-    void lookup(const string& column, vector<double>& results);
+//    double count();
+//    double sum(const string& column);
+//    double average(const string& column);
+//    double count_unique(const string& column);
+//    
+//    double estimate(Handle<Function> aggfunc);
+//    double aggregate(Handle<Function> aggfunc);
+//    
+//    void lookup(const string& column, vector<double>& results);
   };
 }
 

@@ -13,15 +13,17 @@
 #include <source/Common.h>
 #include <source/Table.h>
 #include <source/Group.h>
+#include <source/Cursor.h>
 
 namespace Retsu {
   namespace Operation {
-    using namespace std;
     using namespace v8;
+    using namespace std;
     using namespace boost;
     
     class Grouping {
     public:
+      Handle<Value> group(Cursor& cursor, Local<Object> params, map<size_t, Group>& groups, Handle<Array> results);
     };
   }
 }
