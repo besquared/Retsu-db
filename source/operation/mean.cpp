@@ -10,7 +10,7 @@
 #include "mean.h"
 
 Retsu::Operation::Mean::Mean(shared_ptr<Table> table, const string& column, Handle<Value> options) :
-  Retsu::Operation::Conditional::Conditional(), table(table), column(column), options(options) { 
+  table(table), column(column), options(options) { 
 }
 
 v8::Handle<v8::Value> Retsu::Operation::Mean::perform() {
@@ -28,13 +28,13 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::perform() {
 
   try {
     Cursor cursor;
-    if(has_conditions(options)) {
+    if(conditional.has_conditions(options)) {
       cursor = Cursor(table, sample_size);
     } else {
-      cursor = Cursor(table, conditions(options), sample_size);
+      cursor = Cursor(table, conditional.conditions(options), sample_size);
     }
     
-    group(cursor, params, groups, results);
+    grouping.group(cursor, params, groups, results);
     calculate(params, groups, results);
   } catch(StorageError e) {
     return ThrowException(String::New(e.what()));
@@ -55,15 +55,18 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::calculate(
   double value;
   size_t idx = 0;
   vector<double> values;
+  map<string, double> estimate;
   map<size_t, Group>::iterator group;
   for(group = groups.begin(); group != groups.end(); group++, idx++) {
     values.clear();
     table->lookup(column, group->second.records, values, false);
     
-    if(bootstrapped->IsNull()) {
+    if(bootstrapped->IsUndefined()) {
       // normal it
+      // normal(values, estimate);
     } else {
-      // bootstrap it
+      Statistics::Bootstrap boot(97.5, Statistics::Bootstrap::PERCENTILE);
+      boot.perform(values, 1000, &Retsu::Statistics::mean);
     }
     
     results->Get(Number::New(idx))->ToObject()->Set(String::New("value"), Number::New(value));

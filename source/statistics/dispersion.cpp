@@ -1,11 +1,11 @@
 /*
- *  statistical.cpp
+ *  dispersion.cpp
  *  retsudb
  *
- *  Created by Josh Ferguson on 3/28/10.
+ *  Created by Josh Ferguson on 3/30/10.
  *  Copyright 2010 Cube Tree Labs, LLC. All rights reserved.
  *
  */
 
-#include "statistical.h"
+#include "dispersion.h"
 

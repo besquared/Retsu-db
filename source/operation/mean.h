@@ -15,9 +15,11 @@
 #include <source/Group.h>
 #include <source/Cursor.h>
 
+#include <source/statistics/location.h>
+#include <source/statistics/bootstrap.h>
+
 #include "grouping.h"
 #include "conditional.h"
-#include "statistical.h"
 
 namespace Retsu {
   namespace Operation {
@@ -25,12 +27,16 @@ namespace Retsu {
     using namespace v8;
     using namespace boost;
     
-    class Mean : public Grouping, public Conditional, public Statistical {
+    class Mean {
     protected:
       string column;
       shared_ptr<Table> table;
       Handle<Value> options;
-    
+      
+      // Mixin-like composition
+      Grouping grouping;
+      Conditional conditional;
+      
     public:
       Mean(shared_ptr<Table> table, const string& column, Handle<Value> options);
       
@@ -38,6 +44,7 @@ namespace Retsu {
         
     protected:
       Handle<Value> calculate(Local<Object> params, map<size_t, Group>& groups, Handle<Array> results);
+      double calculate(const vector<double>& values);
     };
   }
 }
