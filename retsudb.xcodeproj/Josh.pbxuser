@@ -4861,6 +4861,16 @@
 		vrLen = 852;
 		vrLoc = 3014;
 	};
+	031A01F411645F4C009D87A6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03851C5311606555002AD50D /* mean.cpp */;
+		name = "mean.cpp: 93";
+		rLen = 0;
+		rLoc = 3191;
+		rType = 0;
+		vrLen = 968;
+		vrLoc = 2304;
+	};
 	031AFE0411606E36009D87A6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "error: 'class v8::Value' has no member named 'Get'";
@@ -23959,9 +23969,9 @@
 	};
 	03851C5311606555002AD50D /* mean.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1189.39, 2775}}";
-			sepNavSelRange = "{3265, 0}";
-			sepNavVisRange = "{3014, 852}";
+			sepNavIntBoundsRect = "{{0, 0}, {1189.39, 2700}}";
+			sepNavSelRange = "{3191, 0}";
+			sepNavVisRange = "{2304, 968}";
 		};
 	};
 	03851C561160659C002AD50D /* grouping.h */ = {
@@ -24588,6 +24598,7 @@
 			031A01E311645E01009D87A6 /* PBXTextBookmark */ = 031A01E311645E01009D87A6 /* PBXTextBookmark */;
 			031A01E511645E28009D87A6 /* PBXTextBookmark */ = 031A01E511645E28009D87A6 /* PBXTextBookmark */;
 			031A01E911645EBC009D87A6 /* PBXTextBookmark */ = 031A01E911645EBC009D87A6 /* PBXTextBookmark */;
+			031A01F411645F4C009D87A6 /* PBXTextBookmark */ = 031A01F411645F4C009D87A6 /* PBXTextBookmark */;
 			031AFE0411606E36009D87A6 /* PBXTextBookmark */ = 031AFE0411606E36009D87A6 /* PBXTextBookmark */;
 			031AFE0511606E36009D87A6 /* PBXTextBookmark */ = 031AFE0511606E36009D87A6 /* PBXTextBookmark */;
 			031AFE0F11607129009D87A6 /* PBXTextBookmark */ = 031AFE0F11607129009D87A6 /* PBXTextBookmark */;

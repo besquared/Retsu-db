@@ -1,7 +1,7 @@
 try {
   results = tables.playback.mean('amount', {
-    'sample': 2000, 'confidence': 99.0,
-    'bootstrap': {'replicate': 500, 'interval': 'normal'},
+    'sample': 20000, 'confidence': 99.0,
+    'bootstrap': {'replicate': 500, 'interval': 'percentile'},
     'conditions': {
       'amount': {'lt': 500, 'gt': 100},
       'show_id': {'eq': 'Nocturnal Sunshine'}
