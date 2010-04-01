@@ -27,4 +27,3 @@ std::pair<double, double> Retsu::Statistics::confidence(double alpha, double mea
   
   return interval;
 }
-

@@ -15,11 +15,14 @@
 namespace Retsu {
   namespace Statistics {
     double mean(const std::vector<double>& values);
-    double gmean(const std::vector<double>& values);
-    double hmean(const std::vector<double>& values);
-    double tmean(const std::vector<double>& values);
+    double geometric_mean(const std::vector<double>& values);
+    double harmonic_mean(const std::vector<double>& values);
+    double trimmed_mean(const std::vector<double>& values);
+    
     double median(const std::vector<double>& values);
     double mode(const std::vector<double>& values);
+    double max(const std::vector<double>& values);
+    double min(const std::vector<double>& values);    
   }
 }
 
