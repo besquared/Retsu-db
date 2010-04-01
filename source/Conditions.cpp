@@ -95,7 +95,7 @@ void Retsu::Conditions::add(const string& type, const string& column, const stri
   } else if(type == "in") {
     // this could be an array of strings or numbers
     // do some in stuff here, unwrap the array and whatnot
-  }  
+  }
 }
 
 void Retsu::Conditions::add(const string& type, const string& column, const double& value) {
@@ -133,6 +133,7 @@ bool Retsu::Conditions::check(const string& column, string& value) const {
 
 bool Retsu::Conditions::check(const string& column, void* datum, int vsize) const {
   for(size_t i = 0; i < conditions.size(); i++) {
+    cout << "Should I check? " << conditions[i]->column << " == " << column << "?" << endl;
 		if(conditions[i]->column == column && !conditions[i]->check(datum, vsize)) {
       return false;
 		}

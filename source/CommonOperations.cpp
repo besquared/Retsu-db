@@ -38,6 +38,16 @@ v8::Handle<v8::Value> Retsu::CommonOperations::inspect(const Arguments& args) {
   return Handle<Value>();
 }
 
+std::string Retsu::CommonOperations::inspect(const Handle<Value> value) {
+  if(value->IsArray()) {
+    return inspect_array(Handle<Array>::Cast(value));
+  } else if(value->IsObject()) {
+    return inspect_object(value->ToObject());
+  } else {
+    return inspect_value(value);
+  }
+}
+
 std::string Retsu::CommonOperations::inspect_object(const Handle<Object> object) {
   string result;
   

@@ -28,7 +28,7 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::perform() {
 
   try {
     Cursor cursor;
-    if(conditional.has_conditions(options)) {
+    if(!conditional.has_conditions(options)) {
       cursor = Cursor(table, sample_size);
     } else {
       cursor = Cursor(table, conditional.conditions(options), sample_size);
@@ -52,7 +52,6 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::calculate(
   Local<Value> confidence = params->Get(String::New("confidence"));
   Local<Value> bootstrapped = params->Get(String::New("bootstrap"));
   
-  double value;
   size_t idx = 0;
   vector<double> values;
   map<string, double> estimate;
@@ -61,15 +60,24 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::calculate(
     values.clear();
     table->lookup(column, group->second.records, values, false);
     
+    Handle<Object> result_obj = results->Get(Number::New(idx))->ToObject();
+    
     if(bootstrapped->IsUndefined()) {
-      // normal it
-      // normal(values, estimate);
+      double mean = Statistics::mean(values);
+      double std_err = sqrt(Statistics::variance(values));
+      pair<double, double> interval = Statistics::confidence((1 - 97.5 / 100), mean, std_err, values.size());
+      
+      result_obj->Set(String::New("value"), Number::New(mean));
+      result_obj->Set(String::New("std_err"), Number::New(std_err));
+      
+      Handle<Array> interval_ary = Array::New();
+      interval_ary->Set(Number::New(0), Number::New(interval.first));
+      interval_ary->Set(Number::New(1), Number::New(interval.second));
+      result_obj->Set(String::New("interval"), interval_ary);
     } else {
-      Statistics::Bootstrap boot(97.5, Statistics::Bootstrap::PERCENTILE);
+      Statistics::Bootstrap boot(confidence->NumberValue(), Statistics::Bootstrap::PERCENTILE);
       boot.perform(values, 1000, &Retsu::Statistics::mean);
     }
-    
-    results->Get(Number::New(idx))->ToObject()->Set(String::New("value"), Number::New(value));
   }
   
   return Handle<Value>();

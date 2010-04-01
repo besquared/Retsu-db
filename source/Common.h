@@ -34,6 +34,9 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/filesystem.hpp>
 
+#include <boost/math/distributions/normal.hpp>
+#include <boost/math/distributions/students_t.hpp>
+
 #include <include/v8.h>
 
 namespace fs = boost::filesystem;

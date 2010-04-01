@@ -74,6 +74,7 @@ bool Retsu::Cursor::conditional_next() {
     if(!unconditional_next()) { return false; }
     
     for(column = conditions->columns.begin(); column != conditions->columns.end(); column++) {
+      cout << "Looking up value in column " << *column << " for conditional_next() " << endl;
       // do a raw lookup here
       void* datum = table->lookup(*column, current, vsize);
       

@@ -17,6 +17,7 @@
 
 #include <source/statistics/location.h>
 #include <source/statistics/bootstrap.h>
+#include <source/statistics/confidence.h>
 
 #include "grouping.h"
 #include "conditional.h"

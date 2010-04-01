@@ -15,6 +15,7 @@
 #include "location.h"
 #include "dispersion.h"
 #include "shape.h"
+#include "confidence.h"
 
 namespace Retsu {
   namespace Statistics {
@@ -22,13 +23,14 @@ namespace Retsu {
 
     class Bootstrap {
     public:
-      enum Method { BASIC, STUDENTIZED, PERCENTILE, BCA };
+      enum Method { NORMAL, PERCENTILE, BCA };
 
     protected:
       Method method;
       double confidence;
 
     public:
+      double mean;
       double std_err;
       double variance;
       pair<double, double> interval;
@@ -40,6 +42,9 @@ namespace Retsu {
     protected:
       void calculate_stats(const vector<double>& values);
       void calculate_interval(const vector<double>& values);
+      void calculate_normal_interval(const vector<double>& values);
+      void calculate_percentile_interval(const vector<double>& values);
+      void calculate_bias_corrected_interval(const vector<double>& values);
     };
   }
 }
