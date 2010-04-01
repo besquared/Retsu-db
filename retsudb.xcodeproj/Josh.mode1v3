@@ -334,7 +334,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>031A01F411645F4C009D87A6</string>
+										<string>031A02031164628C009D87A6</string>
 										<key>history</key>
 										<array>
 											<string>0324FAF411364340001E567A</string>
@@ -962,9 +962,9 @@
 	<array>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>030FACCD112E67CF0047E4F7</string>
-		<string>/Users/Josh/Socialytical/retsudb/retsudb.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/Josh/Socialytical/retsudb/retsudb.xcodeproj</string>
+		<string>030FACCD112E67CF0047E4F7</string>
 	</array>
 	<key>WindowString</key>
 	<string>20 165 1237 819 0 0 1280 1002 </string>
@@ -990,7 +990,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CommonOperations.h</string>
+								<string>mean.cpp</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -999,7 +999,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1052, 414}}</string>
 								<key>RubberWindowFrame</key>
-								<string>184 132 1052 698 0 0 1280 1002 </string>
+								<string>121 296 1052 698 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -1023,7 +1023,7 @@
 								<key>Frame</key>
 								<string>{{0, 419}, {1052, 238}}</string>
 								<key>RubberWindowFrame</key>
-								<string>184 132 1052 698 0 0 1280 1002 </string>
+								<string>121 296 1052 698 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -1053,11 +1053,11 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.buildV3</string>
 			<key>WindowString</key>
-			<string>184 132 1052 698 0 0 1280 1002 </string>
+			<string>121 296 1052 698 0 0 1280 1002 </string>
 			<key>WindowToolGUID</key>
 			<string>030FACCD112E67CF0047E4F7</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

@@ -49,8 +49,13 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::perform() {
 v8::Handle<v8::Value> Retsu::Operation::Mean::calculate(
   Local<Object> params, map<size_t, Group>& groups, Handle<Array> results) {
  
-  Local<Value> confidence = params->Get(String::New("confidence"));
-  Local<Value> bootstrapped = params->Get(String::New("bootstrap"));
+  Local<Value> confidence_param = params->Get(String::New("confidence"));
+  Local<Value> bootstrapped_param = params->Get(String::New("bootstrap"));
+  
+  double confidence = 97.5;
+  if(!confidence_param->IsUndefined()) {
+    confidence = confidence_param->NumberValue();
+  }
   
   size_t idx = 0;
   vector<double> values;
@@ -62,10 +67,10 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::calculate(
     
     Local<Object> result_obj = results->Get(Number::New(idx))->ToObject();
     
-    if(bootstrapped->IsUndefined()) {
+    if(bootstrapped_param->IsUndefined()) {
       double mean = Statistics::mean(values);
       double std_err = sqrt(Statistics::variance(values));
-      pair<double, double> interval = Statistics::confidence((1 - 97.5 / 100), mean, std_err, values.size());
+      pair<double, double> interval = Statistics::confidence((1 - confidence / 100), mean, std_err, values.size());
       
       result_obj->Set(String::New("value"), Number::New(mean));
       result_obj->Set(String::New("std_err"), Number::New(std_err));
@@ -78,7 +83,7 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::calculate(
       size_t replicate = 1000;
       Statistics::Bootstrap::Method interval = Statistics::Bootstrap::NORMAL;
       
-      Local<Object> boot_params = bootstrapped->ToObject();
+      Local<Object> boot_params = bootstrapped_param->ToObject();
       Local<Value> replicate_param = boot_params->Get(String::New("replicate"));
       Local<Value> interval_param = boot_params->Get(String::New("interval"));
       
@@ -94,9 +99,10 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::calculate(
         }
       }
       
-      Statistics::Bootstrap boot(confidence->NumberValue(), interval);
-      boot.perform(values, replicate, &Retsu::Statistics::mean);
+      Statistics::Bootstrap boot(confidence, interval);
       
+      boot.perform(values, replicate, &Retsu::Statistics::mean);
+    
       result_obj->Set(String::New("value"), Number::New(boot.mean));
       result_obj->Set(String::New("std_err"), Number::New(boot.std_err));
       
