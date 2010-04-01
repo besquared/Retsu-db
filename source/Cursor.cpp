@@ -72,9 +72,9 @@ bool Retsu::Cursor::conditional_next() {
 
   while(true) {
     if(!unconditional_next()) { return false; }
-    
+  
+    bool passed = true;
     for(column = conditions->columns.begin(); column != conditions->columns.end(); column++) {
-      cout << "Looking up value in column " << *column << " for conditional_next() " << endl;
       // do a raw lookup here
       void* datum = table->lookup(*column, current, vsize);
       
@@ -83,17 +83,20 @@ bool Retsu::Cursor::conditional_next() {
       
       if(conditions->check(*column, datum, vsize)) {
         free(datum);
-        return true;
       } else {
         free(datum);
+        passed = false;
         break;
       }
     }
+    
+    // did we find one that passes all the tests?
+    if(passed) return true;
   }
 }
 
 bool Retsu::Cursor::unconditional_next() {
-  if(is_sampled && sample_size < population_size) {
+  if(is_sampled) {
     if(sampled == sample_size) {
       return false;
     } else {

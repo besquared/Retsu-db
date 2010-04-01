@@ -23,7 +23,6 @@ namespace Retsu {
 			Condition::Base::Base(column, Base::STRING) {
 				this->strvalue = value;
 				this->type = Base::EQ;
-        cout << "Instantiating string conditional EQ " << column << " => " << value << endl;
 			}
       
       Eq(const string& column, const double& value) :
@@ -33,12 +32,10 @@ namespace Retsu {
       }
 			
       bool check(string& value) {
-        cout << "Checking " << column << value << " == " << strvalue << endl;
         return value == strvalue;
       }
       
       bool check(double& value) {
-        cout << "Checking " << column << value << " == " << strvalue << endl;
         return value == dblvalue;
       }
             

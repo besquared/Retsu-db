@@ -131,9 +131,8 @@ bool Retsu::Conditions::check(const string& column, string& value) const {
   return true;
 }
 
-bool Retsu::Conditions::check(const string& column, void* datum, int vsize) const {
+bool Retsu::Conditions::check(const string& column, void* datum, int vsize) const {  
   for(size_t i = 0; i < conditions.size(); i++) {
-    cout << "Should I check? " << conditions[i]->column << " == " << column << "?" << endl;
 		if(conditions[i]->column == column && !conditions[i]->check(datum, vsize)) {
       return false;
 		}

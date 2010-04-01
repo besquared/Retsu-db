@@ -38,10 +38,8 @@ boost::shared_ptr<Retsu::Conditions> Retsu::Operation::Conditional::conditions(H
         string type = *String::AsciiValue(cond_type);
         
         if(cond_type_val->IsNumber()) {
-          cout << "Adding number condition " << *String::AsciiValue(column) << " => " << cond_type_val->NumberValue() << endl;
           p_conditions->add(type, *String::AsciiValue(column), cond_type_val->NumberValue());
         } else if(cond_type_val->IsString()) {
-          cout << "Adding string condition " << *String::AsciiValue(column) << " => " << *String::AsciiValue(cond_type_val) << endl;
           p_conditions->add(type, *String::AsciiValue(column), *String::AsciiValue(cond_type_val));
         } else {
           // it's an array for 'in' get them all out
