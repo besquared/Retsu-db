@@ -60,7 +60,7 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::calculate(
     values.clear();
     table->lookup(column, group->second.records, values, false);
     
-    Handle<Object> result_obj = results->Get(Number::New(idx))->ToObject();
+    Local<Object> result_obj = results->Get(Number::New(idx))->ToObject();
     
     if(bootstrapped->IsUndefined()) {
       double mean = Statistics::mean(values);
@@ -70,13 +70,40 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::calculate(
       result_obj->Set(String::New("value"), Number::New(mean));
       result_obj->Set(String::New("std_err"), Number::New(std_err));
       
-      Handle<Array> interval_ary = Array::New();
+      Local<Array> interval_ary = Array::New();
       interval_ary->Set(Number::New(0), Number::New(interval.first));
       interval_ary->Set(Number::New(1), Number::New(interval.second));
       result_obj->Set(String::New("interval"), interval_ary);
     } else {
-      Statistics::Bootstrap boot(confidence->NumberValue(), Statistics::Bootstrap::PERCENTILE);
-      boot.perform(values, 1000, &Retsu::Statistics::mean);
+      size_t replicate = 1000;
+      Statistics::Bootstrap::Method interval = Statistics::Bootstrap::NORMAL;
+      
+      Local<Object> boot_params = bootstrapped->ToObject();
+      Local<Value> replicate_param = boot_params->Get(String::New("replicate"));
+      Local<Value> interval_param = boot_params->Get(String::New("interval"));
+      
+      if(!replicate_param->IsUndefined()) {
+        replicate = replicate_param->NumberValue();
+      }
+      
+      if(!interval_param->IsUndefined()) {
+        string interval_str = *String::AsciiValue(interval_param);
+        
+        if(interval_str == "percentile") {
+          interval = Statistics::Bootstrap::PERCENTILE;
+        }
+      }
+      
+      Statistics::Bootstrap boot(confidence->NumberValue(), interval);
+      boot.perform(values, replicate, &Retsu::Statistics::mean);
+      
+      result_obj->Set(String::New("value"), Number::New(boot.mean));
+      result_obj->Set(String::New("std_err"), Number::New(boot.std_err));
+      
+      Local<Array> interval_ary = Array::New();
+      interval_ary->Set(Number::New(0), Number::New(boot.interval.first));
+      interval_ary->Set(Number::New(1), Number::New(boot.interval.second));
+      result_obj->Set(String::New("interval"), interval_ary);
     }
   }
   

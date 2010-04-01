@@ -1116,7 +1116,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 68";
 		rLen = 0;
-		rLoc = 2732;
+		rLoc = 3825;
 		rType = 0;
 		vrLen = 760;
 		vrLoc = 1173;
@@ -1136,7 +1136,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 2564;
+		rLoc = 2562;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 1414;
@@ -1552,7 +1552,7 @@
 		comments = "error: 'Bootstrap' was not declared in this scope";
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		rLen = 0;
-		rLoc = 77;
+		rLoc = 96;
 		rType = 1;
 	};
 	031A00391163178C009D87A6 /* PBXTextBookmark */ = {
@@ -1580,7 +1580,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 68";
 		rLen = 0;
-		rLoc = 2649;
+		rLoc = 3332;
 		rType = 0;
 		vrLen = 523;
 		vrLoc = 1484;
@@ -1642,7 +1642,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 68";
 		rLen = 0;
-		rLoc = 2595;
+		rLoc = 3290;
 		rType = 0;
 		vrLen = 530;
 		vrLoc = 1416;
@@ -1702,7 +1702,7 @@
 		comments = "error: expected ',' or ';' before '.' token";
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		rLen = 0;
-		rLoc = 77;
+		rLoc = 96;
 		rType = 1;
 	};
 	031A004C1163182E009D87A6 /* PBXTextBookmark */ = {
@@ -1710,7 +1710,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 68";
 		rLen = 0;
-		rLoc = 2595;
+		rLoc = 3290;
 		rType = 0;
 		vrLen = 546;
 		vrLoc = 1416;
@@ -1730,7 +1730,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2732;
+		rLoc = 3825;
 		rType = 0;
 		vrLen = 435;
 		vrLoc = 1756;
@@ -1760,7 +1760,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2730;
+		rLoc = 3405;
 		rType = 0;
 		vrLen = 747;
 		vrLoc = 1414;
@@ -1810,7 +1810,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2730;
+		rLoc = 3405;
 		rType = 0;
 		vrLen = 747;
 		vrLoc = 1414;
@@ -1850,7 +1850,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 71";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 644;
 		vrLoc = 1553;
@@ -1860,7 +1860,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 71";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 644;
 		vrLoc = 1553;
@@ -1880,7 +1880,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2730;
+		rLoc = 3405;
 		rType = 0;
 		vrLen = 701;
 		vrLoc = 1572;
@@ -1890,7 +1890,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2730;
+		rLoc = 3405;
 		rType = 0;
 		vrLen = 702;
 		vrLoc = 1572;
@@ -1914,7 +1914,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2730;
+		rLoc = 3405;
 		rType = 0;
 		vrLen = 716;
 		vrLoc = 1572;
@@ -1931,7 +1931,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2730;
+		rLoc = 3405;
 		rType = 0;
 		vrLen = 716;
 		vrLoc = 1572;
@@ -1981,7 +1981,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2730;
+		rLoc = 3405;
 		rType = 0;
 		vrLen = 775;
 		vrLoc = 1416;
@@ -2041,7 +2041,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 76";
 		rLen = 0;
-		rLoc = 2773;
+		rLoc = 3866;
 		rType = 0;
 		vrLen = 660;
 		vrLoc = 1553;
@@ -2121,7 +2121,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2726;
+		rLoc = 3401;
 		rType = 0;
 		vrLen = 728;
 		vrLoc = 1484;
@@ -2141,7 +2141,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2730;
+		rLoc = 3405;
 		rType = 0;
 		vrLen = 775;
 		vrLoc = 1416;
@@ -2170,8 +2170,8 @@
 		isa = PBXTextBookmark;
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 68";
-		rLen = 96;
-		rLoc = 2577;
+		rLen = 71;
+		rLoc = 3272;
 		rType = 0;
 		vrLen = 435;
 		vrLoc = 1756;
@@ -2197,8 +2197,8 @@
 		isa = PBXTextBookmark;
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 68";
-		rLen = 96;
-		rLoc = 2577;
+		rLen = 71;
+		rLoc = 3272;
 		rType = 0;
 		vrLen = 435;
 		vrLoc = 1756;
@@ -2238,7 +2238,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2730;
+		rLoc = 3405;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 1337;
@@ -2258,7 +2258,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 72";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 1416;
@@ -2278,7 +2278,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 68";
 		rLen = 0;
-		rLoc = 2577;
+		rLoc = 3272;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 1414;
@@ -2288,7 +2288,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 68";
 		rLen = 0;
-		rLoc = 2577;
+		rLoc = 3272;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 1414;
@@ -2308,7 +2308,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 63";
 		rLen = 0;
-		rLoc = 1911;
+		rLoc = 1910;
 		rType = 0;
 		vrLen = 936;
 		vrLoc = 1251;
@@ -2328,7 +2328,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 1935;
+		rLoc = 1934;
 		rType = 0;
 		vrLen = 896;
 		vrLoc = 1251;
@@ -2338,7 +2338,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 1935;
+		rLoc = 1934;
 		rType = 0;
 		vrLen = 896;
 		vrLoc = 1251;
@@ -2358,7 +2358,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2686;
+		rLoc = 3356;
 		rType = 0;
 		vrLen = 810;
 		vrLoc = 1416;
@@ -2368,7 +2368,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2686;
+		rLoc = 3356;
 		rType = 0;
 		vrLen = 810;
 		vrLoc = 1416;
@@ -2388,7 +2388,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2686;
+		rLoc = 3356;
 		rType = 0;
 		vrLen = 810;
 		vrLoc = 1416;
@@ -3467,7 +3467,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2686;
+		rLoc = 3356;
 		rType = 0;
 		vrLen = 812;
 		vrLoc = 1414;
@@ -3487,7 +3487,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 68";
 		rLen = 0;
-		rLoc = 2601;
+		rLoc = 3296;
 		rType = 0;
 		vrLen = 811;
 		vrLoc = 1414;
@@ -3669,7 +3669,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 2564;
+		rLoc = 2562;
 		rType = 0;
 		vrLen = 792;
 		vrLoc = 1414;
@@ -3699,7 +3699,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 65";
 		rLen = 0;
-		rLoc = 2564;
+		rLoc = 2562;
 		rType = 0;
 		vrLen = 812;
 		vrLoc = 1414;
@@ -3899,7 +3899,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 2564;
+		rLoc = 2562;
 		rType = 0;
 		vrLen = 792;
 		vrLoc = 1414;
@@ -3969,7 +3969,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 2564;
+		rLoc = 2562;
 		rType = 0;
 		vrLen = 792;
 		vrLoc = 1414;
@@ -3999,7 +3999,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 75";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 871;
 		vrLoc = 1553;
@@ -4049,7 +4049,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2083;
+		rLoc = 2082;
 		rType = 0;
 		vrLen = 884;
 		vrLoc = 1553;
@@ -4059,7 +4059,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2132;
+		rLoc = 2131;
 		rType = 0;
 		vrLen = 884;
 		vrLoc = 1553;
@@ -4079,7 +4079,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2080;
+		rLoc = 2079;
 		rType = 0;
 		vrLen = 884;
 		vrLoc = 1553;
@@ -4099,7 +4099,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 69";
 		rLen = 0;
-		rLoc = 2083;
+		rLoc = 2082;
 		rType = 0;
 		vrLen = 884;
 		vrLoc = 1553;
@@ -4139,7 +4139,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 75";
 		rLen = 0;
-		rLoc = 2492;
+		rLoc = 2490;
 		rType = 0;
 		vrLen = 926;
 		vrLoc = 1825;
@@ -4159,7 +4159,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 75";
 		rLen = 0;
-		rLoc = 2492;
+		rLoc = 2490;
 		rType = 0;
 		vrLen = 1089;
 		vrLoc = 1669;
@@ -4169,7 +4169,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 75";
 		rLen = 0;
-		rLoc = 2492;
+		rLoc = 2490;
 		rType = 0;
 		vrLen = 1089;
 		vrLoc = 1669;
@@ -4189,7 +4189,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 78";
 		rLen = 0;
-		rLoc = 2622;
+		rLoc = 3317;
 		rType = 0;
 		vrLen = 1102;
 		vrLoc = 1669;
@@ -4289,7 +4289,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 78";
 		rLen = 0;
-		rLoc = 2635;
+		rLoc = 3330;
 		rType = 0;
 		vrLen = 608;
 		vrLoc = 2164;
@@ -4326,7 +4326,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 78";
 		rLen = 0;
-		rLoc = 2635;
+		rLoc = 3330;
 		rType = 0;
 		vrLen = 608;
 		vrLoc = 2164;
@@ -4790,6 +4790,76 @@
 		rType = 0;
 		vrLen = 464;
 		vrLoc = 1880;
+	};
+	031A01DB11645D04009D87A6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0385165011529A43002AD50D /* Cursor.cpp */;
+		name = "Cursor.cpp: 104";
+		rLen = 0;
+		rLoc = 2247;
+		rType = 0;
+		vrLen = 464;
+		vrLoc = 1880;
+	};
+	031A01DC11645D04009D87A6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03851C5311606555002AD50D /* mean.cpp */;
+		name = "mean.cpp: 38";
+		rLen = 0;
+		rLoc = 1051;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 443;
+	};
+	031A01DD11645D04009D87A6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0385165011529A43002AD50D /* Cursor.cpp */;
+		name = "Cursor.cpp: 104";
+		rLen = 0;
+		rLoc = 2247;
+		rType = 0;
+		vrLen = 464;
+		vrLoc = 1880;
+	};
+	031A01DE11645D04009D87A6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03851C5311606555002AD50D /* mean.cpp */;
+		name = "mean.cpp: 79";
+		rLen = 0;
+		rLoc = 2831;
+		rType = 0;
+		vrLen = 1127;
+		vrLoc = 1761;
+	};
+	031A01E311645E01009D87A6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03851C5311606555002AD50D /* mean.cpp */;
+		name = "mean.cpp: 97";
+		rLen = 0;
+		rLoc = 3265;
+		rType = 0;
+		vrLen = 962;
+		vrLoc = 2500;
+	};
+	031A01E511645E28009D87A6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03851C5311606555002AD50D /* mean.cpp */;
+		name = "mean.cpp: 97";
+		rLen = 0;
+		rLoc = 3265;
+		rType = 0;
+		vrLen = 920;
+		vrLoc = 2562;
+	};
+	031A01E911645EBC009D87A6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03851C5311606555002AD50D /* mean.cpp */;
+		name = "mean.cpp: 96";
+		rLen = 0;
+		rLoc = 3265;
+		rType = 0;
+		vrLen = 852;
+		vrLoc = 3014;
 	};
 	031AFE0411606E36009D87A6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -6498,7 +6568,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 53";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 3864;
 		rType = 0;
 		vrLen = 446;
 		vrLoc = 1064;
@@ -6676,7 +6746,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 53";
 		rLen = 0;
-		rLoc = 2771;
+		rLoc = 3864;
 		rType = 0;
 		vrLen = 446;
 		vrLoc = 1064;
@@ -7604,7 +7674,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 52";
 		rLen = 0;
-		rLoc = 2745;
+		rLoc = 3838;
 		rType = 0;
 		vrLen = 675;
 		vrLoc = 830;
@@ -7614,7 +7684,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 51";
 		rLen = 0;
-		rLoc = 2745;
+		rLoc = 3838;
 		rType = 0;
 		vrLen = 672;
 		vrLoc = 794;
@@ -7624,7 +7694,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 53";
 		rLen = 0;
-		rLoc = 2742;
+		rLoc = 3835;
 		rType = 0;
 		vrLen = 707;
 		vrLoc = 821;
@@ -7634,7 +7704,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 55";
 		rLen = 0;
-		rLoc = 2742;
+		rLoc = 3835;
 		rType = 0;
 		vrLen = 718;
 		vrLoc = 821;
@@ -7644,7 +7714,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 54";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 660;
 		vrLoc = 911;
@@ -7654,7 +7724,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 54";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 660;
 		vrLoc = 911;
@@ -7684,7 +7754,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 55";
 		rLen = 0;
-		rLoc = 2742;
+		rLoc = 3835;
 		rType = 0;
 		vrLen = 672;
 		vrLoc = 911;
@@ -7724,7 +7794,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 57";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 694;
 		vrLoc = 975;
@@ -7754,7 +7824,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 57";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 693;
 		vrLoc = 975;
@@ -8212,7 +8282,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 61";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 730;
 		vrLoc = 1098;
@@ -8222,7 +8292,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 61";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 680;
 		vrLoc = 1148;
@@ -8242,7 +8312,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 61";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 729;
 		vrLoc = 1098;
@@ -8252,7 +8322,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 58";
 		rLen = 0;
-		rLoc = 2739;
+		rLoc = 3832;
 		rType = 0;
 		vrLen = 727;
 		vrLoc = 1070;
@@ -8322,7 +8392,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 63";
 		rLen = 0;
-		rLoc = 2738;
+		rLoc = 3831;
 		rType = 0;
 		vrLen = 750;
 		vrLoc = 1186;
@@ -8332,7 +8402,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 64";
 		rLen = 0;
-		rLoc = 2564;
+		rLoc = 2562;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 1293;
@@ -8342,7 +8412,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 63";
 		rLen = 0;
-		rLoc = 1925;
+		rLoc = 1924;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 1293;
@@ -8362,7 +8432,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 63";
 		rLen = 0;
-		rLoc = 1925;
+		rLoc = 1924;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 1293;
@@ -8402,7 +8472,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 63";
 		rLen = 0;
-		rLoc = 1925;
+		rLoc = 1924;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 1264;
@@ -8422,7 +8492,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 2732;
+		rLoc = 3825;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 1293;
@@ -8432,7 +8502,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 2564;
+		rLoc = 2562;
 		rType = 0;
 		vrLen = 694;
 		vrLoc = 1427;
@@ -8442,7 +8512,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 2564;
+		rLoc = 2562;
 		rType = 0;
 		vrLen = 771;
 		vrLoc = 1350;
@@ -8462,7 +8532,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 2564;
+		rLoc = 2562;
 		rType = 0;
 		vrLen = 771;
 		vrLoc = 1350;
@@ -8582,7 +8652,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 68";
 		rLen = 0;
-		rLoc = 2732;
+		rLoc = 3825;
 		rType = 0;
 		vrLen = 794;
 		vrLoc = 1085;
@@ -8622,7 +8692,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 2564;
+		rLoc = 2562;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 1350;
@@ -8652,7 +8722,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 66";
 		rLen = 0;
-		rLoc = 2564;
+		rLoc = 2562;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 1350;
@@ -8682,7 +8752,7 @@
 		fRef = 03851C5311606555002AD50D /* mean.cpp */;
 		name = "mean.cpp: 68";
 		rLen = 0;
-		rLoc = 2732;
+		rLoc = 3825;
 		rType = 0;
 		vrLen = 794;
 		vrLoc = 1085;
@@ -12994,7 +13064,7 @@
 	0385165011529A43002AD50D /* Cursor.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1124.58, 3150}}";
-			sepNavSelRange = "{2194, 0}";
+			sepNavSelRange = "{2247, 0}";
 			sepNavVisRange = "{1880, 464}";
 			sepNavWindowFrame = "{{15, 218}, {1121, 779}}";
 		};
@@ -23889,9 +23959,9 @@
 	};
 	03851C5311606555002AD50D /* mean.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1092.18, 2300}}";
-			sepNavSelRange = "{1051, 0}";
-			sepNavVisRange = "{443, 785}";
+			sepNavIntBoundsRect = "{{0, 0}, {1189.39, 2775}}";
+			sepNavSelRange = "{3265, 0}";
+			sepNavVisRange = "{3014, 852}";
 		};
 	};
 	03851C561160659C002AD50D /* grouping.h */ = {
@@ -24511,6 +24581,13 @@
 			031A01D811645C2B009D87A6 /* PBXTextBookmark */ = 031A01D811645C2B009D87A6 /* PBXTextBookmark */;
 			031A01D911645C2B009D87A6 /* PBXTextBookmark */ = 031A01D911645C2B009D87A6 /* PBXTextBookmark */;
 			031A01DA11645C2B009D87A6 /* PBXTextBookmark */ = 031A01DA11645C2B009D87A6 /* PBXTextBookmark */;
+			031A01DB11645D04009D87A6 /* PBXTextBookmark */ = 031A01DB11645D04009D87A6 /* PBXTextBookmark */;
+			031A01DC11645D04009D87A6 /* PBXTextBookmark */ = 031A01DC11645D04009D87A6 /* PBXTextBookmark */;
+			031A01DD11645D04009D87A6 /* PBXTextBookmark */ = 031A01DD11645D04009D87A6 /* PBXTextBookmark */;
+			031A01DE11645D04009D87A6 /* PBXTextBookmark */ = 031A01DE11645D04009D87A6 /* PBXTextBookmark */;
+			031A01E311645E01009D87A6 /* PBXTextBookmark */ = 031A01E311645E01009D87A6 /* PBXTextBookmark */;
+			031A01E511645E28009D87A6 /* PBXTextBookmark */ = 031A01E511645E28009D87A6 /* PBXTextBookmark */;
+			031A01E911645EBC009D87A6 /* PBXTextBookmark */ = 031A01E911645EBC009D87A6 /* PBXTextBookmark */;
 			031AFE0411606E36009D87A6 /* PBXTextBookmark */ = 031AFE0411606E36009D87A6 /* PBXTextBookmark */;
 			031AFE0511606E36009D87A6 /* PBXTextBookmark */ = 031AFE0511606E36009D87A6 /* PBXTextBookmark */;
 			031AFE0F11607129009D87A6 /* PBXTextBookmark */ = 031AFE0F11607129009D87A6 /* PBXTextBookmark */;
