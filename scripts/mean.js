@@ -1,6 +1,6 @@
 try {
   results = tables.playback.mean('amount', {
-    'sample': 20000, 'confidence': 99.0,
+    'sample': 10000, 'confidence': 99.0,
     'bootstrap': {'replicate': 500, 'interval': 'percentile'},
     'conditions': {
       'amount': {'lt': 500, 'gt': 100},

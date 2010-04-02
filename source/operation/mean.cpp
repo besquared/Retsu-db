@@ -67,6 +67,8 @@ v8::Handle<v8::Value> Retsu::Operation::Mean::calculate(
     
     Local<Object> result_obj = results->Get(Number::New(idx))->ToObject();
     
+    result_obj->Set(String::New("count"), Number::New(values.size()));
+
     if(bootstrapped_param->IsUndefined()) {
       double mean = Statistics::mean(values);
       double std_err = sqrt(Statistics::variance(values));
